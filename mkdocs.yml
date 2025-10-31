@@ -20,8 +20,10 @@ nav:
     - 'Plano de Testes': 'testes/index.md'
 
   - 'Desenvolvimento':
+    - 'Visão Geral do Desenvolvimento': 'desenvolvimento/geral.md'
     - 'Guia de Instalação': 'desenvolvimento/guia-instalacao.md'
     - 'Documentação da API': 'desenvolvimento/documentacao-api.md'
+
 
 theme:
   name: material
