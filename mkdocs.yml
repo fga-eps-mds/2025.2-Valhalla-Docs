@@ -44,6 +44,11 @@ theme:
         name: Switch to system preference
 
   features:
+  features:
+    - navigation.footer
+  logo: assets/images/LogoCorujudaCapeludaOutline.svg
+  favicon: assets/favicon.ico
+
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
