@@ -11,7 +11,9 @@ nav:
     - 'Visão Geral': 'atas-reuniao/index.md'
 
   - 'Escopo e Requisitos':
+    - 'Visão Geral': 'escopo-requisitos/geral.md'
     - 'Requisitos': 'escopo-requisitos/Requisitos.md'
+    - 'Casos de Uso': 'escopo-requisitos/casos-de-uso.md'
 
   - 'Arquitetura':
     - 'Visão Geral': 'arquitetura/index.md'
@@ -20,7 +22,6 @@ nav:
     - 'Plano de Testes': 'testes/index.md'
 
   - 'Desenvolvimento':
-    - 'Visão Geral do Desenvolvimento': 'desenvolvimento/geral.md'
     - 'Guia de Instalação': 'desenvolvimento/guia-instalacao.md'
     - 'Documentação da API': 'desenvolvimento/documentacao-api.md'
 
