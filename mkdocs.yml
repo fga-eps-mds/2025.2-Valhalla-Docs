@@ -11,7 +11,7 @@ nav:
     - 'Visão Geral': 'atas-reuniao/index.md'
 
   - 'Escopo e Requisitos':
-    - 'Declaração de Escopo': 'escopo-requisitos/index.md'
+    - 'Requisitos': 'escopo-requisitos/Requisitos.md'
 
   - 'Arquitetura':
     - 'Visão Geral': 'arquitetura/index.md'
