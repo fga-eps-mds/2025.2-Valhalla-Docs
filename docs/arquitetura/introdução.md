@@ -6,6 +6,7 @@
 | Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
 | 31/10| 1.0 | Introdução do Documento de Arquitetura |Gabriel Diniz; Pedro H. Américo;  Pedro Lucas|
+| 31/10| 1.0 | Referências Documento de Arquitetura |Gabriel Diniz; Pedro H. Américo;  Pedro Lucas|
 
 
 **Autores:**
@@ -13,6 +14,7 @@
 |------|-----------|
 |Gabriel Diniz | 24102630 |
 |Pedro H. Américo | 241025980 |
+|Pedro Ian Guedes | 241025837 |
 |Pedro Lucas B. | 241025710 |
 
 ## 1. Introdução
@@ -31,10 +33,10 @@ O problema que o projeto busca resolver é a falta de informação e o "sentimen
 
 O detalhamento completo do escopo se encontra na seção Escopo e Requisitos. Em linhas gerais, o escopo do produto compreende a implementação de um conjunto completo de funcionalidades, incluindo:
 
-* Autenticação e Conta: Permite que os usuários realizem cadastro, login de maneira segura e recuperação de senha.
-* Página de Perfil: O usuário pode visualizar e editar suas informações, além de gerenciar seu histórico de denúncias.
-* Página de Orientação: Disponibiliza informações, tutoriais e links para que as denúncias sejam realizadas de maneira oficial.
-* Página de Denúncia: Permite a interação entre usuários através da publicação de denúncias, uma timeline, comentários e reações.
-* Administração: Concede privilégios a administradores para gerenciar denúncias e usuários.
-* Segurança e Privacidade: Garante a criptografia de dados sensíveis e a opção de denúncias anônimas.
-* Página de Gráficos e Notícias: Permite aos usuários visualizar dados gerais sobre as denúncias e ver as notícias cadastradas por administradores.
+- **Autenticação e Conta:** Permite que os usuários realizem cadastro, login de maneira segura e recuperação de senha.
+- **Página de Perfil:** O usuário pode visualizar e editar suas informações, além de gerenciar seu histórico de denúncias.
+- **Página de Orientação:** Disponibiliza informações, tutoriais e links para que as denúncias sejam realizadas de maneira oficial.
+- **Página de Denúncia:** Permite a interação entre usuários através da publicação de denúncias, uma timeline, comentários e reações.
+- **Administração:** Concede privilégios a administradores para gerenciar denúncias e usuários.
+- **Segurança e Privacidade:** Garante a criptografia de dados sensíveis e a opção de denúncias anônimas.
+- **Página de Gráficos e Notícias**: Permite aos usuários visualizar dados gerais sobre as denúncias e ver as notícias cadastradas por administradores.
