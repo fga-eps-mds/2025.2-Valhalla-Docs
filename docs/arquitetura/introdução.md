@@ -6,7 +6,8 @@
 | Data | Versão | Descrição | Autor(es) |
 |------|--------|-----------|-----------|
 | 31/10| 1.0 | Introdução do Documento de Arquitetura |Gabriel Diniz; Pedro H. Américo;  Pedro Lucas|
-| 31/10| 1.0 | Referências Documento de Arquitetura |Gabriel Diniz; Pedro H. Américo;  Pedro Lucas|
+| 31/10| 1.1 | Referências Documento de Arquitetura |Gabriel Diniz; Pedro H. Américo;  Pedro Lucas|
+| 31/10| 1.2 | Representação Arquitetural Documento de Arquitetura |Gabriel Diniz; Pedro H. Américo;  Pedro Lucas|
 
 
 **Autores:**
