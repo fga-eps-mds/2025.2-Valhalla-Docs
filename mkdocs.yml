@@ -1,1 +1,54 @@
-site_name: My Docs
+site_name: 2025.2 Valhalla
+site_url: "" 
+site_author: Equipe Valhalla
+site_description: Documentação do projeto Valhalla para as disciplinas de MDS.
+repo_url: https://github.com/fga-eps-mds/2025.2-Valhalla.git
+
+nav:
+  - 'Home': 'index.md'
+
+  - 'Atas de Reunião':
+    - 'Visão Geral': 'atas-reuniao/index.md'
+
+  - 'Escopo e Requisitos':
+    - 'Declaração de Escopo': 'escopo-requisitos/index.md'
+
+  - 'Arquitetura':
+    - 'Visão Geral': 'arquitetura/index.md'
+
+  - 'Testes':
+    - 'Plano de Testes': 'testes/index.md'
+
+  - 'Desenvolvimento':
+    - 'Guia de Instalação': 'desenvolvimento/guia-instalacao.md'
+    - 'Documentação da API': 'desenvolvimento/documentacao-api.md'
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-2
+        name: Switch to system preference
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - navigation.path
