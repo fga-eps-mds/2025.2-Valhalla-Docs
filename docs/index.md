@@ -1,6 +1,6 @@
 # Documentação do Projeto Guardiões da Universidade - Grupo Valhalla
 
-![logo](assets/images/LogoCorujudaOutline.svg){ width="200" }
+![logo](assets/images/LogoCorujudaOutline.svg)
 
 **Versão: 1.0.0**
 
