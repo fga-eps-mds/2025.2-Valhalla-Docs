@@ -14,7 +14,9 @@ nav:
     - 'Declaração de Escopo': 'escopo-requisitos/index.md'
 
   - 'Arquitetura':
-    - 'Visão Geral': 'arquitetura/index.md'
+    - 'Introdução': 'arquitetura/introdução.md'
+    - 'Representação Arquitetural': 'arquitetura/representação_arquitetural.md'
+    - 'Referências': 'arquitetura/referências.md'
 
   - 'Testes':
     - 'Plano de Testes': 'testes/index.md'

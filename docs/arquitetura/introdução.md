@@ -12,8 +12,9 @@
 
 
 **Autores:**
+
 | Nome | Matricula |
-|------|-----------|
+| ------ | ------ |
 |Gabriel Diniz | 24102630 |
 |Pedro H. Américo | 241025980 |
 |Pedro Ian Guedes | 241025837 |
