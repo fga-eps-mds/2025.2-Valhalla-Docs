@@ -1,0 +1,2159 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto Valhalla para as disciplinas de MDS.">
+      
+      
+        <meta name="author" content="Equipe Valhalla">
+      
+      
+      
+        <link rel="prev" href="../introdu%C3%A7%C3%A3o/">
+      
+      
+        <link rel="next" href="../refer%C3%AAncias/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico
+- navigation.tabs - navigation.tabs.sticky - navigation.sections - navigation.top - search.suggest - search.highlight - content.code.copy - navigation.path">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Representação Arquitetural - 2025.2 Valhalla</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#representacao-arquitetural" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="2025.2 Valhalla" class="md-header__button md-logo" aria-label="2025.2 Valhalla" data-md-component="logo">
+      
+  <img src="../../assets/images/LogoCorujudaCapeludaOutline.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2025.2 Valhalla
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Representação Arquitetural
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fga-eps-mds/2025.2-Valhalla.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="2025.2 Valhalla" class="md-nav__button md-logo" aria-label="2025.2 Valhalla" data-md-component="logo">
+      
+  <img src="../../assets/images/LogoCorujudaCapeludaOutline.svg" alt="logo">
+
+    </a>
+    2025.2 Valhalla
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fga-eps-mds/2025.2-Valhalla.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Atas de Reunião
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Atas de Reunião
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Escopo e Requisitos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Escopo e Requisitos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../escopo-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Declaração de Escopo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Arquitetura
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Arquitetura
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introdu%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Representação Arquitetural
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Representação Arquitetural
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-da-estrutura-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição da Estrutura do Sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#justificativa-das-tecnologias-adotadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Justificativa das Tecnologias Adotadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificacao-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificação Técnica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Especificação Técnica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-da-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes da Arquitetura:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicação:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologias-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias Utilizadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tecnologias Utilizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ferramentas-de-suporte-ao-desenvolvimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ferramentas de Suporte ao Desenvolvimento:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-e-front-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design e Front-end:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back-end
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metas-e-restricoes-arquiteturais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metas e restrições arquiteturais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metas e restrições arquiteturais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metas-arquiteturais-baseadas-nos-rnfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metas Arquiteturais baseadas nos RNFs:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restricoes-arquiteturais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrições Arquiteturais:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlog-do-produto-escopo-do-produto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backlog do Produto (Escopo do Produto)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão lógica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visão lógica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramas-e-pacotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramas e Pacotes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao-entre-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicação entre Módulos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camadas:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-de-dados-mer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão de Dados (MER)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visão de Dados (MER)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entidades-tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entidades (Tabelas):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacoes-e-cardinalidades-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relações e Cardinalidades Principais:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atributos-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributos Principais:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-de-implantacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão de Implantação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visão de Implantação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infraestrutura-de-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infraestrutura de Hardware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologias-de-implantacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias de Implantação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infraestrutura-de-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infraestrutura de Banco de Dados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restricoes-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrições adicionais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Restrições adicionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restricoes-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrições de Negócio:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restricoes-de-qualidade-de-software-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrições de Qualidade de Software (Requisitos Não Funcionais):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refer%C3%AAncias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Referências
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Testes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Testes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plano de Testes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Desenvolvimento
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Desenvolvimento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desenvolvimento/guia-instalacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guia de Instalação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desenvolvimento/documentacao-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentação da API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-da-estrutura-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição da Estrutura do Sistema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#justificativa-das-tecnologias-adotadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Justificativa das Tecnologias Adotadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificacao-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificação Técnica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Especificação Técnica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-da-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes da Arquitetura:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicação:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnologias-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias Utilizadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tecnologias Utilizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ferramentas-de-suporte-ao-desenvolvimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ferramentas de Suporte ao Desenvolvimento:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-e-front-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design e Front-end:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back-end
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metas-e-restricoes-arquiteturais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metas e restrições arquiteturais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metas e restrições arquiteturais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metas-arquiteturais-baseadas-nos-rnfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metas Arquiteturais baseadas nos RNFs:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restricoes-arquiteturais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrições Arquiteturais:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlog-do-produto-escopo-do-produto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backlog do Produto (Escopo do Produto)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão lógica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visão lógica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramas-e-pacotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramas e Pacotes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comunicacao-entre-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicação entre Módulos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camadas:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-de-dados-mer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão de Dados (MER)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visão de Dados (MER)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entidades-tabelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entidades (Tabelas):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacoes-e-cardinalidades-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relações e Cardinalidades Principais:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atributos-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributos Principais:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-de-implantacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão de Implantação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visão de Implantação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infraestrutura-de-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infraestrutura de Hardware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologias-de-implantacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologias de Implantação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infraestrutura-de-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infraestrutura de Banco de Dados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restricoes-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrições adicionais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Restrições adicionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restricoes-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrições de Negócio:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restricoes-de-qualidade-de-software-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrições de Qualidade de Software (Requisitos Não Funcionais):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="representacao-arquitetural">Representação Arquitetural</h1>
+<h2 id="descricao-da-estrutura-do-sistema">Descrição da Estrutura do Sistema</h2>
+<p>O sistema seguirá uma arquitetura <strong>Cliente-Servidor (Client-Server)</strong>. Esta arquitetura é organizada em um formato de <strong>único repositório (Monorepo)</strong>, que gerencia duas aplicações principais e independentes:</p>
+<ol>
+<li>
+<p><strong>Cliente (Front-end):</strong> Uma aplicação Web de interface do usuário (UI/UX), desenvolvida em <strong>Next.js (React)</strong>.</p>
+</li>
+<li>
+<p><strong>Servidor (Back-end):</strong> Uma aplicação de lógica de negócio e dados, desenvolvida em NestJS <strong>(Node.js)</strong>.</p>
+</li>
+</ol>
+<p>O Servidor (Back-end) é implementado como um <strong>Monolíto Modular</strong>. Isso significa que é uma aplicação única e coesa, mas internamente organizada em módulos de domínio independentes (ex: denuncias, usuarios, auth), alinhando-se ao padrão de <strong>Arquitetura em Camadas (Layered Architecture)</strong>.</p>
+<p>A comunicação entre o Cliente e o Servidor ocorre exclusivamente através de uma interface de API bem definida, seguindo o padrão <strong>REST (Representational State Transfer)</strong>, com troca de dados no formato JSON.</p>
+<hr />
+<h2 id="justificativa-das-tecnologias-adotadas">Justificativa das Tecnologias Adotadas</h2>
+<p>A escolha pela arquitetura Cliente-Servidor foi uma decisão deliberada para atender aos requisitos funcionais e não funcionais do projeto Guardiões da Universidade.</p>
+<p>A justificativa detalhada baseia-se nos seguintes pilares:</p>
+<ol>
+<li>
+<p><strong>Separação Estrita de Responsabilidades:</strong> Esta é a principal vantagem. A arquitetura permite uma divisão clara entre a <strong>camada de apresentação (Cliente)</strong> e <strong>a camada de lógica de negócio (Servidor)</strong>.</p>
+<ul>
+<li><strong>Front-end (Next.js)</strong>: Foca exclusivamente na experiência do usuário (UX) e na interface (UI). Isso é crucial para atender aos Requisitos Não Funcionais de Usabilidade, como “<em>Interface Intuitiva</em>” e “<em>Responsividade</em>”. O front-end não contém regras de negócio ou acesso direto ao banco de dados.</li>
+<li><strong>Back-end (NestJS)</strong>: Foca exclusivamente na segurança, regras de negócio e persistência de dados. Isso é vital para cumprir os requisitos de “<em>Segurança e Privacidade</em>”, como Criptografia de Senhas, e “<em>Conformidade Legal</em>”, como a Lei Geral de Proteção de Dados Pessoais (LGPD).</li>
+</ul>
+</li>
+<li>
+<p><strong>Flexibilidade Tecnológica e Foco:</strong> A separação permite escolher a melhor ferramenta para cada trabalho.</p>
+<ul>
+<li><strong>Next.js</strong> foi escolhido para o front-end por sua alta performance na renderização de interfaces React e seu ecossistema estruturado, atendendo ao requisito de “<em>Responsividade</em>”.</li>
+<li><strong>NestJS</strong> foi escolhido para o back-end por ser um framework opinativo e modular, que força uma organização de código limpa (Controllers, Services), facilitando a manutenção, evolução e a implementação de padrões de segurança.</li>
+</ul>
+</li>
+<li>
+<p><strong>Desenvolvimento Paralelo e Manutenibilidade:</strong></p>
+<ul>
+<li>Com a <strong>API REST</strong> servindo como um "contrato" estável entre o back-end e o front-end, permitindo que ambas as equipes trabalhem de forma paralela e independente sem bloquear uma à outra, otimizando o tempo de desenvolvimento.</li>
+<li>A organização do back-end em um <strong>Monolíto Modular</strong> foi preferida em vez de microserviços. Considerando o escopo atual do projeto, outras arquiteturas mais complexas como microserviços introduziriam uma complexidade operacional desnecessária (como o gerenciamento de múltiplos serviços e comunicações em rede). O monolíto modular oferece uma excelente separação lógica de domínios, por exemplo, módulos de <em>Denúncias e Autenticação</em>, garantindo a qualidade do código sem a sobrecarga de um sistema distribuído.</li>
+</ul>
+</li>
+<li>
+<p><strong>Escalabilidade Independente:</strong> A arquitetura permite que o servidor e o cliente sejam escalados de forma independente. Se a plataforma receber um grande número de denúncias, podemos escalar apenas a aplicação back-end para lidar com mais requisições, sem afetar a aplicação front-end.</p>
+</li>
+</ol>
+<hr />
+<h2 id="especificacao-tecnica">Especificação Técnica</h2>
+<p>A arquitetura Cliente-Servidor do sistema "<em>Guardiões da Universidade</em>" é composta por três componentes principais: o Cliente (Front-end), o Servidor (Back-end) e o Banco de Dados. A aplicação é desenvolvida em um formato de Monorepo, que aloja as aplicações do Cliente e do Servidor no mesmo repositório, facilitando o desenvolvimento e o compartilhamento de tipos.</p>
+<h3 id="componentes-da-arquitetura">Componentes da Arquitetura:</h3>
+<ol>
+<li>
+<p><strong>Cliente (Front-end):</strong></p>
+<ul>
+<li><strong>Tecnologia: Next.js (React)</strong>.</li>
+<li><strong>Responsabilidade:</strong> Camada de apresentação, sendo a única interface direta com o usuário. É responsável por renderizar todas as telas, gerenciar o estado da interface (UI/UX) e lidar com a interação do usuário, não contém lógica de negócio crítica. Suas funções incluem atender aos requisitos de “<em>Usabilidade</em>”, como “<em>interface intuitiva</em>” e “<em>responsividade</em>”. A comunicação com o back-end é realizada via protocolos HTTP, utilizando Axios para requisições.</li>
+<li><strong>Instanciação:</strong> Representa a aplicação front-end localizada na pasta <code>/Front</code> do repositório.</li>
+</ul>
+</li>
+<li>
+<p><strong>Servidor (back-end):</strong></p>
+<ul>
+<li><strong>Tecnologia: NestJS (Node.js)</strong>.</li>
+<li><strong>Responsabilidade:</strong> É o núcleo da aplicação, responsável por toda a lógica de negócio, segurança e persistência de dados. Ele implementa a <strong>API REST</strong> consumida pelo usuário e segue internamente um padrão de <strong>Arquitetura em Camadas</strong> (Controllers, Services, Model) para garantir a separação de responsabilidades e atender ao requisito de “<em>Manutenção e Evolução</em>”. É também responsável por implementar todos os requisitos funcionais e de segurança, incluindo <strong>criptografia de senhas</strong></li>
+<li><strong>Instanciação:</strong> Representa a aplicação contida na pasta <code>/Back</code> do repositório, organizada em módulos conforme a arquitetura definida.</li>
+</ul>
+</li>
+<li>
+<p><strong>Banco de Dados (Database):</strong></p>
+<ul>
+<li><strong>Tecnologia: PostgreSQL</strong>, acessado por meio do ORM <strong>Prisma</strong>.</li>
+<li><strong>Responsabilidade:</strong> É a camada de <strong>persistência de dados</strong>. É responsável por armazenar e recuperar todas as informações, incluindo usuários, denúncias, comentários, entre outros. O <strong>Prisma ORM</strong> garante o acesso tipado, seguro e consistente aos dados, facilitando a manutenção e reduzindo a possibilidade de erros.</li>
+</ul>
+</li>
+</ol>
+<h3 id="comunicacao">Comunicação:</h3>
+<p>A comunicação entre o Cliente e o Servidor é feita exclusivamente através de uma <strong>API REST</strong> sobre o protocolo <strong>HTTP</strong>, usando Axios. O Cliente (Next.js) envia requisições HTTP (GET, POST, PATCH, DELETE) para os endpoints definidos no Servidor (NestJS). O Servidor processa a requisição, interage com o Banco de Dados (se necessário) e retorna uma resposta no formato <strong>JSON</strong>.</p>
+<p><img alt="Comunicação-Cliente-Servidor" src="../../assets/images/ComunicacaoClienteServidor.png" /></p>
+<hr />
+<h2 id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+<p>O sistema Guardiões da Universidade utiliza um conjunto de tecnologias modernas focadas em escalabilidade, separação de responsabilidades e uma experiência de desenvolvimento robusta e manutenível:</p>
+<h3 id="ferramentas-de-suporte-ao-desenvolvimento">Ferramentas de Suporte ao Desenvolvimento:</h3>
+<ul>
+<li><strong>GitHub</strong>: Utilizado para o versionamento do código-fonte, seguindo uma estratégia de <strong>Monorepo</strong> que aloja os códigos do Back-end e Front-end em um único repositório.</li>
+<li><strong>Zenhub</strong>: Plataforma de gerenciamento de projetos integrada ao GitHub. É utilizada para organizar o Backlog do Produto, planejar as Sprints (Milestones) e acompanhar o fluxo de trabalho da equipe no Quadro de Tarefas.</li>
+<li><strong>Jest</strong>: Framework de testes de JavaScript, utilizado para a criação de testes unitários e de integração, garantindo o cumprimento do requisito de testes.</li>
+</ul>
+<h3 id="design-e-front-end">Design e Front-end:</h3>
+<ul>
+<li><strong>Figma</strong>: Ferramenta de design colaborativo utilizada para a prototipação de baixa e alta fidelidade das telas (UI/UX), planejamento visual do roadmap e criação de diagramas de arquitetura.</li>
+<li><strong>Next.js</strong>: O framework React escolhido para o desenvolvimento do <strong>Cliente (front-end)</strong>. É responsável por toda a camada de apresentação (UI/UX), gerenciamento de estado da interface e o roteamento das páginas.</li>
+<li><strong>React</strong>: Biblioteca JavaScript fundamental para a construção de interfaces de usuário componentizadas e reativas.</li>
+<li><strong>Axios/Fetch</strong>: Clientes HTTP utilizados no front-end para realizar a comunicação e o consumo da <strong>API REST</strong> exposta pelo back-end.</li>
+</ul>
+<h3 id="back-end">Back-end</h3>
+<ul>
+<li><strong>NestJS</strong>: Framework Node.js escalável e modular escolhido para a construção do <strong>Servidor (back-end)</strong>. Ele organiza a lógica de negócio em uma Arquitetura em Camadas (Controllers, Services).</li>
+<li><strong>Prisma</strong>: ORM (Object-Relational Mapper) moderno, utilizado para fazer a interface segura e tipada entre a aplicação NestJS e o banco de dados PostgreSQL.</li>
+<li><strong>PostgreSQL</strong>: Banco de dados relacional escolhido para a persistência e armazenamento de todos os dados da aplicação, como usuários, denúncias e comentários.</li>
+<li><strong>JWT (JSON Web Tokens)</strong>: Padrão utilizado para a autenticação e autorização da API. Garante que endpoints protegidos só possam ser acessados por usuários autenticados.</li>
+<li><strong>Bcrypt</strong>: Biblioteca para hashing de senhas, garantindo que as senhas dos usuários sejam armazenadas de forma criptografada e segura, em conformidade com o requisito de segurança.</li>
+</ul>
+<hr />
+<h2 id="metas-e-restricoes-arquiteturais">Metas e restrições arquiteturais</h2>
+<p>As metas e restrições arquiteturais são derivadas diretamente dos Requisitos Não Funcionais (RNFs) definidos no documento de requisitos do projeto. Eles atuam como diretrizes e restrições que moldam as escolhas de design e tecnologia.</p>
+<h3 id="metas-arquiteturais-baseadas-nos-rnfs">Metas Arquiteturais baseadas nos RNFs:</h3>
+<ul>
+<li>
+<p><strong>Usabilidade</strong>:</p>
+<ul>
+<li>A arquitetura do front-end deve possibilitar a construção de uma interface intuitiva, garantindo que os fluxos críticos (como denúncia e cadastro) possam ser concluídos em até <strong>quatro etapas</strong>.</li>
+<li>O sistema deve ser <strong>totalmente responsivo</strong>, assegurando adaptação automática a diferentes resoluções e tamanhos de tela, incluindo desktops, tablets e dispositivos móveis.</li>
+</ul>
+</li>
+<li>
+<p><strong>Manutenção e Evolução:</strong></p>
+<ul>
+<li>O código-fonte deve seguir padrões de <strong>clean code</strong> para ser legível e fácil de manter.</li>
+<li>A arquitetura do sistema deve ser devidamente <strong>documentada</strong>, incluindo descrições de endpoints, fluxos e componentes arquiteturais.</li>
+</ul>
+</li>
+<li>
+<p><strong>Segurança e Conformidade Legal:</strong></p>
+<ul>
+<li>A arquitetura deve garantir que todas as senhas sejam armazenadas utilizando um <strong>algoritmo de hash seguro</strong>, assegurando que nenhuma senha seja gravada em texto plano.</li>
+<li>A arquitetura deve ser compatível com a <strong>LGPD</strong>, garantindo o consentimento do usuário e a capacidade de exclusão de dados.</li>
+</ul>
+</li>
+</ul>
+<h3 id="restricoes-arquiteturais">Restrições Arquiteturais:</h3>
+<ul>
+<li><strong>Tecnologia do Back-end:</strong> O back-end será desenvolvido exclusivamente com o framework <strong>NestJS (Node.js)</strong>.</li>
+<li><strong>Tecnologia do Front-end:</strong> O front-end será desenvolvido exclusivamente com o framework <strong>Next.js (React)</strong>.</li>
+<li><strong>Banco de Dados:</strong> A camada de persistência utilizará o <strong>PostgreSQL</strong> como sistema de gerenciamento de banco de dados, com o <strong>Prisma</strong> como ORM.</li>
+</ul>
+<hr />
+<h2 id="backlog-do-produto-escopo-do-produto">Backlog do Produto (Escopo do Produto)</h2>
+<p>O funcionamento geral do sistema "<em>Guardiões da Universidade</em>" consiste em fornecer um canal duplo: um voltado <strong>denúncias e interações da comunidade</strong> e outro dedicado a <strong>orientações formais</strong>.</p>
+<p>Os usuários podem se cadastrar, autenticar-se, publicar denúncias (de forma anônima ou identificada), além de comentar e reagir às postagens de outros membros. Paralelamente, têm acesso a uma área de orientações institucionais, com guias e links para os canais oficiais da universidade.</p>
+<p>Administradores dispõem de uma interface de <strong>moderação e gerenciamento</strong>, permitindo o controle de conteúdo e de usuários.</p>
+<p>Diversos requisitos do <strong>Backlog do Produto</strong> influenciaram diretamente a adoção de uma arquitetura Cliente-Servidor, com um back-end modular, favorecendo a escalabilidade, a segurança e a independência entre as camadas do sistema.</p>
+<p>Essas decisões podem ser compreendidas a partir dos principais <strong>requisitos do Backlog do Produto</strong>, destacados a seguir:</p>
+<ol>
+<li>
+<p><strong>Requisitos de Segurança e Domínios Separados:</strong> Considerando necessidade de funcionalidades críticas, como <em>Autenticação de Conta e Administração</em>, justificou a implementação de um back-end completo responsável por centralizar e proteger essa lógica, mantendo-a isolada da interface do usuário.</p>
+</li>
+<li>
+<p><strong>Requisitos de Usabilidade:</strong> A forte ênfase em uma <em>Interface Intuitiva</em> e <em>Responsividade</em>, justificou o uso de um framework de front-end moderno e dedicado (Next.js), o que é um pilar da arquitetura Cliente-Servidor.</p>
+</li>
+<li>
+<p><strong>Requisitos de Manutenibilidade:</strong> O requisito de <em>Qualidade do Código</em> influenciou a escolha do NestJS para o back-end, uma vez que sua arquitetura modular permite a criação de um monólito organizado por domínio, facilitando a manutenção e a evolução do sistema em comparação a uma abordagem baseada em microserviços, considerada excessiva para o escopo deste projeto.</p>
+</li>
+<li>
+<p><strong>Experiência da Equipe:</strong> A familiaridade da equipe com o ecossistema JavaScript/TypeScript, incluindo tecnologias como NestJS, React e Node.js, foi um fator determinante na escolha da stack. Esse alinhamento técnico permitiu um desenvolvimento mais ágil, colaborativo e eficiente, garantindo a entrega dentro dos prazos acadêmicos sem comprometer a qualidade do código.</p>
+</li>
+</ol>
+<hr />
+<h2 id="visao-logica">Visão lógica</h2>
+<p>A visão lógica descreve a organização interna da aplicação, seus principais componentes de software e como eles interagem. Conforme a arquitetura Cliente-Servidor definida, o sistema é subdividido em dois pacotes de software principais: a aplicação <strong>Cliente (Front-end)</strong> e a aplicação <strong>Servidor (Back-end)</strong>. Esta seção foca primariamente na visão lógica do Servidor (Back-end), que é um <strong>Monolíto Modular</strong> construído com NestJS.</p>
+<ul>
+<li><strong>Módulos do Servidor (Back-end):</strong>
+O back-end é subdividido em módulos que representam os principais domínios de negócio da aplicação. Esta abordagem garante a separação de responsabilidades e alta manutenibilidade. Os módulos principais são:<ul>
+<li><strong>app.module.ts:</strong> O módulo raiz que importa todos os outros módulos de funcionalidade.</li>
+<li><strong>database (ou prisma):</strong> Módulo de infraestrutura responsável por prover a conexão com o banco de dados (PrismaService) para os outros módulos.</li>
+<li><strong>autenticação (ou auth):</strong> Gerencia todas as funcionalidades de autenticação, como registro, login (geração de JWT) e recuperação de senha, além de prover os Guards de segurança.</li>
+<li><strong>usuário (ou users):</strong> Gerencia o CRUD de usuários e a lógica de perfis.</li>
+<li><strong>denúncias:</strong> Gerencia o CRUD e a lógica de negócio para as denúncias.</li>
+<li><strong>categorias:</strong> Gerencia o CRUD dos tipos de denúncia.</li>
+<li><strong>comentários:</strong> Gerencia o CRUD de comentários associados às denúncias.</li>
+<li><strong>notícias:</strong> Gerencia o CRUD de notícias publicadas por administradores.</li>
+<li><strong>apoios:</strong> Gerencia a lógica para "apoiar" denúncias e comentários.</li>
+<li><strong>reports:</strong> Gerencia a lógica para "reportar" denúncias e comentários.</li>
+</ul>
+</li>
+</ul>
+<h3 id="diagramas-e-pacotes">Diagramas e Pacotes</h3>
+<p>O diagrama de pacotes a seguir ilustra como os módulos do back-end se relacionam. A principal regra de dependência é que os módulos de funcionalidade dependem do módulo de infraestrutura (database), além de algumas relações de dependências entre eles, a depender do módulo.</p>
+<p>O diagrama de pacotes a seguir representa as relações entre os módulos do back-end. A regra principal de dependência estabelece que os módulos de funcionalidade dependem do módulo de infraestrutura, responsável pela integração com o banco de dados. Além disso, podem existir dependências secundárias entre módulos específicos, quando há compartilhamento de entidades ou serviços comuns.</p>
+<p><img alt="Modelagem-Conceitual" src="../../assets/images/ModelagemConceitual.jpg" /></p>
+<h3 id="comunicacao-entre-modulos">Comunicação entre Módulos:</h3>
+<p>A comunicação no sistema ocorre de duas formas distintas:</p>
+<ul>
+<li>
+<p><strong>Comunicação Externa (Cliente -&gt; Servidor):</strong> Realizada exclusivamente via <strong>API REST</strong> sobre o protocolo HTTP. O Cliente (Next.js) envia requisições em formato JSON para os endpoints definidos nos Controllers do Servidor (NestJS) garantindo a separação clara entre interface e lógica de negócio.</p>
+</li>
+<li>
+<p><strong>Comunicação Interna (Módulo -&gt; Módulo):</strong> Implementada por meio do mecanismo de Injeção de Dependência do NestJS. Módulos que necessitam de funcionalidades de outros módulos (por exemplo, <code>DenunciasService</code> utilizando <code>PrismaService</code>) recebem essas dependências diretamente em seus constructors, mantendo a modularidade e facilitando a manutenção.</p>
+</li>
+</ul>
+<hr />
+<h2 id="camadas">Camadas:</h2>
+<p>O sistema é organizado em camadas, cada uma com responsabilidades específicas, permitindo separação de interface, lógica de negócio e persistência de dados. A seguir, são apresentadas as principais camadas da aplicação:</p>
+<ul>
+<li>
+<p><strong>Camada de Apresentação (Interface com Usuário):</strong> No contexto da arquitetura Cliente-Servidor, esta camada corresponde ao front-end desenvolvido em Next.js, totalmente separado do back-end. O protótipo de baixa fidelidade encontra-se disponível na aba de protótipo, servindo como referência para a interface e fluxos de usuário.</p>
+</li>
+<li>
+<p><strong>Lógica de Negócios e Regras de Negócio:</strong> Esta camada reside nos <strong>Services</strong> do NestJS, que contêm a lógica principal do sistema, e nos <strong>Controllers</strong>, que funcionam como a fachada da API, recebendo requisições HTTP e delegando o processamento para os Services. Essa separação garante modularidade, manutenibilidade e clareza na implementação das regras de negócio.</p>
+</li>
+<li>
+<p><strong>Comunicação com o Banco de Dados:</strong> É a camada responsável pela persistência e recuperação de informações, esta camada é gerenciada pelo <strong>Prisma ORM</strong>, que faz interface com o <strong>PostgreSQL</strong>, e encapsulada no <strong>PrismaService</strong> (módulo database). Os Services da camada de negócios interagem com o PrismaService, abstraindo operações SQL e garantindo consistência, segurança e integridade no acesso aos dados.</p>
+</li>
+</ul>
+<hr />
+<h2 id="visao-de-dados-mer">Visão de Dados (MER)</h2>
+<p>A persistência de dados do sistema é gerida por um <em>banco de dados relacional</em><em> (PostgreSQL) e abstraída pela aplicação através do ORM Prisma. O </em><em>Modelo Entidade-Relacionamento (MER)</em>* define a estrutura lógica dos dados, suas relações e restrições, garantindo consistência e integridade.</p>
+<p><img alt="MER" src="../../assets/images/MER.png" /></p>
+<h3 id="entidades-tabelas">Entidades (Tabelas):</h3>
+<ol>
+<li>
+<p><strong>Usuario:</strong> Armazena as informações dos utilizadores da plataforma (nome, email, senha com hash, cargo, etc.). É a entidade central para autenticação e autoria.</p>
+</li>
+<li>
+<p><strong>Denuncia:</strong> A entidade principal do sistema. Armazena o conteúdo das denúncias (descrição, mediasrc), o estado (anonimato, dataDelete) e as suas ligações.</p>
+</li>
+<li>
+<p><strong>Categoria:</strong> Armazena os tipos de denúncia (ex: "Infraestrutura", "Segurança"). Esta tabela permite que os tipos sejam geridos dinamicamente pela administração.</p>
+</li>
+<li>
+<p><strong>Noticia:</strong> Armazena as postagens informativas criadas por administradores.</p>
+</li>
+<li>
+<p><strong>Comentario:</strong> Armazena os comentários realizados pelos usuários em cada denúncia, registrando autoria, conteúdo, data e vínculo com a denúncia correspondente.</p>
+</li>
+<li>
+<p><strong>ApoiosDenuncia / ReportsDenuncia (Tabelas de Junção):</strong> Gerem as relações N-para-N (muitos-para-muitos) entre Usuario e Denuncia, permitindo que um utilizador possa apoiar ou reportar várias denúncias, e uma denúncia possa ser apoiada ou reportada por vários utilizadores.</p>
+</li>
+<li>
+<p><strong>ApoiosComentario / ReportsComentario (Tabelas de Junção):</strong> Idênticas às anteriores, mas aplicadas à entidade Comentario.</p>
+</li>
+</ol>
+<h3 id="relacoes-e-cardinalidades-principais">Relações e Cardinalidades Principais:</h3>
+<ul>
+<li><strong>Usuario 1:N Denuncia:</strong> Um Usuario pode criar múltiplas Denuncias. Cada Denuncia pertence a apenas um Usuario.</li>
+<li><strong>Usuario 1:N Comentario:</strong> Um Usuario pode fazer múltiplos Comentarios. Cada Comentario pertence a apenas um Usuario.</li>
+<li><strong>Denuncia 1:N Comentario:</strong> Uma Denuncia pode ter múltiplos Comentarios. Cada Comentario está ligado a apenas uma Denuncia.</li>
+<li><strong>Categoria 1:N Denuncia:</strong> Uma Categoria pode ser aplicada a múltiplas Denuncias. Cada Denuncia pertence a apenas uma Categoria.</li>
+<li><strong>Usuario N:N ApoiosDenuncia N:N Denuncia:</strong> Relação de muitos-para-muitos que define os "apoios".</li>
+</ul>
+<hr />
+<h2 id="atributos-principais">Atributos Principais:</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Entidade</th>
+<th style="text-align: center;">Atributo</th>
+<th style="text-align: center;">Tipo de Dado (Prisma/PostgreSQL)</th>
+<th style="text-align: left;">Propósito e Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Usuario</strong></td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">Int (PK)</td>
+<td style="text-align: left;">Identificador único do usuário.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">nome</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: left;">Nome completo do usuário.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">email</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: left;">Email de login, não há um identificador unico pois aplicaremos um soft-delete. Mas o e-mail é único para usuário com dataDelete iguall a NULL</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">senha</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: left;">Armazena o hash da senha.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">cargo</td>
+<td style="text-align: center;">Enum (CargoUsuario)</td>
+<td style="text-align: left;">Define o cargo do usuário (ESTUDANTE, SERVIDOR, OUTRO).</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">isAdmin</td>
+<td style="text-align: center;">Boolean</td>
+<td style="text-align: left;">Flag booleana que indica se o usuário tem permissões de administrador.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">admMaster</td>
+<td style="text-align: center;">Boolean</td>
+<td style="text-align: left;">Flag para o administrador "root" do sistema, com permissões máximas.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">mediasrc</td>
+<td style="text-align: center;">String?</td>
+<td style="text-align: left;">URL para a foto de perfil do usuário. O ? indica que é opcional.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataDelete</td>
+<td style="text-align: center;">DateTime?</td>
+<td style="text-align: left;">Data da exclusão lógica (Soft Delete). Se null, o usuário está ativo.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Denuncia</strong></td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">Int (PK)</td>
+<td style="text-align: left;">Identificador único da denúncia.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idUsuario</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Usuario.id. O autor da denúncia.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">descricao</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: left;">O texto descritivo completo da denúncia.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idCategoria</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Categoria.id.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">mediasrc</td>
+<td style="text-align: center;">String?</td>
+<td style="text-align: left;">URL para mídia (foto/vídeo) anexa à denúncia. Opcional.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">anonimato</td>
+<td style="text-align: center;">Boolean</td>
+<td style="text-align: left;">Se true, a denúncia foi feita anonimamente (o idUsuario ainda é registrado, mas a UI não deve exibi-lo).</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataDelete</td>
+<td style="text-align: center;">DateTime?</td>
+<td style="text-align: left;">Data da exclusão lógica (Soft Delete).</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataCriacao</td>
+<td style="text-align: center;">DateTime</td>
+<td style="text-align: left;">Timestamp de quando a denúncia foi criada (@default(now())).</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataUpdate</td>
+<td style="text-align: center;">DateTime</td>
+<td style="text-align: left;">Timestamp da última atualização (@updatedAt).</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Comentario</strong></td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">Int (PK)</td>
+<td style="text-align: left;">Identificador único do comentário.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idUsuario</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Usuario.id. O autor do comentário.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idDenuncia</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Denuncia.id. A denúncia que está sendo comentada.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Descricao</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: left;">O texto do comentário.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">anonimato</td>
+<td style="text-align: center;">Boolean</td>
+<td style="text-align: left;">Se true, o comentário foi feito anonimamente.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataDelete</td>
+<td style="text-align: center;">DateTime?</td>
+<td style="text-align: left;">Data da exclusão lógica (Soft Delete).</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataCriacao</td>
+<td style="text-align: center;">DateTime</td>
+<td style="text-align: left;">Timestamp de quando o comentário foi criado.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataUpdate</td>
+<td style="text-align: center;">DateTime</td>
+<td style="text-align: left;">Timestamp da última atualização.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Noticia</strong></td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">Int (PK)</td>
+<td style="text-align: left;">Identificador único da notícia.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idUsuario</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Usuario.id. O administrador que postou a notícia.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">descricao</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: left;">O corpo/texto da notícia.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">tipo</td>
+<td style="text-align: center;">String</td>
+<td style="text-align: left;">Um tipo ou categoria para a notícia (ex: "Aviso", "Evento", "Manutenção").</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">mediasrc</td>
+<td style="text-align: center;">String?</td>
+<td style="text-align: left;">URL para uma imagem de capa da notícia. Opcional.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataDelete</td>
+<td style="text-align: center;">DateTime?</td>
+<td style="text-align: left;">Data da exclusão lógica (Soft Delete).</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataCriacao</td>
+<td style="text-align: center;">DateTime</td>
+<td style="text-align: left;">Timestamp de quando a notícia foi criada.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">dataUpdate</td>
+<td style="text-align: center;">DateTime</td>
+<td style="text-align: left;">Timestamp da última atualização.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Categoria</strong></td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">Int (PK)</td>
+<td style="text-align: left;">Identificador único da categoria.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">nome</td>
+<td style="text-align: center;">String (Unique)</td>
+<td style="text-align: left;">Nome único da categoria de denúncia (ex: "Estrutural", "Acadêmico", "Assédio").</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ApoiosDenuncia</strong></td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">Int (PK)</td>
+<td style="text-align: left;">Identificador único do registro de apoio.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idUsuario</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Usuario.id. O usuário que apoiou.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idDenuncia</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Denuncia.id. A denúncia que foi apoiada.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Atributo Implícito</td>
+<td style="text-align: center;">@@unique(...)</td>
+<td style="text-align: left;">Tabela de Junção (0-para-N). Garante que um usuário só pode apoiar a mesma denúncia uma vez.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ReportsDenuncia</strong></td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">Int (PK)</td>
+<td style="text-align: left;">Identificador único do registro de report.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idUsuario</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Usuario.id. O usuário que reportou.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idDenuncia</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Denuncia.id. A denúncia que foi reportada.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Atributo Implícito</td>
+<td style="text-align: center;">@@unique(...)</td>
+<td style="text-align: left;">Tabela de Junção (0-para-N). Garante que um usuário só pode reportar a mesma denúncia uma vez.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ApoiosComentario</strong></td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">Int (PK)</td>
+<td style="text-align: left;">Identificador único do registro de apoio.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idUsuario</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Usuario.id. O usuário que apoiou.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idComentario</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Comentario.id. O comentário que foi apoiado.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Atributo Implícito</td>
+<td style="text-align: center;">@@unique(...)</td>
+<td style="text-align: left;">Tabela de Junção (0-para-N). Garante que um usuário só pode apoiar o mesmo comentário uma vez.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ReportsComentario</strong></td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">Int (PK)</td>
+<td style="text-align: left;">Identificador único do registro de report.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idUsuario</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Usuario.id. O usuário que reportou.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">idComentario</td>
+<td style="text-align: center;">Int (FK)</td>
+<td style="text-align: left;">Chave estrangeira que referencia Comentario.id. O comentário que foi reportado.</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Atributo Implícito</td>
+<td style="text-align: center;">@@unique(...)</td>
+<td style="text-align: left;">Tabela de Junção (0-para-N). Garante que um usuário só pode reportar o mesmo comentário uma vez.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="visao-de-implantacao">Visão de Implantação</h2>
+<h3 id="infraestrutura-de-hardware">Infraestrutura de Hardware</h3>
+<p>O software será implantado em um <strong>Servidor Virtual Privado (VPS)</strong> único. Esta abordagem foi selecionada para priorizar a <strong>centralização do controle e a simplicidade operacional</strong>. Diferentemente de arquiteturas de nuvem distribuídas a utilização de um VPS único consolida todos os recursos de software em um ambiente de fácil gerenciamento, sendo ideal para o escopo e os requisitos do projeto.</p>
+<h3 id="tecnologias-de-implantacao">Tecnologias de Implantação</h3>
+<p>A estratégia de implantação é fundamentada nas seguintes tecnologias:</p>
+<ol>
+<li>
+<p><strong>Docker (Containerização):</strong></p>
+<ul>
+<li><strong>Descrição:</strong> O Docker será empregado como a tecnologia central para a <strong>containerização</strong> (empacotamento) da aplicação (backend NestJS) e do serviço de banco de dados (PostgreSQL).</li>
+<li><strong>Justificativa:</strong> A containerização é essencial para garantir a <strong>paridade entre os ambientes de desenvolvimento e produção</strong>. Isso mitiga discrepâncias de software e configuração, resolvendo problemas comuns de implantação e garantindo que o software se comporte de maneira previsível.</li>
+</ul>
+</li>
+<li>
+<p><strong>Docker Compose (Orquestração de Contêineres):</strong></p>
+<ul>
+<li><strong>Descrição:</strong> O Docker Compose será utilizado para <strong>definir e orquestrar</strong> a aplicação multi-contêiner.</li>
+<li><strong>Justificativa:</strong> Esta ferramenta automatiza e simplifica o ciclo de vida da implantação. Através de um único arquivo de definição (docker-compose.yml), o Docker Compose gerencia a construção da imagem da aplicação, o provisionamento do contêiner do banco de dados, a configuração da rede interna entre os serviços e a inicialização de todos os componentes na ordem de dependência correta.</li>
+</ul>
+</li>
+<li>
+<p>Node.js (Runtime da Aplicação):</p>
+<ul>
+<li><strong>Descrição:</strong> O ambiente de execução JavaScript no lado do servidor, necessário para a execução do framework NestJS.</li>
+<li><strong>Justificativa:</strong> O runtime Node.js será <strong>encapsulado</strong> dentro da imagem Docker da aplicação. Ele não será instalado diretamente no sistema operacional do host (VPS), garantindo o isolamento das dependências, a portabilidade da imagem e a consistência do ambiente de execução.</li>
+</ul>
+</li>
+</ol>
+<h3 id="infraestrutura-de-banco-de-dados">Infraestrutura de Banco de Dados</h3>
+<p>A infraestrutura de persistência de dados será implementada da seguinte forma:</p>
+<ol>
+<li>
+<p><strong>SGBD (Sistema de Gerenciamento): PostgreSQL</strong></p>
+<ul>
+<li><strong>Descrição:</strong> O sistema de banco de dados relacional de código aberto PostgreSQL.</li>
+<li><strong>Justificativa:</strong> A escolha é ditada pelo schema.prisma do projeto, que define uma estrutura de dados relacional. O PostgreSQL oferece robustez, escalabilidade e suporte avançado aos tipos de dados e relacionamentos (1-N, N-N) modelados para o sistema.</li>
+</ul>
+</li>
+<li>
+<p>Infraestrutura: Contêiner Docker Co-localizado</p>
+<ul>
+<li><strong>Descrição:</strong> O SGBD PostgreSQL será executado como um contêiner Docker provisionado dentro do mesmo Servidor Virtual Privado (VPS) que a aplicação.</li>
+<li><strong>Justificativa:</strong> Esta abordagem representa uma alternativa economicamente eficiente e operacionalmente simples aos serviços gerenciados de Banco de Dados como Serviço (DBaaS). O Docker Compose será responsável por gerenciar o ciclo de vida do contêiner do banco de dados e a comunicação de rede entre este e o contêiner da aplicação. A string de conexão (DATABASE_URL) da aplicação NestJS referenciará o nome do serviço do banco de dados na rede interna do Docker, assegurando uma arquitetura coesa e autocontida.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="restricoes-adicionais">Restrições adicionais</h2>
+<p>Existem restrições de negócio e de qualidade de software (Requisitos Não Funcionais) que guiam o desenvolvimento e a arquitetura do sistema.</p>
+<h3 id="restricoes-de-negocio">Restrições de Negócio:</h3>
+<ul>
+<li><strong>Acesso Controlado:</strong> O acesso à maioria das funcionalidades críticas (criar denúncia, comentar, editar perfil) deve exigir que o utilizador esteja autenticado.</li>
+<li><strong>Canal Não-Oficial:</strong> A plataforma deve informar os utilizadores de que se trata de um canal não-oficial da universidade, e o seu propósito principal é dar voz à comunidade e orientar para os canais competentes.</li>
+</ul>
+<h3 id="restricoes-de-qualidade-de-software-requisitos-nao-funcionais">Restrições de Qualidade de Software (Requisitos Não Funcionais):</h3>
+<p>O sistema deve aderir estritamente aos seguintes Requisitos Não Funcionais:</p>
+<ul>
+<li>
+<p><strong>Usabilidade:</strong></p>
+<ul>
+<li>A interface deve ser intuitiva, com fluxos críticos realizados em até 4 passos.</li>
+<li>Ações críticas e irreversíveis (ex: cancelar denúncia) devem exigir confirmação explícita do utilizador.</li>
+</ul>
+</li>
+<li>
+<p><strong>Manutenção e Evolução:</strong></p>
+<ul>
+<li>O código deve seguir padrões de clean code e ser adequadamente documentado.</li>
+<li>A documentação da API e da arquitetura deve ser mantida atualizada para facilitar a integração e manutanção.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conformidade Legal:</strong></p>
+<ul>
+<li>O sistema deve estar em conformidade com a LGPD, apresentando uma política de privacidade clara e obtendo consentimento ativo do utilizador no cadastro.</li>
+</ul>
+</li>
+<li><strong>Segurança e Privacidade:</strong><ul>
+<li>Todas as senhas de utilizador devem ser armazenadas no banco de dados utilizando um hash seguro.</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../introdu%C3%A7%C3%A3o/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introdução">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Introdução
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../refer%C3%AAncias/" class="md-footer__link md-footer__link--next" aria-label="Next: Referências">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Referências
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
