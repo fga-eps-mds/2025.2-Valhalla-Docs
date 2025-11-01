@@ -5,7 +5,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 ### Requisitos Não-Funcionais
 
 | ID | Requisito | Importância | Descrição | Critérios de Sucesso |
-|:---|:---|:---|:---|:---|
+|---|---|---|---|---|
 | **Confiabilidade e Disponibilidade** |
 | RNF-001 | Disponibilidade do Sistema | MUST | Eu como usuário, quero que o sistema esteja disponível na maior parte do tempo, para que eu possa acessá-lo sempre que precisar. | - O sistema deve ter disponibilidade mínima de 99,5% mensal (~3h36min de downtime). |
 | RNF-002 | Suporte a Múltiplos Usuários | MUST | Eu como administrador, quero que o sistema suporte muitos usuários conectados ao mesmo tempo, para garantir estabilidade mesmo em períodos de pico. | - O sistema deve suportar pelo menos 250 usuários simultâneos sem degradação perceptível. |
