@@ -1,6 +1,6 @@
 # Documento de Visão - Guardiões da Universidade - Grupo Valhalla
 
-**Versão:** 1.1
+**Versão:** 1.2
 
 ### Histórico de Revisão
 
@@ -8,6 +8,7 @@
 |------|--------|-----------|-----------|
 | 31/10| 1.0 | Requisitos Não Funcionais Documento de Visão | António Lucas; Gustavo Bonifácio; Julia Gabriella; Laura Rogelin; Pedro H. Américo; Pedro Lucas|
 | 01/11| 1.1 | Tabela Versionamento Documento de Visão | António Lucas; Gustavo Bonifácio; Julia Gabriella; Laura Rogelin; Pedro H. Américo; Pedro Lucas|
+| 03/11| 1.2 | Introdução do Documento de Visão | António Lucas; Gustavo Bonifácio; Julia Gabriella; Laura Rogelin; Pedro H. Américo; Pedro Lucas|
 
 ### Autores
 
