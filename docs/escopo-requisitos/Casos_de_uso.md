@@ -90,6 +90,7 @@ Este caso de uso permite que o usuário redefina sua senha caso a tenha esquecid
 
 ### 1.3.2 Fluxo básico
 1. O usuário acessa a tela de login e clica em Esqueci minha senha. 
+
 2. O sistema exibe o campo para inserção do e-mail. 
 3. O usuário informa o e-mail. 
 4. O sistema verifica se o e-mail está cadastrado. 
@@ -116,3 +117,30 @@ Este caso de uso permite que o usuário redefina sua senha caso a tenha esquecid
 
 ### 1.3.6 Referência cruzada
 Relacionado ao requisito funcional 3.3 – Recuperação de Senha. 
+
+## 1.4 Logout (Encerramento de sessão)
+Este caso de uso descreve o encerramento da sessão do usuário, garantindo que os dados não permaneçam ativos após o uso.
+
+**Ator principal:** Usuário, Sistema
+
+### 1.4.1 Pré-condições
+- O usuário deve estar logado. 
+
+### 1.4.2 Fluxo básico
+1. O usuário clica em Sair no menu de perfil. 
+
+2. O sistema encerra a sessão ativa. 
+3. O sistema limpa cookies e tokens temporários. 
+4. O usuário é redirecionado para a tela de login. 
+5. O sistema registra o evento no log de auditoria. 
+
+### 1.4.3 Pós-condições
+- Sessão encerrada com segurança. 
+- Dados de sessão eliminados da memória local. 
+
+### 1.4.4 Requisitos não funcionais
+- O encerramento deve ocorrer em até 2 segundos.
+- Tokens de sessão devem ser invalidados imediatamente. 
+
+### 1.4.5 Referência cruzada
+Relacionado ao requisito funcional 3.1 – Autenticação e 4.1 – Segurança de Sessão. 
