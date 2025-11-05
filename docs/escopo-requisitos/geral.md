@@ -48,5 +48,17 @@ O objetivo primordial do projeto "Guardiões da Universidade" é **sanar a lacun
 
 Conforme detalhado na seção 1.1, o problema central não é a ausência de canais formais, mas a dificuldade em acessá-los e a consequente sensação de desamparo institucional. Portanto, o objetivo estratégico deste software não é substituir os canais oficiais, mas sim atuar como uma camada de facilitação que capacita o usuário.
 
+Para alcançar este objetivo principal, o projeto se baseia nos seguintes objetivos secundários:
+
+1.  **Consolidar as Informações Oficiais:**
+    O software deve funcionar como um repositório centralizado, agregando e organizando todos os guias, tutoriais e links relevantes para os processos formais de denúncia. Isso ataca diretamente a "falta de informação".
+
+2.  **Oferecer um Canal de Exposição Comunitária:**
+    A plataforma deve permitir a postagem pública de queixas. Isso visa tratar o "sentimento de não serem ouvidos", dando voz à comunidade e permitindo que todos visualizem as demandas coletivas.
+
+3.  **Simplificar a Experiência do Usuário:**
+    Através de uma interface intuitiva, o projeto visa traduzir a burocracia complexa dos canais existentes em um fluxo claro e acessível, efetivamente facilitando o processo.
+
+
 
 ### 1.4 Tecnologias a Serem Utilizadas
