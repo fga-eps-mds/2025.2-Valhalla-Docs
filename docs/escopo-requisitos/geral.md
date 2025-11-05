@@ -31,6 +31,18 @@ Os usuários-alvo são os discentes e servidores da Universidade de Brasília. E
 
 Os clientes (usuários) deveriam utilizar este produto porque ele é a única solução que oferece o benefício duplo de dar visibilidade imediata a um problema (através do feed público) e capacitar o usuário para a ação formal (através dos guias), transformando a frustração em um processo claro e acessível.
 
+A tabela a seguir resume a posição e o valor único do "Guardiões da Universidade" no ecossistema da UnB:
+
+| | |
+| :--- | :--- |
+| **Para:** | |
+| **Necessidade:** | |
+| **O (nome do produto):** | |
+| **Que:** | |
+| **Ao contrário:** | |
+| **Nosso produto:** | |
+
+
 ### 1.3 Objetivos do Produto
 
 ### 1.4 Tecnologias a Serem Utilizadas
