@@ -23,6 +23,14 @@ A solução de software proposta, "Guardiões da Universidade", é uma plataform
 
 ### 1.2 Declaração de Posição do Produto
 
+O "Guardiões da Universidade" é uma plataforma web (Cliente-Servidor) que se propõe a resolver a lacuna de comunicação e informação entre a comunidade acadêmica da UnB (discentes e servidores) e os canais de denúncia oficiais da instituição.
+
+O que torna este produto fundamentalmente diferente dos concorrentes (ou, neste caso, da alternativa oficial única, o Fala.BR) é que ele não tenta ser um canal oficial. Sua principal inovação é atuar como uma camada de facilitação: ele oferece um espaço para exposição pública de queixas (dando voz à comunidade) e, simultaneamente, serve como um guia centralizado que orienta o usuário sobre como navegar a burocracia e formalizar sua queixa no canal correto.
+
+Os usuários-alvo são os discentes e servidores da Universidade de Brasília. Este produto é importante para eles pois ataca diretamente a frustração gerada pela dificuldade em encontrar os canais corretos e pelo sentimento de que suas reclamações não são vistas ou ouvidas pela comunidade.
+
+Os clientes (usuários) deveriam utilizar este produto porque ele é a única solução que oferece o benefício duplo de dar visibilidade imediata a um problema (através do feed público) e capacitar o usuário para a ação formal (através dos guias), transformando a frustração em um processo claro e acessível.
+
 ### 1.3 Objetivos do Produto
 
 ### 1.4 Tecnologias a Serem Utilizadas
