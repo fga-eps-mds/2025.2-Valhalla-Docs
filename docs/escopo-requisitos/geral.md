@@ -59,6 +59,6 @@ Para alcançar este objetivo principal, o projeto se baseia nos seguintes objeti
 3.  **Simplificar a Experiência do Usuário:**
     Através de uma interface intuitiva, o projeto visa traduzir a burocracia complexa dos canais existentes em um fluxo claro e acessível, efetivamente facilitando o processo.
 
-
-
 ### 1.4 Tecnologias a Serem Utilizadas
+
+O sistema "Guardiões da Universidade" utiliza um conjunto de tecnologias modernas focadas em escalabilidade, separação de responsabilidades e uma experiência de desenvolvimento robusta e manutenível. A pilha de tecnologia (tech stack) é dividida nas seguintes categorias:
