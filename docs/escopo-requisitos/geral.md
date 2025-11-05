@@ -35,12 +35,13 @@ A tabela a seguir resume a posição e o valor único do "Guardiões da Universi
 
 | | |
 | :--- | :--- |
-| **Para:** | |
-| **Necessidade:** | |
-| **O (nome do produto):** | |
-| **Que:** | |
-| **Ao contrário:** | |
-| **Nosso produto:** | |
+| **Para:** | Discentes e servidores da Universidade de Brasília (UnB). |
+| **Necessidade:** | De um canal que resolva a "falta de informação" e a "sensação de desamparo institucional" sobre os problemas da universidade. |
+| **O (nome do produto):** | Guardiões da Universidade. |
+| **Que:** | É uma plataforma web (Cliente-Servidor) que serve como um meio para expor denúncias e, o mais importante, como um guia que orienta sobre os procedimentos oficiais de denúncia. |
+| **Ao contrário de:** | Utilizar unicamente a plataforma oficial do governo (Fala.BR), que é a única alternativa autorizada, mas que não oferece um espaço comunitário para visualização de demandas nem um guia simplificado e centralizado focado na UnB. |
+| **Nosso produto:** | Não substitui o canal oficial, mas atua como um facilitador que **redireciona e orienta** o usuário para os canais corretos, ao mesmo tempo em que fortalece o senso de comunidade ao expor os problemas do dia a dia. |
+
 
 
 ### 1.3 Objetivos do Produto
