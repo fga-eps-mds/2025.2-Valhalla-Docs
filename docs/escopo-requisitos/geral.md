@@ -42,8 +42,11 @@ A tabela a seguir resume a posição e o valor único do "Guardiões da Universi
 | **Ao contrário de:** | Utilizar unicamente a plataforma oficial do governo (Fala.BR), que é a única alternativa autorizada, mas que não oferece um espaço comunitário para visualização de demandas nem um guia simplificado e centralizado focado na UnB. |
 | **Nosso produto:** | Não substitui o canal oficial, mas atua como um facilitador que **redireciona e orienta** o usuário para os canais corretos, ao mesmo tempo em que fortalece o senso de comunidade ao expor os problemas do dia a dia. |
 
-
-
 ### 1.3 Objetivos do Produto
+
+O objetivo primordial do projeto "Guardiões da Universidade" é **sanar a lacuna de comunicação e orientação** que a comunidade acadêmica da UnB enfrenta.
+
+Conforme detalhado na seção 1.1, o problema central não é a ausência de canais formais, mas a dificuldade em acessá-los e a consequente sensação de desamparo institucional. Portanto, o objetivo estratégico deste software não é substituir os canais oficiais, mas sim atuar como uma camada de facilitação que capacita o usuário.
+
 
 ### 1.4 Tecnologias a Serem Utilizadas
