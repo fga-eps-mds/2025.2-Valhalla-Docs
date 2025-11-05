@@ -79,3 +79,40 @@ Este caso de uso descreve o processo de criação de uma nova conta no sistema. 
 
 ### 1.2.6 Referência cruzada
 Relacionado ao requisito funcional 3.2 – Tela de Cadastro de Usuário. 
+
+## 1.3 Recuperação de senha
+Este caso de uso permite que o usuário redefina sua senha caso a tenha esquecido, garantindo segurança e controle no processo.
+
+**Ator principal:** Usuário, Sistema.
+### 1.3.1 Pré-condições
+- O usuário deve possuir uma conta existente. 
+- O sistema deve estar conectado ao serviço de e-mail. 
+
+### 1.3.2 Fluxo básico
+1. O usuário acessa a tela de login e clica em Esqueci minha senha. 
+2. O sistema exibe o campo para inserção do e-mail. 
+3. O usuário informa o e-mail. 
+4. O sistema verifica se o e-mail está cadastrado. 
+5. Caso positivo, o sistema gera um token temporário de redefinição de senha. 
+6. O sistema envia um e-mail com o link seguro para redefinição. 
+7. O usuário acessa o link e insere uma nova senha. 
+8. O sistema valida a nova senha conforme as regras de complexidade. 
+9. Se válida, o sistema atualiza o hash no banco de dados. 
+10. O sistema exibe a mensagem: “Senha redefinida com sucesso.” 
+
+### 1.3.3 Fluxo alternativo
+- Se o e-mail não for encontrado, o sistema exibe: “E-mail não cadastrado.” 
+- Se o link estiver expirado, o sistema solicita novo pedido de redefinição. 
+- Se o servidor de e-mail estiver fora do ar, o sistema exibe: “Erro ao enviar e-mail, tente novamente mais tarde.” 
+
+### 1.3.4 Pós-condições
+- A senha do usuário é redefinida. 
+- O sistema registra a ação no log de segurança. 
+
+### 1.3.5 Requisitos não funcionais
+- O link de redefinição deve expirar após 15 minutos. 
+- Todo o processo deve ocorrer sob conexão segura (HTTPS). 
+- Mensagens devem ser claras e orientativas. 
+
+### 1.3.6 Referência cruzada
+Relacionado ao requisito funcional 3.3 – Recuperação de Senha. 
