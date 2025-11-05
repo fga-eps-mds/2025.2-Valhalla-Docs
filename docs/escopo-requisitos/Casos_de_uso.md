@@ -1,7 +1,7 @@
 # CASOS DE USO
 
 ## 1. Autenticação e Conta
-### 1.1 Login de usuário
+##   1.1 Login de usuário
 Este caso de uso descreve o processo de login, que permi4e ao usuário acessar o sistema utilizando suas credenciais institucionais. O objetivo é garantir que somente membros autorizados possam entrar na plataforma, de forma segura, rápida e controlada.
 ### 1.1.1 Pré-condições
 - O usuário deve possuir uma conta previamente cadastrada. 
@@ -42,3 +42,40 @@ Este caso de uso descreve o processo de login, que permi4e ao usuário acessar o
 ### 1.1.6 Referência cruzada
 Relacionado ao requisito funcional 3.1 – Tela de Login. 
 
+## 1.2 Cadastro de novo usuário
+Este caso de uso descreve o processo de criação de uma nova conta no sistema. Ele garante que apenas usuários com e-mails válidos possam se registrar.
+
+**Ator principal:** Usuário, Sistema.
+### 1.2.1 Pré-condições
+- O usuário deve possuir um e-mail válido. 
+- O sistema deve estar conectado ao banco de dados de usuários. 
+### 1.2.2 Fluxo básico
+1. O usuário acessa a tela de login e clica em Cadastre-se. 
+2. O sistema exibe o formulário de cadastro com os campos: Nome Completo, E-mail, Cargo/Ocupação, Senha e Confirmação de Senha. 
+3. O usuário preenche os campos obrigatórios. 
+4. O sistema valida: 
+
+    - Se o nome possui ao menos dois nomes; 
+    - Se o e-mail é válido; 
+    - Se a senha contém letras maiúsculas, minúsculas, números e caracteres especiais. 
+5. O sistema verifica se o e-mail já está cadastrado. 
+6. Caso não esteja, cria o registro e armazena os dados. 
+7. O sistema exibe a mensagem: “Cadastro realizado com sucesso.” 
+8. O usuário é redirecionado para a tela de login. 
+
+### 1.2.3 Fluxo alternativo
+- Se o e-mail já estiver cadastrado, o sistema exibe: “E-mail já cadastrado.” 
+- Se o e-mail não for válido, exibe: “E-mail inválido para cadastro.” 
+- Se a senha for fraca, exibe: “Senha não atende aos requisitos mínimos.” 
+
+### 1.2.4 Pós-condições
+- O novo usuário é registrado e habilitado para login. 
+- O sistema grava data e hora do cadastro. 
+
+### 1.2.5 Requisitos não funcionais
+- O formulário deve ser intuitivo e validado em tempo real. 
+- O tempo total do cadastro não deve exceder 5 segundos. 
+- O sistema deve aplicar boas práticas de usabilidade e acessibilidade. 
+
+### 1.2.6 Referência cruzada
+Relacionado ao requisito funcional 3.2 – Tela de Cadastro de Usuário. 
