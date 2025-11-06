@@ -62,3 +62,36 @@ Para alcançar este objetivo principal, o projeto se baseia nos seguintes objeti
 ### 1.4 Tecnologias a Serem Utilizadas
 
 O sistema "Guardiões da Universidade" utiliza um conjunto de tecnologias modernas focadas em escalabilidade, separação de responsabilidades e uma experiência de desenvolvimento robusta e manutenível. A pilha de tecnologia (tech stack) é dividida nas seguintes categorias:
+
+#### Linguagem Principal
+
+* **TypeScript**
+
+#### Gerenciamento, Design e Qualidade
+
+* **Git / GitHub**
+
+* **Zenhub**
+
+* **Figma**
+
+* **Jest:**
+
+#### Arquitetura do Cliente (Front-end)
+
+* **Next.js (React)**
+
+* **TailwindCSS**
+
+* **Axios**
+
+#### Arquitetura do Servidor (Back-end)
+
+* **NestJS (Node.js)**
+
+* **PostgreSQL**
+
+* **Prisma**
+    
+* **JWT (JSON Web Tokens) e Bcrypt**
+    
