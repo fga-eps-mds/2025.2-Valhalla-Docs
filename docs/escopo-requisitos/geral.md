@@ -65,33 +65,45 @@ O sistema "Guardiões da Universidade" utiliza um conjunto de tecnologias modern
 
 #### Linguagem Principal
 
-* **TypeScript**
+* **TypeScript:**
+    É a linguagem de programação principal utilizada em *todo* o projeto, tanto no Back-end (com NestJS) quanto no Front-end (com Next.js/React). Seu uso garante um código fortemente tipado, mais seguro e fácil de manter.
 
 #### Gerenciamento, Design e Qualidade
 
-* **Git / GitHub**
+* **Git / GitHub:**
+    O Git é usado para o versionamento de código, com o GitHub servindo como repositório central. O projeto adota uma estratégia de **Monorepo**, hospedando o Back-end e o Front-end no mesmo repositório.
 
-* **Zenhub**
+* **Zenhub:**
+    É a ferramenta de gerenciamento de projeto integrada ao GitHub. É usada para organizar o Backlog do Produto, planejar as Sprints e acompanhar o fluxo de trabalho.
 
-* **Figma**
+* **Figma:**
+    É a ferramenta de design colaborativo usada para a prototipação de alta fidelidade (UI) e criação de diagramas da arquitetura.
 
 * **Jest:**
+    É o framework de testes adotado para a criação de testes unitários e de integração, garantindo a qualidade do código.
 
 #### Arquitetura do Cliente (Front-end)
 
-* **Next.js (React)**
+* **Next.js (React):**
 
-* **TailwindCSS**
+    É o framework React escolhido para construir toda a camada de apresentação (UI). É responsável pelo roteamento das páginas e pela renderização dos componentes visuais.
+* **TailwindCSS:**
 
-* **Axios**
+    É o framework de CSS "utility-first" utilizado para a estilização dos componentes, permitindo a implementação rápida e consistente dos protótipos do Figma.
+* **Axios:**
+
+    É a biblioteca (cliente HTTP) responsável por executar a comunicação com o back-end, consumindo a API REST (fazendo requisições `POST`, `GET`, etc.).
 
 #### Arquitetura do Servidor (Back-end)
 
-* **NestJS (Node.js)**
+* **NestJS (Node.js):**
+    É o framework de servidor (rodando sobre Node.js) que organiza toda a lógica de negócio em uma Arquitetura em Camadas (Controllers e Services) e expõe a API REST para o front-end.
 
-* **PostgreSQL**
+* **PostgreSQL:**
+    É o sistema de banco de dados relacional escolhido para a persistência e armazenamento de todos os dados da aplicação (usuários, denúncias, etc.).
 
-* **Prisma**
-    
-* **JWT (JSON Web Tokens) e Bcrypt**
-    
+* **Prisma:**
+    É o ORM (Object-Relational Mapper) que faz a "ponte" entre o código NestJS (JavaScript/TypeScript) e o banco de dados PostgreSQL (SQL). Ele garante que todas as consultas ao banco sejam seguras e tipadas.
+
+* **JWT (JSON Web Tokens) e Bcrypt:**
+    São as tecnologias de segurança. O **Bcrypt** é usado para criar um *hash* seguro das senhas dos usuários antes de salvá-las. O **JWT** é usado para criar "crachás" (tokens) de autenticação que o front-end envia para acessar rotas protegidas da API.
