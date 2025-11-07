@@ -747,3 +747,33 @@ O administrador deseja postar, editar ou excluir notícias e comunicados para di
 
 ### 6.3.7 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.7 POSTAGENS e Gestão de NOTÍCIAS. 
+
+## 6.4 Configurações do sistema
+O administrador acessa um painel de configurações gerais para ajustar o funcionamento da plataforma, como gerenciar categorias de denúncia e permissões de usuários, conforme a necessidade.
+
+**Ator principal:** Administrador, Sistema
+
+### 6.4.1 Pré-condições
+- O usuário logado possui perfil de administrador e tem permissão para acessar as configurações. 
+
+### 6.4.2 Fluxo básico
+1. O administrador acessa a área de "Configurações do Sistema" no painel administrativo. 
+
+2. O sistema exibe uma interface clara com diferentes seções de configuração (ex: Categorias de Denúncia, Permissões, Parâmetros de Segurança). 
+3. O administrador seleciona a seção que deseja alterar. 
+4. Ele realiza as modificações necessárias (ex: adiciona uma nova categoria de denúncia). 
+5. O administrador salva as alterações. 
+6. O sistema aplica as novas configurações e registra a alteração em um log administrativo. 
+
+### 6.4.3 FLuxo alternativo
+- O administrador descarta as alterações antes de salvar, e o sistema mantém as configurações anteriores. 
+
+### 6.4.4 Pós-condições
+- O comportamento do sistema é ajustado de acordo com as novas configurações definidas pelo administrador. 
+
+### 6.4.5 Requisitos não funcionais
+- O acesso a esta área deve ser estritamente restrito a usuários autorizados para evitar alterações indevidas. 
+- A interface deve ser clara e organizada para facilitar a gestão dos parâmetros. 
+
+### 6.4.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.7 CONFIGURAÇÕES DO SISTEMA. 
