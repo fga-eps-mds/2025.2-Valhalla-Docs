@@ -491,3 +491,33 @@ Um usuário que encontra uma postagem ou comentário inapropriado deseja denunci
 
 ### 5.1.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.6 MODERAÇÃO E DENÚNCIA DE ABUSO 
+
+## 5.2 Filtros e busca
+Um usuário deseja encontrar uma denúncia específica de forma fácil, utilizando filtros por categoria ou uma busca por palavras-chave.
+
+**Ator principal:** Usuário, Sistema
+
+### 5.2.1 Pré-condições
+- O usuário está na página que lista as denúncias. 
+- Existem denúncias cadastradas no sistema. 
+
+### 5.2.2 Fluxo básico
+1. O usuário utiliza a barra de busca para digitar palavras-chave relacionadas ao título ou conteúdo da denúncia desejada. 
+
+2. Alternativamente, o usuário seleciona filtros disponíveis, como categoria, período de tempo, etc. 
+3. O usuário aplica a busca ou o filtro. 
+4. O sistema processa a solicitação e exibe uma lista de denúncias que correspondem aos critérios informados. 
+5. Os resultados da busca são apresentados em no máximo 2 segundos. 
+
+### 5.2.3 Fluxo alternativo
+- Se nenhum resultado for encontrado para os critérios de busca ou filtro, o sistema exibirá uma mensagem informativa, como "Nenhuma denúncia encontrada". 
+
+### 5.2.4 Pós-condições
+- O usuário visualiza uma lista refinada de denúncias, facilitando a localização do conteúdo de seu interesse. 
+
+### 5.2.5 Requisitos não funcionais
+- A performance da busca deve ser otimizada para retornar resultados rapidamente, mesmo com um grande volume de dados. 
+- A interface dos filtros deve ser clara e de fácil compreensão. 
+
+### 5.2.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.6 FILTROS E BUSCA. 
