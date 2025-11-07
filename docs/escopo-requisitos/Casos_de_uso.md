@@ -358,3 +358,38 @@ Este caso de uso descreve como o usuário, após encontrar um guia, pode ler o c
 ### 3.2.6 Referência cruzada
 Relacionado ao requisito funcional 3.3.2 Links para Denúncia. 
 
+## 4. Página de gráfico
+
+## 4.1 Gráfico por categoria de denúncia
+O usuário irá acessar a aba de gráficos e notícias e deseja ver os gráficos de denúncias.
+
+**Ator principal:** Usuário, Sistema
+
+### 4.1.1 Pré-condições
+- O usuário deverá estar logado ao site. 
+- O usuário terá a vista da tela inicial do site, e depois acessar a página de gráficos e notícias, onde ficarão os gráficos. 
+- Deve haver denúncias cadastradas no sistema com categorias definidas. 
+
+### 4.1.2 Fluxo básico
+1. O usuário acessa a seção "Gráficos" do sistema. 
+
+2. O sistema carrega e exibe um gráfico (por exemplo, de barras ou pizza) intitulado "Denúncias por Categoria". 
+3. Cada parte do gráfico representa uma categoria de denúncia e seu tamanho/valor corresponde à quantidade total de denúncias naquela categoria.  
+4. O usuário pode passar o mouse sobre uma seção do gráfico para ver o nome da categoria e o número exato de denúncias. 
+5. O sistema garante que os dados do gráfico sejam atualizados em tempo real, refletindo novas denúncias assim que são registradas. 
+6. O gráfico apresenta legendas claras e um design intuitivo para fácil interpretação. 
+
+### 4.1.3 Fluxo alternativo
+- Se não houver denúncias cadastradas, o sistema exibirá uma mensagem informativa no local do gráfico, como "Ainda não há dados para exibir. Nenhuma denúncia foi registrada." 
+
+### 4.1.4 Pós-condições
+- O usuário obtém uma visão clara e comparativa sobre quais tipos de problemas são mais frequentemente reportados na universidade. 
+
+### 4.1.5 Requisitos não funcionais
+- O gráfico deve carregar rapidamente, mesmo com um grande volume de dados. 
+- A visualização do gráfico deve ser responsiva, adaptando-se a diferentes tamanhos de tela (desktop, tablet, mobile). 
+- As cores e o design do gráfico devem ser acessíveis e de fácil distinção para todos os usuários. 
+
+### 4.1.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.4.1 (Gráfico por Categoria de Denúncia) 
+
