@@ -258,3 +258,40 @@ Este caso de uso descreve como o usuário pode consultar o histórico de suas de
 
 ### 2.3.5 Referência cruzada
 Relacionado ao requisito funcional 3.6 – Gestão de Denúncias (Visualização do Usuário).
+
+## 2.4 Exclusão de conta
+Este caso de uso descreve o processo de exclusão de conta, no qual o usuário solicita a remoção de seus dados pessoais e encerramento do acesso ao sistema.
+
+**Ator principal:** Usuário, Sistema, Administrador
+
+### 2.4.1 Pré-condições
+- O usuário deve estar logado. 
+- Não deve haver denúncias pendentes associadas à conta. 
+
+### 2.4.2 Fluxo básico
+1. O usuário acessa o menu Configurações de Conta. 
+
+2. Clica em Excluir Conta. 
+3. O sistema solicita confirmação da ação e apresenta um aviso sobre a perda de acesso. 
+4. O usuário confirma a exclusão. 
+5. O sistema solicita autenticação de segurança (reinsira a senha). 
+6. O sistema torna inativo os dados pessoais e anonimiza as denúncias enviadas. 
+7. O sistema exibe: “Conta excluída com sucesso.” 
+
+### 2.4.3 Fluxo alternativo
+- Se o usuário tiver denúncias pendentes, o sistema exibirá: “Não é possível excluir a conta enquanto houver denúncias abertas.” 
+- Se houver falha de rede, o sistema exibirá: “Erro ao excluir a conta, tente novamente.” 
+
+### 2.4.4 Pós-condições
+- Conta excluída e dados pessoais removidos. 
+- Denúncias associadas são mantidas de forma anônima. 
+
+### 2.4.5 Requisitos não funcionais
+- O processo deve seguir os princípios da LGPD. 
+- A exclusão deve ser processada em até 5 segundos. 
+- Logs da ação devem ser mantidos para auditoria institucional. 
+
+### 2.4.6 Referência cruzada
+Relacionado ao requisito funcional 4.3 – Exclusão e Anonimização de Dados. 
+
+
