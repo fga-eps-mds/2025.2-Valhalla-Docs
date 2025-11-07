@@ -709,3 +709,41 @@ O administrador gerencia as contas dos usuários da plataforma, podendo desativa
 
 ### 6.2.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.7 GESTÃO DE USUÁRIOS. 
+
+## 6.3 Postagens e gestão de denúncias
+O administrador deseja postar, editar ou excluir notícias e comunicados para disseminar informações pertinentes aos usuários da plataforma de maneira simples e rápida.
+
+**Ator principal:** Administrador, Sistema
+
+### 6.3.1 Pré-condições
+- O administrador está logado no sistema. 
+
+### 6.3.2 Fluxo básico (Criar notícia)
+1. O administrador navega para a seção de gestão de notícias. 
+
+2. Ele clica em "Criar Nova Notícia". 
+3. Um editor de texto é apresentado, onde o administrador insere o título e o conteúdo da notícia. 
+4. O administrador publica a notícia. 
+5. A notícia aparece em uma área designada, visível para todos os usuários comuns. 
+
+### 6.3.3 Fluxo básico (Editar ou excluir notícia)
+1. O administrador acessa a lista de notícias publicadas. 
+
+2. Ele seleciona a notícia que deseja modificar ou remover. 
+3. Ele escolhe a opção "Editar" ou "Excluir". 
+4. Se "Editar", o sistema abre o editor com o conteúdo existente para alteração. As alterações são salvas e refletidas imediatamente para os outros usuários. 
+5. Se "Excluir", o sistema pede confirmação e remove a notícia da plataforma. 
+
+### 6.3.4 FLuxo alternativo
+- O administrador pode salvar uma notícia como rascunho para publicá-la posteriormente. 
+
+### 6.3.5 Pós-condições
+- Informações e comunicados importantes são compartilhados com os usuários da plataforma. 
+- O conteúdo informativo do site é mantido atualizado. 
+
+### 6.3.6 Requisitos não funcionais
+- A interface de edição de notícias deve ser intuitiva e de fácil utilização. 
+- A publicação e atualização de notícias devem ocorrer em tempo real, com responsividade imediata. 
+
+### 6.3.7 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.7 POSTAGENS e Gestão de NOTÍCIAS. 
