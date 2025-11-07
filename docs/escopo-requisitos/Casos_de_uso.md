@@ -294,4 +294,36 @@ Este caso de uso descreve o processo de exclusão de conta, no qual o usuário s
 ### 2.4.6 Referência cruzada
 Relacionado ao requisito funcional 4.3 – Exclusão e Anonimização de Dados. 
 
+## 3. Página de orientação
 
+## 3.1 Consulta e busca de guias e informações
+Este caso de uso descreve o processo em que o usuário busca e consulta guias e tutoriais passo a passo sobre como realizar denúncias nos canais oficiais, garantindo que o processo seja feito corretamente. Ele permite ao usuário encontrar informações específicas de maneira rápida e eficiente.
+
+**Ator principal:** Usuário, Sistema
+
+### 3.1.1 Pré-condições
+- O usuário deve ter acesso à internet. 
+- O módulo de orientação deve estar ativo e devidamente preenchido com guias e tutoriais. 
+
+### 3.1.2 Fluxo básico
+1. O usuário acessa a plataforma e navega até a seção "Orientação". 
+
+2. O sistema exibe um índice ou uma lista de guias disponíveis, categorizados por tipo de denúncia (ex: "Assédio Moral", "Problemas de Infraestrutura"). 
+3. O usuário utiliza a barra de busca para encontrar informações específicas, digitando palavras-chave como "restaurante universitário" ou "iluminação". 
+4. O sistema exibe os resultados da busca que correspondem às palavras-chave. 
+5. O usuário clica em um dos guias da lista. 
+6. O sistema carrega e exibe o conteúdo completo do guia, que inclui instruções detalhadas, textos explicativos e, se aplicável, imagens ou diagramas. 
+7. O usuário lê o guia para entender o processo de denúncia. 
+
+### 3.1.3 Fluxo alternativo
+- Busca sem Resultados: Se a busca não retornar nenhum guia relevante, o sistema exibirá a mensagem: "Nenhum resultado encontrado para a sua busca. Por favor, tente outras palavras-chave." 
+- Conteúdo Indisponível: Se o guia estiver incompleto ou houver um erro de carregamento, o sistema exibirá: "Não foi possível carregar o conteúdo. Por favor, tente novamente mais tarde." 
+
+### 3.1.4 Pós-condições
+- O usuário consegue encontrar e ler o guia completo, compreendendo o processo de uma denúncia oficial. 
+
+### 3.1.5 Requisitos não funcionais
+- A busca deve ser rápida e a interface deve ser intuitiva. O sistema deve garantir que os guias e tutoriais sejam de fácil leitura e compreensão. 
+
+### 3.1.6 Referência cruzada
+Relacionado ao requisito funcional 3.3.1 Guia de Denúncia. 
