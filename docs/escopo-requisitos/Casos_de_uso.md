@@ -642,3 +642,38 @@ Um usuário que leu uma denúncia deseja reagir com "Apoiar" para expressar sua 
 
 ### 5.6.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.6 sistema de reações. 
+
+## 6. Administração
+
+## 6.1 Gestão de denúncias
+O administrador acessa e gerencia todas as denúncias registradas para garantir que sejam processadas adequadamente e para moderar o conteúdo, removendo postagens que violem as regras da plataforma.
+
+**Ator principal:** Administrador, Sistema
+
+### 6.1.1 Pré-condições
+- O usuário deve ter permissões de administrador e estar logado no sistema. 
+- O administrador deve estar no painel de administração. 
+
+### 6.1.2 Fluxo básico
+1. O administrador acessa a seção de gerenciamento de denúncias. 
+
+2. O sistema exibe uma lista de todas as denúncias, que pode ser filtrada por categoria ou usuário. 
+3. O sistema apresenta as denúncias que foram reportadas por usuários em uma lista separada para análise prioritária. 
+4. O administrador seleciona uma denúncia para analisar seu conteúdo e autor. 
+5. O administrador decide a ação a ser tomada, como "Excluir" a denúncia. 
+6. O administrador executa a ação, e o sistema remove a denúncia do ar facilmente. 
+7. Toda alteração realizada pelo administrador é registrada no histórico da denúncia. 
+
+### 6.1.3 Fluxo alternativo
+- O administrador pode requerer a alteração da denuncia se o sistema obtiver tal suporte. 
+
+### 6.1.4 Pós-condições
+- A denúncia é moderada (excluída ou atualizada), garantindo que a plataforma permaneça livre de abusos. 
+- O histórico de moderação é atualizado para fins de auditoria. 
+
+### 6.1.5 Requisitos não funcionais
+- A interface de gestão deve ser eficiente, permitindo que o administrador encontre e modere denúncias rapidamente. 
+- As ações de exclusão devem ser seguras e registradas de forma confiável. 
+
+### 6.1.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.7 gestão de denúncias. 
