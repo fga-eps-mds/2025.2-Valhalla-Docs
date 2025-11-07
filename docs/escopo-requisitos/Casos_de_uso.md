@@ -581,3 +581,34 @@ O usuário visualiza em uma linha do tempo todas as denúncias publicadas, orden
 
 ### 5.4.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.6 TIMELINE DE DENÚNCIAS.
+
+## 5.5 Comentários nas denúncias
+Um usuário interessado em uma denúncia específica deseja interagir, adicionando um comentário para compartilhar informações a discussão.
+
+**Ator principal:** Usuário, Sistema
+
+### 5.5.1 Pré-condições
+- O usuário deve estar logado na plataforma. 
+- O usuário deve estar visualizando os detalhes de uma denúncia. 
+
+### 5.5.2 Fluxo básico
+1. O usuário navega até a seção de comentários da denúncia. 
+
+2. O usuário digita sua mensagem no campo de texto apropriado. 
+3. O usuário clica no botão "Comentar" ou "Enviar". 
+4. O sistema registra o comentário, associando o autor, a data e o conteúdo. 
+5. O novo comentário é exibido na lista, que é ordenada cronologicamente, com os mais recentes no topo. 
+
+### 5.5.3 Fluxo alternativo
+- Se o usuário tentar enviar um comentário vazio, o sistema exibirá uma mensagem de erro. 
+- Outros usuários podem denunciar um comentário que considerem inapropriado para moderação. 
+
+### 5.5.4 Pós-condições
+- O comentário do usuário é adicionado à denúncia e fica visível para outros membros da comunidade. 
+
+### 5.5.5 Requisitos não funcionais
+- O sistema deve processar e exibir novos comentários rapidamente. 
+- A interface para comentar deve ser clara e de fácil utilização. 
+
+### 5.5.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.6 comentários nas denúncias. 
