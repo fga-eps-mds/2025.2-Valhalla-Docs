@@ -612,3 +612,33 @@ Um usuário interessado em uma denúncia específica deseja interagir, adicionan
 
 ### 5.5.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.6 comentários nas denúncias. 
+
+## 5.6 Sistema de reações
+Um usuário que leu uma denúncia deseja reagir com "Apoiar" para expressar sua opinião de forma rápida, sem a necessidade de escrever um comentário.
+
+**Ator principal:** Usuário, Sistema
+
+### 5.6.1 Pré-condições
+- O usuário deve estar logado na plataforma. 
+- O usuário está visualizando uma denúncia. 
+
+### 5.6.2 Fluxo básico
+1. O usuário localiza o botão de reação "Apoiar" (like) na postagem da denúncia. 
+
+2. O usuário clica no botão para expressar seu apoio. 
+3. O sistema registra que o usuário reagiu àquela denúncia, garantindo que ele só possa reagir uma única vez. 
+4. O número total de reações da denúncia é atualizado em tempo real para todos os usuários. 
+5. O botão de reação muda de estado para indicar que o usuário já reagiu. 
+
+### 5.6.3 Fluxo alternativo
+- Se o usuário clicar novamente no botão "Apoiar", sua reação é removida, e a contagem total de apoios é decrementada em tempo real. 
+
+### 5.6.4 Pós-condições
+- O apoio do usuário é contabilizado, refletindo a repercussão da denúncia na comunidade. 
+
+### 5.6.5 Requisitos não funcionais
+- A atualização da contagem de reações deve ser instantânea e não deve sobrecarregar o sistema. 
+- A interface das reações deve ser visualmente clara e responsiva ao clique do usuário. 
+
+### 5.6.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.6 sistema de reações. 
