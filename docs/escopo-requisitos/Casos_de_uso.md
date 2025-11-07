@@ -676,4 +676,36 @@ O administrador acessa e gerencia todas as denúncias registradas para garantir 
 - As ações de exclusão devem ser seguras e registradas de forma confiável. 
 
 ### 6.1.6 Referência cruzada
-Este caso de uso está relacionado ao requisito funcional 3.7 gestão de denúncias. 
+Este caso de uso está relacionado ao requisito funcional 3.7 gestão de denúncias.
+
+## 6.2 Gestão de usuários
+O administrador gerencia as contas dos usuários da plataforma, podendo desativar ou banir contas para manter a segurança e a integridade do sistema.
+
+**Ator principal:** Administrador, Sistema
+
+### 6.2.1 Pré-condições
+- O administrador está logado no painel administrativo. 
+
+### 6.2.2 Fluxo básico
+1. O administrador acessa a seção "Gerenciar Usuários". 
+
+2. O sistema exibe uma lista de todos os usuários cadastrados. 
+3. O administrador pode buscar por um usuário específico. 
+4. Ao encontrar o usuário, o administrador seleciona uma ação, como "Desativar", "Banir" ou "Excluir conta". 
+5. O sistema solicita uma confirmação para a ação crítica. 
+6. Após a confirmação, o sistema aplica a restrição ou remove a conta do usuário. 
+7. Todas as ações administrativas realizadas na conta do usuário são registradas em um histórico. 
+
+### 6.2.3 Fluxo alternativo
+- O administrador pode precisar reativar uma conta que foi desativada anteriormente. 
+
+### 6.2.4 Pós-condições
+- A conta do usuário é gerenciada (desativada, banida ou excluída), e o usuário perde o acesso conforme a ação aplicada. 
+- A segurança e a ordem da comunidade são mantidas. 
+
+### 6.2.5 Requisitos não funcionais
+- A busca por usuários deve ser rápida e eficiente. 
+- As ações de gerenciamento de usuários devem ser devidamente registradas para garantir a rastreabilidade.
+
+### 6.2.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.7 GESTÃO DE USUÁRIOS. 
