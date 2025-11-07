@@ -458,3 +458,36 @@ O usuário visualizará uma seção destacada que lista as três denúncias que 
 
 ### 4.3.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.4.3 (Top Denúncias). 
+
+## 5. Página de denúncias
+
+## 5.1 Moderação e denúncia de abuso
+Um usuário que encontra uma postagem ou comentário inapropriado deseja denunciar o conteúdo para que a moderação da plataforma possa analisar e tomar as medidas cabíveis.
+
+**Ator principal:** Usuário, Administrador, Sistema
+
+### 5.1.1 Pré-condições
+- O usuário está logado e navegando pelo conteúdo da plataforma (denúncias ou comentários). 
+
+### 5.1.2 Fluxo básico
+1. O usuário identifica um conteúdo que viola as regras e clica no botão "Denunciar", que deve estar visível em todas as postagens e comentários. 
+
+2. O sistema apresenta uma lista pré-definida de motivos para a denúncia (ex: assédio, spam, discurso de ódio). 
+3. O usuário seleciona o motivo que melhor se aplica. 
+4. O usuário confirma a ação. 
+5. O sistema registra a denúncia de abuso, armazenando a data, hora, ID do denunciante e ID do conteúdo denunciado. 
+6. O sistema envia uma notificação imediata para a equipe de moderação. 
+
+### 5.1.3 Fluxo alternativo
+- O usuário pode optar por cancelar a denúncia antes de confirmá-la. 
+
+### 5.1.4 Pós-condições
+- O conteúdo é marcado para revisão pela equipe de administradores. 
+- A denúncia de abuso é registrada para futuras análises. 
+
+### 5.1.5 Requisitos não funcionais
+- O processo deve ser discreto e garantir o sigilo do denunciante. 
+- O sistema de notificação para moderadores deve ser confiável e imediato. 
+
+### 5.1.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.6 MODERAÇÃO E DENÚNCIA DE ABUSO 
