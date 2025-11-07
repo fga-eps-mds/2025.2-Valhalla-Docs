@@ -521,3 +521,34 @@ Um usuário deseja encontrar uma denúncia específica de forma fácil, utilizan
 
 ### 5.2.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.6 FILTROS E BUSCA. 
+
+## 5.3 Publicação de denúncia
+Um usuário que presenciou uma irregularidade registra uma denúncia na plataforma de forma clara e intuitiva para que o problema seja reportado e detenha as orientações cabíveis.
+
+**Ator principal:** Usuári, Sistema
+
+### 5.3.1 Pré-condições
+- O usuário deve estar logado no sistema. 
+- O usuário deve estar na página de denúncias para a criação de uma nova denúncia. 
+
+### 5.3.2 Fluxo básico
+1. O usuário acessa o formulário de nova denúncia. 
+
+2. O usuário preenche os campos obrigatórios, como categoria e descrição da irregularidade, e pode incluir anexos opcionalmente. 
+3. O usuário clica no botão para enviar a denúncia. 
+4. O sistema valida as informações e registra a denúncia no banco de dados, atribuindo um ID único e um carimbo de data/hora. 
+5. O sistema exibe uma mensagem de confirmação para o usuário, informando que a denúncia foi enviada com sucesso. 
+6. A denúncia é imediatamente exibida na timeline de denúncias para que outros usuários possam visualizá-la. 
+
+### 5.3.3 Fluxo alternativo
+- Caso o usuário tente submeter o formulário sem preencher os campos obrigatórios, o sistema exibirá uma mensagem de erro, indicando quais campos precisam ser preenchidos. 
+
+### 5.3.4 Pós-condições
+- A denúncia é registrada com sucesso e fica visível para a comunidade na plataforma. 
+
+### 5.3.5 Requisitos não funcionais
+- O sistema deve garantir a opção de anonimato ao usuário, conforme o requisito de "Anonimização de Denúncias". 
+- A interface do formulário deve ser intuitiva e fácil de usar. 
+
+### 5.3.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.6 PUBLICAÇÃO DE DENÚNCIA. 
