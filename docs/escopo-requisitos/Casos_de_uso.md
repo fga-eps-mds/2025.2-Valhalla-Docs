@@ -393,3 +393,37 @@ O usuário irá acessar a aba de gráficos e notícias e deseja ver os gráficos
 ### 4.1.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.4.1 (Gráfico por Categoria de Denúncia) 
 
+## 4.2 Linha do tempo de denúncias
+O usuário visualizará um gráfico de linha do tempo que mostra a evolução do número de denúncias realizadas a cada mês, permitindo-lhe analisar tendências de crescimento ou diminuição ao longo do tempo.
+
+**Ator principal:** Usuário, Sistema
+
+### 4.2.1 Pré-condições
+- O usuário deverá estar logado. 
+- O usuário deve ter acesso à página de gráficos e notícias. 
+- Devem existir denúncias cadastradas em diferentes meses para que a linha do tempo seja significativa. 
+
+### 4.2.2 Fluxo básico
+1. O usuário navega para a página de gráficos e notícias do sistema. 
+
+2. O sistema exibe um gráfico de linha intitulado "Linha do Tempo de Denúncias" ou "Volume de Denúncias por Mês". 
+3. O eixo X do gráfico representa os meses do ano. 
+4. O eixo Y do gráfico representa a quantidade total de denúncias. 
+5. Sistema plota os pontos de dados, onde cada ponto corresponde ao número total de denúncias registradas em um mês específico, e os conecta com uma linha. 
+6. O usuário pode passar o mouse sobre um ponto no gráfico para ver o mês e o número exato de denúncias. 
+7. O gráfico é atualizado em tempo real para refletir novas denúncias. 
+
+### 4.2.3 Fluxo alternativo
+- Se houver um período sem denúncias, o gráfico mostrará o valor "0" para o(s) mês(es) correspondente(s). 
+- Se não houver denúncias no sistema, uma mensagem como "Nenhuma denúncia encontrada para gerar a linha do tempo" será exibida. 
+
+### 4.2.4 Pós-condições
+- O usuário consegue identificar padrões e tendências sazonais no volume de denúncias. 
+
+### 4.2.5 Requisitos não funcionais
+- A busca e agregação dos dados por mês devem ser eficientes para garantir o carregamento rápido do gráfico. 
+- O design do gráfico deve ser claro e intuitivo. 
+- O gráfico deve ser compatível com diversos navegadores e dispositivos. 
+
+### 4.2.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.4.2 (Linha do Tempo de Denúncias). 
