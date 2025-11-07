@@ -223,3 +223,38 @@ Este caso de uso descreve as ações realizadas pelo usuário para atualizar ou 
 
 ### 2.2.6 Referência cruzada
 Relacionado ao requisito funcional 3.5 – Perfil de Usuário (Edição). 
+
+## 2.3 Histórico de denúncias e atividades
+Este caso de uso descreve como o usuário pode consultar o histórico de suas denúncias e atividades dentro do sistema. O objetivo é fornecer transparência e controle sobre as ações realizadas, permitindo que o usuário acompanhe o andamento de suas participações.
+
+**Ator principal:** Usuário, Sistema, Administrador
+
+### 2.3.1 Pré-condições
+- O usuário deve estar logado. 
+- O sistema deve ter registros associados à conta do usuário. 
+
+### 2.3.2 Fluxo básico
+1. O usuário acessa o menu Meu Perfil e seleciona Minhas Denúncias. 
+
+2. O sistema exibe uma lista com todas as denúncias enviadas, incluindo título, categoria, data e status atual (Pendente, Em Análise, Resolvida). 
+3. O usuário pode clicar em uma denúncia específica para visualizar detalhes, comentários e anexos. 
+4. O sistema apresenta uma linha do tempo mostrando as atualizações do status. 
+5. O usuário pode filtrar as denúncias por data, categoria ou status. 
+6. O sistema oferece a opção de exportar o histórico em PDF. 
+7. O sistema mantém todas as informações salvas em ordem cronológica. 
+
+### 2.3.3 Fluxo alternativo
+- Se o usuário ainda não tiver denúncias, o sistema exibirá: “Nenhuma denúncia registrada até o momento.” 
+- Se houver falha na conexão com o banco de dados, o sistema exibirá: “Erro ao carregar histórico.” 
+- Se o usuário tentar acessar denúncia removida, o sistema informará que ela foi arquivada ou excluída. 
+
+### 2.3.4 Pós-condições
+- O histórico é exibido corretamente e atualizado em tempo real. 
+- Logs de consulta são registrados para auditoria. 
+- Requisitos não funcionais: 
+- O carregamento do histórico não deve exceder 4 segundos. 
+- O sistema deve garantir consistência e integridade dos registros. 
+- A exportação deve ser gerada em formato padronizado (PDF/A). 
+
+### 2.3.5 Referência cruzada
+Relacionado ao requisito funcional 3.6 – Gestão de Denúncias (Visualização do Usuário).
