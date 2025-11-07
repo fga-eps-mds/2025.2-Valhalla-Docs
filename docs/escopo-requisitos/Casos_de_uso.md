@@ -327,3 +327,34 @@ Este caso de uso descreve o processo em que o usuário busca e consulta guias e 
 
 ### 3.1.6 Referência cruzada
 Relacionado ao requisito funcional 3.3.1 Guia de Denúncia. 
+
+## 3.2 Leitura de tutoriais e acesso a links externos
+Este caso de uso descreve como o usuário, após encontrar um guia, pode ler o conteúdo em profundidade, incluindo tutoriais e instruções detalhadas, e acessar diretamente os links para canais de denúncia externos e oficiais, garantindo que sua reclamação seja formalizada.
+
+**Ator principal:** Usuário, Sistema
+
+### 3.2.1 Pré-condições
+- O usuário deve ter selecionado um guia na página de Orientação. 
+- O sistema deve ter os links de órgãos oficiais cadastrados e funcionais. 
+
+### 3.2.2 Fluxo básico
+1. O sistema carrega o guia de denúncia, que pode incluir tutoriais passo a passo e links para sites externos. 
+
+2. O usuário lê o tutorial para entender o procedimento completo. 
+3. O usuário localiza e clica em um dos links oficiais fornecidos, como "Acesse o site da Ouvidoria da UnB". 
+4. O sistema redireciona o usuário para o site oficial do órgão competente em no máximo 2 segundos. 
+5. O usuário consegue prosseguir com a denúncia no canal oficial, utilizando as informações obtidas no tutorial. 
+
+### 3.2.3 Fluxo alternativo
+- Link Quebrado: Se o link oficial estiver quebrado ou o site do órgão estiver fora do ar, o sistema exibirá uma mensagem de erro: "O link não está funcionando no momento. Por favor, tente novamente mais tarde ou acesse diretamente o site do órgão." 
+
+### 3.2.4 Pós-condições
+- O usuário é redirecionado para a página externa do canal oficial de denúncia e tem as informações necessárias para formalizar sua reclamação. 
+
+### 3.2.5 Requisitos não funcionais
+- A responsividade dos links deve ser eficiente. 
+- O sistema deve ser compatível com os principais navegadores. 
+
+### 3.2.6 Referência cruzada
+Relacionado ao requisito funcional 3.3.2 Links para Denúncia. 
+
