@@ -427,3 +427,34 @@ O usuário visualizará um gráfico de linha do tempo que mostra a evolução do
 
 ### 4.2.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.4.2 (Linha do Tempo de Denúncias). 
+
+## 4.3 Top denúncias
+O usuário visualizará uma seção destacada que lista as três denúncias que receberam o maior número de apoios (curtidas, votos) nos últimos 30 dias. Isso permite que os usuários identifiquem rapidamente os tópicos de maior relevância e repercussão na comunidade universitária.
+
+**Ator principal:** Usuário, Sistema
+
+### 4.3.1 Pré-condições
+- O usuário deve estar logado no sistema.  
+- Devem existir denúncias criadas nos últimos 30 dias que tenham recebido apoios de outros usuários. 
+
+### 4.3.2 Fluxo básico
+1. O usuário acessa a página de gráficos e notícias ou uma seção específica de "Destaques". 
+2. O sistema realiza uma consulta para identificar todas as denúncias criadas nos últimos 30 dias. 
+3. O sistema classifica essas denúncias em ordem decrescente pelo número de apoios recebidos. 
+4. O sistema exibe as três primeiras denúncias dessa lista. 
+5. Para cada denúncia exibida, o sistema mostra de forma clara seu título ou um resumo, e o número total de apoios que ela obteve. 
+6. O usuário pode clicar em uma das denúncias para ver seus detalhes completos. 
+
+### 4.3.3 Fluxo alternativo
+- Se não houver denúncias nos últimos 30 dias, ou se nenhuma delas tiver recebido apoio, o sistema exibirá uma mensagem como "Nenhuma denúncia em destaque nos últimos 30 dias." 
+- Se houver menos de três denúncias com apoios nos últimos 30 dias, o sistema exibirá apenas as que existirem. 
+
+### 4.3.4 Pós-condições
+- O usuário está ciente das questões mais urgentes e apoiadas pela comunidade nos últimos 30 dias. 
+
+### 4.3.5 Requisitos não funcionais
+- A consulta para determinar as "Top Denúncias" deve ser otimizada para não impactar o desempenho do sistema. 
+- A exibição das denúncias deve ser visualmente atraente e clara. 
+
+### 4.3.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.4.3 (Top Denúncias). 
