@@ -552,3 +552,32 @@ Um usuário que presenciou uma irregularidade registra uma denúncia na platafor
 
 ### 5.3.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.6 PUBLICAÇÃO DE DENÚNCIA. 
+
+## 5.4 Timeline de denúncias
+O usuário visualiza em uma linha do tempo todas as denúncias publicadas, ordenadas por data de publicação, para acompanhar os acontecimentos em ordem cronológica.
+
+**Ator principal:** Usuário, Sistema
+
+### 5.4.1 Pré-condições
+- O usuário deve ter acesso à página principal de denúncias da plataforma. 
+
+### 5.4.2 Fluxo básico
+1. O usuário acessa a página de denúncias. 
+
+2. O sistema carrega e exibe a lista de denúncias publicadas. 
+3. As denúncias são automaticamente ordenadas da mais recente para a mais antiga. 
+4. Cada item na timeline exibe o título, a data de publicação e o número de apoios recebidos. 
+5. A timeline é atualizada em tempo real sempre que novas denúncias são publicadas no sistema. 
+
+### 5.4.3 Fluxo alternativo
+- Se não houver nenhuma denúncia registrada no sistema, será exibida uma mensagem informativa, como "Nenhuma denúncia foi publicada ainda." 
+
+### 5.4.4 Pós-condições
+- O usuário obtém uma visão geral e cronológica das denúncias registradas na plataforma. 
+
+### 5.4.5 Requisitos não funcionais
+- A interface deve ser responsiva, adaptando-se a diferentes tamanhos de tela. 
+- O carregamento da timeline deve ser eficiente para não comprometer a experiência do usuário. 
+
+### 5.4.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.6 TIMELINE DE DENÚNCIAS.
