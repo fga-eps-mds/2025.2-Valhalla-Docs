@@ -807,3 +807,32 @@ Como última instância de controle, o administrador mestre possui privilégios 
 
 ### 6.5.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.7 ADMINISTRADOR MESTRE. 
+
+## 7. Confiabilidade e disponibilidade
+
+## 7.1 Disponibilidade do sistema
+O usuário espera que a plataforma esteja operacional e acessível na maior parte do tempo, permitindo o acesso a suas funcionalidades sempre que necessário, com um mínimo de interrupções.
+
+**Ator principal:** Usuário, Sistema
+
+### 7.1.1 Pré-condições
+- O usuário possui um dispositivo conectado à internet.  
+
+### 7.1.2 Fluxo básico
+1. O usuário digita o endereço da plataforma em um navegador web em qualquer dia ou horário. 
+
+2. O sistema responde e carrega a página solicitada de forma rápida e funcional. 
+3. O usuário consegue realizar login, consultar denúncias e utilizar todas as funcionalidades da plataforma sem falhas de conexão com o servidor. 
+
+### 7.1.3 Fluxo alternativo
+- Caso o sistema esteja passando por uma manutenção planejada ou uma falha inesperada, uma página informativa deve ser exibida, comunicando o status e, se possível, uma previsão de retorno. 
+
+### 7.1.4 Pós-condições
+- O usuário consegue utilizar a plataforma de forma confiável para suas necessidades. 
+
+### 7.1.5 Requisitos não funcionais
+- Este caso de uso descreve um requisito não funcional em si. 
+- O sistema deve garantir uma disponibilidade mínima de 99,5% mensalmente, o que equivale a um tempo máximo de inatividade de aproximadamente 3 horas e 36 minutos por mês. 
+
+### 7.1.6 Referência cruzada
+Este caso de uso está relacionado ao requisito não funcional 4.1 DISPONIBILIDADE DO SISTEMA. 
