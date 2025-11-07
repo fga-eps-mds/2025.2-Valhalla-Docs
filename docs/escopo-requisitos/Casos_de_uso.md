@@ -836,3 +836,31 @@ O usuário espera que a plataforma esteja operacional e acessível na maior part
 
 ### 7.1.6 Referência cruzada
 Este caso de uso está relacionado ao requisito não funcional 4.1 DISPONIBILIDADE DO SISTEMA. 
+
+## 7.2 Suporte a múltipos usuários
+O sistema precisa suportar um grande volume de usuários conectados e interagindo ao mesmo tempo, garantindo a estabilidade e a performance da plataforma mesmo durante períodos de pico de acesso.
+
+**Ator principal:** Usuário, Sistema
+
+### 7.2.1 Pré-condições
+- Um número elevado de usuários está acessando o sistema simultaneamente. 
+
+### 7.2.2 Fluxo básico
+1. Múltiplos usuários (pelo menos 250) realizam login, publicam denúncias, comentam e navegam pela plataforma ao mesmo tempo. 
+
+2. O sistema processa todas as requisições concorrentes de forma eficiente. 
+3. O tempo de resposta para as ações dos usuários se mantém baixo, sem que haja lentidão ou degradação perceptível na experiência de uso. 
+4. As operações são concluídas com sucesso para todos os usuários, sem erros de servidor por sobrecarga. 
+
+### 7.2.3 Fluxo alternativo
+- Se o sistema atingir seu limite de capacidade, ele deve gerenciar a carga de forma a não falhar completamente, podendo apresentar uma lentidão controlada ou uma mensagem de alta demanda. 
+
+### 7.2.4 Pós-condições
+- A plataforma se mantém estável e responsiva, proporcionando uma experiência de uso fluida para todos os usuários, mesmo sob alta demanda. 
+
+### 7.2.5 Requisitos não funcionais
+- Este caso de uso descreve um requisito não funcional. 
+- A arquitetura do sistema deve ser robusta o suficiente para suportar no mínimo 250 usuários simultâneos. 
+
+### 7.2.6 Referência cruzada
+Este caso de uso está relacionado ao requisito não funcional 4.1 SUPORTE A MÚLTIPLOS USUÁRIOS. 
