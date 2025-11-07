@@ -143,4 +143,43 @@ Este caso de uso descreve o encerramento da sessão do usuário, garantindo que 
 - Tokens de sessão devem ser invalidados imediatamente. 
 
 ### 1.4.5 Referência cruzada
-Relacionado ao requisito funcional 3.1 – Autenticação e 4.1 – Segurança de Sessão. 
+Relacionado ao requisito funcional 3.1 – Autenticação e 4.1 – Segurança de Sessão.
+
+## 2. Página de perfil
+## 2.1 Visualização de perfil
+Este caso de uso descreve o processo em que o usuário acessa e visualiza suas informações pessoais dentro do sistema. O objetivo é permitir que o usuário tenha acesso rápido e claro aos seus dados de identificação, configurações de conta e histórico de uso, garantindo transparência e controle.
+
+**Ator principal:** Usuário, Sistema
+
+### 2.1.1 Pré-condições
+- O usuário deve estar autenticado no sistema. 
+- O módulo de perfil deve estar ativo e devidamente integrado ao banco de dados. 
+- O sistema deve ter conexão estável com o servidor. 
+
+### 2.1.2 Fluxo básico
+1. O usuário acessa o menu lateral e seleciona a opção Meu Perfil. 
+
+2. O sistema carrega as informações do usuário: nome completo, e-mail, data de criação da conta e foto de perfil. 
+3. O sistema exibe também as configurações de privacidade, preferências de notificação e opções de segurança. 
+4. O usuário pode navegar entre abas como Informações Pessoais, Minhas Denúncias, Configurações e Histórico de Atividades. 
+5. O sistema apresenta as informações de maneira organizada e responsiva, garantindo boa legibilidade. 
+6. O sistema verifica periodicamente se há atualizações nas informações (como mudança de senha ou foto). 
+7. Caso haja atualizações, os dados são recarregados automaticamente. 
+
+### 2.1.3 Fluxo alternativo
+- Se o servidor estiver temporariamente indisponível, o sistema exibe: “Não foi possível carregar o perfil neste momento.” 
+- Caso os dados do usuário estejam corrompidos, o sistema exibe: “Erro ao recuperar informações, contate o suporte.” 
+- Se a imagem de perfil não for carregada, o sistema exibirá um avatar padrão. 
+
+### 2.1.4 Pós-condições
+- As informações do perfil são apresentadas corretamente ao usuário. 
+- Logs de visualização são registrados para fins de auditoria. 
+
+### 2.1.5 Requisitos não funcionais
+- A tela deve carregar em até 3 segundos. 
+- A interface deve ser responsiva e acessível. 
+- O sistema deve garantir a integridade e consistência dos dados apresentados. 
+
+### 2.1.6 Referência cruzada
+Relacionado ao requisito funcional 3.5 – Perfil de Usuário. 
+
