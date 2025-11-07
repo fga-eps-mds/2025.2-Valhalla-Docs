@@ -777,3 +777,33 @@ O administrador acessa um painel de configurações gerais para ajustar o funcio
 
 ### 6.4.6 Referência cruzada
 Este caso de uso está relacionado ao requisito funcional 3.7 CONFIGURAÇÕES DO SISTEMA. 
+
+## 6.5 Administrador mestre
+Como última instância de controle, o administrador mestre possui privilégios para gerenciar outros administradores e suas publicações, garantindo a supervisão completa sobre a plataforma.
+
+**Ator principal:** Administrador mestre, Sistema
+
+### 6.5.1 Pré-condições
+- O usuário logado possui o perfil exclusivo de "Administrador Mestre". 
+
+### 6.5.2 Fluxo básico
+1. O administrador mestre acessa uma área de gestão de administradores ou de notícias. 
+
+2. Ele pode visualizar a lista de todos os outros administradores do sistema. 
+3. Ele seleciona um administrador e pode alterar suas permissões ou excluí-lo. 
+4. Ao visualizar as notícias, ele pode editar ou excluir postagens feitas por qualquer outro administrador. 
+5. O sistema executa a ação, que é soberana sobre as ações de outros administradores. 
+6. Todas as ações são registradas em um log de auditoria de alta prioridade. 
+
+### 6.5.3 Fluxo alternativo
+- O administrador mestre pode optar por apenas revisar as atividades de outros administradores sem realizar nenhuma ação. 
+
+### 6.5.4 Pós-condições
+- O controle sobre a equipe administrativa e o conteúdo crítico é mantido, assegurando a hierarquia de gestão. 
+
+### 6.5.5 Requisitos não funcionais
+- A segurança para o acesso do Administrador Mestre deve ser reforçada, possivelmente com autenticação de múltiplos fatores. 
+- Os privilégios deste perfil devem ser claramente definidos e isolados dos perfis de administradores padrão. 
+
+### 6.5.6 Referência cruzada
+Este caso de uso está relacionado ao requisito funcional 3.7 ADMINISTRADOR MESTRE. 
