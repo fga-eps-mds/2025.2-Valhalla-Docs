@@ -183,3 +183,43 @@ Este caso de uso descreve o processo em que o usuário acessa e visualiza suas i
 ### 2.1.6 Referência cruzada
 Relacionado ao requisito funcional 3.5 – Perfil de Usuário. 
 
+## 2.2 Edição e atualização de perfil
+Este caso de uso descreve as ações realizadas pelo usuário para atualizar ou modificar suas informações pessoais e preferências dentro do sistema. O objetivo é dar autonomia ao usuário para manter seus dados sempre corretos e suas preferências configuradas conforme desejar.
+
+**Ator principal:** Usuário, Sistema
+
+### 2.2.1 Pré-condições
+- O usuário deve estar logado no sistema. 
+- O módulo de edição deve estar disponível e com permissão ativa. 
+
+### 2.2.2 Fluxo básico
+1. O usuário acessa o menu Meu Perfil e clica em Editar Perfil. 
+
+2. O sistema exibe os campos editáveis: nome completo, senha, foto de perfil e preferências de notificação. 
+3. O usuário realiza as alterações desejadas. 
+4. O sistema realiza validações: 
+
+    - Nome completo deve conter pelo menos dois nomes; 
+    - A senha deve atender aos critérios de segurança; 
+    - A foto de perfil deve ter formato válido (.jpg, .png) e tamanho inferior a 5MB.
+
+5. O usuário confirma as alterações clicando em Salvar. 
+6. O sistema atualiza os dados no banco de dados e exibe a mensagem: “Perfil atualizado com sucesso.” 
+7. O sistema cria um log de alteração de dados com data e hora. 
+
+### 2.2.3 Fluxo alternativo
+- Se o usuário inserir senha fraca, o sistema exibirá: “Senha inválida, utilize caracteres especiais e números.” 
+- Se a imagem exceder o limite de tamanho, o sistema exibirá: “Imagem muito grande, selecione outro arquivo.” 
+- Se houver falha de conexão durante o salvamento, o sistema exibirá: “Erro ao salvar alterações, tente novamente.” 
+
+### 2.2.4 Pós-condições
+- Os dados são atualizados e refletidos em todas as telas do sistema. 
+- O sistema mantém o histórico de alterações de dados do usuário. 
+
+### 2.2.5 Requisitos não funcionais
+- As alterações devem ser confirmadas em até 3 segundos. 
+- O sistema deve registrar logs detalhados de cada modificação. 
+- O design deve seguir padrões de usabilidade e clareza. 
+
+### 2.2.6 Referência cruzada
+Relacionado ao requisito funcional 3.5 – Perfil de Usuário (Edição). 
