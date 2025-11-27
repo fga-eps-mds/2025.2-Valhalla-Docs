@@ -28,6 +28,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RF-016 | Linha do Tempo de Denúncias | SHOULD | Eu como usuário, quero visualizar um gráfico que demonstra o número de denúncias realizadas a cada mês. | - O gráfico é claro, intuitivo e atualizado em tempo real.<br>- O gráfico busca precisamente o mês referente a denúncia. |
 | RF-017 | Top Denúncias | COULD | Eu como usuário, quero visualizar as 3 postagens mais apoiadas nos últimos 30 dias. | - Apenas as postagens dos últimos 30 dias podem ser apresentadas.<br>- Deve mostrar a postagem de maneira clara e o número de apoios. |
 | **Página de Denúncias** | | | | |
+| RF-018 | Moderação e Denúncia de Abuso | MUST | Eu como usuário, quero ter a opção de denunciar conteúdos ofensivos ou abusivos para que a moderação da plataforma possa analisar e tomar as medidas necessárias. | - O botão de denúncia deve estar visível em todas as postagens/comentários.<br>- O usuário deve poder escolher o motivo da denúncia em uma lista pré-definida.<br>- A denúncia deve ser registrada com data, hora e IDs.<br>- A moderação deve receber notificação imediata. |
 | **Administração** | | | | |
 
 ### Requisitos Não-Funcionais
