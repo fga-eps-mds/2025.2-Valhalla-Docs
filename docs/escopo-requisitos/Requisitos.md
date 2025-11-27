@@ -29,6 +29,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RF-017 | Top Denúncias | COULD | Eu como usuário, quero visualizar as 3 postagens mais apoiadas nos últimos 30 dias. | - Apenas as postagens dos últimos 30 dias podem ser apresentadas.<br>- Deve mostrar a postagem de maneira clara e o número de apoios. |
 | **Página de Denúncias** | | | | |
 | RF-018 | Moderação e Denúncia de Abuso | MUST | Eu como usuário, quero ter a opção de denunciar conteúdos ofensivos ou abusivos para que a moderação da plataforma possa analisar e tomar as medidas necessárias. | - O botão de denúncia deve estar visível em todas as postagens/comentários.<br>- O usuário deve poder escolher o motivo da denúncia em uma lista pré-definida.<br>- A denúncia deve ser registrada com data, hora e IDs.<br>- A moderação deve receber notificação imediata. |
+| RF-019 | Filtros e Busca | COULD | Eu como usuário que deseja encontrar uma denúncia específica, quero poder filtrar e buscar denúncias por categoria para encontrar facilmente o conteúdo que procuro. | - O sistema deve permitir busca por palavras-chave no título e conteúdo.<br>- Deve haver filtros por categoria, período de tempo e status.<br>- Os resultados devem ser apresentados em no máximo 2 segundos. |
 | **Administração** | | | | |
 
 ### Requisitos Não-Funcionais
