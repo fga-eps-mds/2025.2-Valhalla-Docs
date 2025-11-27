@@ -111,3 +111,4 @@ O sistema "Guardiões da Universidade" utiliza um conjunto de tecnologias modern
 
 ## 2. VISÃO GERAL DO PROJETO
 
+### 2.1 Ciclo de vida do projeto de desenvolvimento de software
