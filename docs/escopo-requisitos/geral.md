@@ -112,3 +112,6 @@ O sistema "Guardiões da Universidade" utiliza um conjunto de tecnologias modern
 ## 2. VISÃO GERAL DO PROJETO
 
 ### 2.1 Ciclo de vida do projeto de desenvolvimento de software
+
+O projeto "Guardiões da Universidade" adota um **ciclo de vida iterativo e incremental**, fundamentado nos princípios da abordagem **ágil**. Diferentemente de modelos preditivos rígidos, onde o escopo é fixado no início, este processo segmenta o desenvolvimento em ciclos curtos e repetitivos denominados sprints (iterações). A cada iteração, um subconjunto funcional do software é desenvolvido, testado e integrado, resultando na entrega contínua de incrementos de valor para o usuário.
+
