@@ -19,6 +19,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RF-009 | Gerenciamento de Denúncia | MUST | Eu como usuário que realizou uma denúncia, quero poder cancelar uma denúncia para corrigir um erro ou evitar informações duplicadas. | - O sistema solicita uma confirmação antes de cancelar a denúncia permanentemente. |
 | RF-010 | Visualização de Interações do Usuário | COULD | Eu como usuário logado, quero ver um feed com todas as minhas atividades recentes (ex: comentários e posts). | - A página exibe uma lista cronológica das últimas postagens.<br>- Cada interação na lista contém um link para o conteúdo original. |
 | **Página de Orientação** | | | | |
+| RF-011 | Guia de Denúncia | MUST | Eu como usuário que não sabe a quem recorrer, quero uma página que possua o passo a passo para realizar denúncias de acordo com a minha necessidade. | - Fluxo claro de etapas para cada tipo de denúncia.<br>- Disponibilidade de links de acesso direto aos órgãos competentes.<br>- Linguagem simples e acessível.<br>- O usuário deve conseguir realizar todos os processos sem necessitar de informações exteriores. |
 | **Página de Gráficos e Notícias** | | | | |
 | **Página de Denúncias** | | | | |
 | **Administração** | | | | |
