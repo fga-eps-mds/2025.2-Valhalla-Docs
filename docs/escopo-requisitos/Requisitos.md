@@ -26,6 +26,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | **Página de Gráficos e Notícias** | | | | |
 | RF-015 | Gráfico por Categoria de Denúncia | SHOULD | Eu como usuário, quero visualizar dividido por tipo de denúncias um gráfico para entender quais os maiores problema da minha universidade. | - O Gráfico mostra a comparação entre a quantidade de denúncias separado por tipo de forma precisa.<br>- Ele é atualizado em tempo real.<br>- O Gráfico é claro e intuitivo. |
 | RF-016 | Linha do Tempo de Denúncias | SHOULD | Eu como usuário, quero visualizar um gráfico que demonstra o número de denúncias realizadas a cada mês. | - O gráfico é claro, intuitivo e atualizado em tempo real.<br>- O gráfico busca precisamente o mês referente a denúncia. |
+| RF-017 | Top Denúncias | COULD | Eu como usuário, quero visualizar as 3 postagens mais apoiadas nos últimos 30 dias. | - Apenas as postagens dos últimos 30 dias podem ser apresentadas.<br>- Deve mostrar a postagem de maneira clara e o número de apoios. |
 | **Página de Denúncias** | | | | |
 | **Administração** | | | | |
 
