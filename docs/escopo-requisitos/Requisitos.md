@@ -7,7 +7,9 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | ID | Requisito | Importância | Descrição | Critérios de Sucesso |
 |---|---|---|---|---|
 | **Autenticação e Conta** | | | | |
+| RF-001 | Login de Usuário | MUST | Eu como usuário cadastrado, quero fazer login usando meu e-mail e senha para ter acesso às funcionalidades exclusivas do meu perfil e interagir com a plataforma. | - O usuário consegue fazer login com credenciais válidas e é redirecionado para a página inicial logada.<br>- O sistema exibe uma mensagem de erro clara ("E-mail ou senha inválidos") ao tentar login com credenciais incorretas. |
 | **Página de Perfil** | | | | |
+
 | **Página de Orientação** | | | | |
 | **Página de Gráficos e Notícias** | | | | |
 | **Página de Denúncias** | | | | |
