@@ -24,6 +24,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RF-013 | Perguntas Frequentes | SHOULD | Eu como usuário com dúvidas, quero uma seleção das perguntas mais feitas por outros usuários com um fácil acesso. | - As perguntas devem estar realizadas de maneira clara.<br>- As respostas devem ser pertinentes e conter links ou tutoriais necessários. |
 | RF-014 | Encaminhamento Automático | COULD | Eu como usuário que fez uma denúncia, quero que após realizar minha denuncia apareça links de redirecionamento para o canal oficial de acordo com o tipo de denúncia. | - O link de acesso ao canal de denuncia e ao tutorial deve ser de acordo com o tipo de denúncia realizada.<br>- Os links devem estar claros e intuitivos após realizar a denúncia.<br>- Todos os redirecionamentos devem ser realizados em no máximo 2s. |
 | **Página de Gráficos e Notícias** | | | | |
+| RF-015 | Gráfico por Categoria de Denúncia | SHOULD | Eu como usuário, quero visualizar dividido por tipo de denúncias um gráfico para entender quais os maiores problema da minha universidade. | - O Gráfico mostra a comparação entre a quantidade de denúncias separado por tipo de forma precisa.<br>- Ele é atualizado em tempo real.<br>- O Gráfico é claro e intuitivo. |
 | **Página de Denúncias** | | | | |
 | **Administração** | | | | |
 
