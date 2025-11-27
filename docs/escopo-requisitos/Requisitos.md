@@ -2,6 +2,11 @@
 
 Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição detalhada.
 
+### Requisitos Funcionais
+
+| ID | Requisito | Importância | Descrição | Critérios de Sucesso |
+|---|---|---|---|---|
+
 ### Requisitos Não-Funcionais
 
 | ID | Requisito | Importância | Descrição | Critérios de Sucesso |
@@ -23,3 +28,4 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RNF-011 | Notificações de Segurança | COULD | Eu como usuário cadastrado quero ser notificado por email sobre atividades que ameacem a segurança da minha conta, para que eu possa agir rapidamente, como em caso de alteração da minha senha ou um login em um novo dispositivo. | - O sistema envia um e-mail de notificação imediatamente após uma alteração de senha bem-sucedida.<br>- O sistema envia uma notificação quando um login é realizado a partir de um novo dispositivo pela primeira vez.<br>- O e-mail deve conter informações relevantes e um link para a página de suporte ou para redefinir a senha. |
 | **Conformidade Legal** |
 | RNF-012 | LGPD e Consentimento | MUST | Eu como usuário, quero ter controle sobre meus dados, para garantir que a plataforma está em conformidade com a Lei Geral de Proteção de Dados (LGPD). | - O sistema deve apresentar política de privacidade clara e acessível.<br>- No cadastro, o usuário deve consentir ativamente com termos de uso e política de privacidade.<br>- No perfil, o usuário deve poder gerenciar permissões e solicitar exclusão de dados. |
+
