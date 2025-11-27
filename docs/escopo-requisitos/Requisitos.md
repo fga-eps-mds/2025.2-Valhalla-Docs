@@ -13,6 +13,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RF-004 | Manter Sessão Ativa | SHOULD | Eu como usuário cadastrado, quero ter a opção de 'Manter-se Conectado' ao fazer login para não precisar inserir minhas credenciais toda vez que eu visitar o site no mesmo dispositivo. | - Se a opção "Manter-se Conectado" for marcada, o usuário permanece logado após fechar e reabrir o navegador.<br>- Se a opção não for marcada, o usuário é desconectado ao fechar a sessão do navegador. |
 | RF-005 | Encerramento de Sessão | MUST | Eu como usuário logado, quero clicar em um botão 'Sair' para encerrar minha sessão de forma segura e proteger minha conta. | - Ao clicar no botão "Sair", a sessão do usuário é encerrada imediatamente.<br>- Após o logout, o usuário é redirecionado para a página inicial.<br>- O usuário não consegue acessar páginas restritas após o logout. |
 | **Página de Perfil** | | | | |
+| RF-006 | Visualização de Dados do Perfil | MUST | Eu como usuário logado, quero visualizar as informações do meu perfil (nome, e-mail, foto, pontuação) para consultar meus dados cadastrados. | - Todas as informações salvas do usuário são exibidas corretamente na página de perfil. |
 | **Página de Orientação** | | | | |
 | **Página de Gráficos e Notícias** | | | | |
 | **Página de Denúncias** | | | | |
