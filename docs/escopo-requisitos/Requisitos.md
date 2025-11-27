@@ -38,6 +38,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RF-024 | Gestão de Denúncias | MUST | Eu como administrador, quero acessar todas as denúncias registradas e poder gerenciá-las (excluir, encontrar o autor). | - Lista com todas as denúncias filtráveis.<br>- Registro de alterações no histórico.<br>- Lista separada para denúncias reportadas.<br>- Facilidade para remover denúncias do ar. |
 | RF-025 | Gestão de Usuários | MUST | Eu como administrador, quero gerenciar os usuários da plataforma (ativar, desativar, banir). | - Listagem de todos os usuários.<br>- Possibilidade de excluir contas.<br>- Registro de ações no histórico administrativo. |
 | RF-026 | Postagens e Gestão de Notícias | SHOULD | Eu como administrador, quero poder postar e editar de maneira fácil e rápida notícias para os usuários comuns. | - Lista separada para postagens de notícias.<br>- Edição intuitiva e responsiva.<br>- Facilidade para excluir notícias. |
+| RF-027 | Configurações do Sistema | SHOULD | Eu como administrador, quero acessar as configurações gerais do sistema para ajustar o funcionamento conforme necessário. | - Interface clara para alteração de parâmetros principais.<br>- Acesso restrito a administradores.<br>- Registro de alterações. |
 
 
 ### Requisitos Não-Funcionais
