@@ -12,7 +12,7 @@
 | 05/11| 1.3 | Casos de Uso | António Lucas; Gustavo Bonifácio; Julia Gabriella; Laura Rogelin; Pedro H. Américo; Pedro Lucas|
 | 05/11| 1.4 | Visão Geral do Produto | António Lucas; Gustavo Bonifácio; Julia Gabriella; Laura Rogelin; Pedro H. Américo; Pedro Lucas|
 | 07/11| 1.5 | Casos de Uso | António Lucas; Gustavo Bonifácio; Julia Gabriella; Laura Rogelin; Pedro H. Américo; Pedro Lucas|
-| 07/11| 1.6 | Visão Geral do Projeto | António Lucas; Gustavo Bonifácio; Julia Gabriella; Laura Rogelin; Pedro H. Américo; Pedro Lucas|
+| 27/11| 1.6 | Visão Geral do Projeto | António Lucas; Gustavo Bonifácio; Julia Gabriella; Laura Rogelin; Pedro H. Américo; Pedro Lucas|
 
 ### Autores
 
