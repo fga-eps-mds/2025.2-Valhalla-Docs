@@ -6,6 +6,12 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 
 | ID | Requisito | Importância | Descrição | Critérios de Sucesso |
 |---|---|---|---|---|
+| **Autenticação e Conta** | | | | |
+| **Página de Perfil** | | | | |
+| **Página de Orientação** | | | | |
+| **Página de Gráficos e Notícias** | | | | |
+| **Página de Denúncias** | | | | |
+| **Administração** | | | | |
 
 ### Requisitos Não-Funcionais
 
