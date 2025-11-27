@@ -21,6 +21,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | **Página de Orientação** | | | | |
 | RF-011 | Guia de Denúncia | MUST | Eu como usuário que não sabe a quem recorrer, quero uma página que possua o passo a passo para realizar denúncias de acordo com a minha necessidade. | - Fluxo claro de etapas para cada tipo de denúncia.<br>- Disponibilidade de links de acesso direto aos órgãos competentes.<br>- Linguagem simples e acessível.<br>- O usuário deve conseguir realizar todos os processos sem necessitar de informações exteriores. |
 | RF-012 | Links para Denúncia | MUST | Eu como usuário quero links de acesso claros e intuitivos que me redirecionem as páginas e canais de denúncia de órgãos oficiais. | - O link deve redirecionar para a página proposta diretamente.<br>- O link deve ser mostrado de maneira clara e intuitiva.<br>- A responsividade do link deve ser eficiente, redirecionando em menos de 2s. |
+| RF-013 | Perguntas Frequentes | SHOULD | Eu como usuário com dúvidas, quero uma seleção das perguntas mais feitas por outros usuários com um fácil acesso. | - As perguntas devem estar realizadas de maneira clara.<br>- As respostas devem ser pertinentes e conter links ou tutoriais necessários. |
 | **Página de Gráficos e Notícias** | | | | |
 | **Página de Denúncias** | | | | |
 | **Administração** | | | | |
