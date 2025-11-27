@@ -14,6 +14,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RF-005 | Encerramento de Sessão | MUST | Eu como usuário logado, quero clicar em um botão 'Sair' para encerrar minha sessão de forma segura e proteger minha conta. | - Ao clicar no botão "Sair", a sessão do usuário é encerrada imediatamente.<br>- Após o logout, o usuário é redirecionado para a página inicial.<br>- O usuário não consegue acessar páginas restritas após o logout. |
 | **Página de Perfil** | | | | |
 | RF-006 | Visualização de Dados do Perfil | MUST | Eu como usuário logado, quero visualizar as informações do meu perfil (nome, e-mail, foto, pontuação) para consultar meus dados cadastrados. | - Todas as informações salvas do usuário são exibidas corretamente na página de perfil. |
+| RF-007 | Edição de Dados Pessoais | MUST | Eu como usuário logado, quero editar minhas informações pessoais (como nome e foto de perfil) para manter meus dados atualizados. | - O usuário consegue alterar seus dados e salvá-los com sucesso.<br>- As informações atualizadas são refletidas imediatamente na página de perfil. |
 | **Página de Orientação** | | | | |
 | **Página de Gráficos e Notícias** | | | | |
 | **Página de Denúncias** | | | | |
