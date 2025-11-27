@@ -17,6 +17,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RF-007 | Edição de Dados Pessoais | MUST | Eu como usuário logado, quero editar minhas informações pessoais (como nome e foto de perfil) para manter meus dados atualizados. | - O usuário consegue alterar seus dados e salvá-los com sucesso.<br>- As informações atualizadas são refletidas imediatamente na página de perfil. |
 | RF-008 | Visualização de Histórico de Denúncias | SHOULD | Eu como usuário logado, quero ver uma lista de todas as denúncias que eu já fiz. | - A página exibe uma lista com todas as denúncias feitas pelo usuário. |
 | RF-009 | Gerenciamento de Denúncia | MUST | Eu como usuário que realizou uma denúncia, quero poder cancelar uma denúncia para corrigir um erro ou evitar informações duplicadas. | - O sistema solicita uma confirmação antes de cancelar a denúncia permanentemente. |
+| RF-010 | Visualização de Interações do Usuário | COULD | Eu como usuário logado, quero ver um feed com todas as minhas atividades recentes (ex: comentários e posts). | - A página exibe uma lista cronológica das últimas postagens.<br>- Cada interação na lista contém um link para o conteúdo original. |
 | **Página de Orientação** | | | | |
 | **Página de Gráficos e Notícias** | | | | |
 | **Página de Denúncias** | | | | |
