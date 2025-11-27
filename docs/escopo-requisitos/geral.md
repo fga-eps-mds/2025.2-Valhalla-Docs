@@ -107,3 +107,7 @@ O sistema "Guardiões da Universidade" utiliza um conjunto de tecnologias modern
 
 * **JWT (JSON Web Tokens) e Bcrypt:**
     São as tecnologias de segurança. O **Bcrypt** é usado para criar um *hash* seguro das senhas dos usuários antes de salvá-las. O **JWT** é usado para criar "crachás" (tokens) de autenticação que o front-end envia para acessar rotas protegidas da API.
+
+
+## 2. VISÃO GERAL DO PROJETO
+
