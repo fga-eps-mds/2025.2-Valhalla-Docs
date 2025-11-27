@@ -34,8 +34,9 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | RF-021 | Timeline de Denúncias | MUST | Eu como usuário do sistema, quero visualizar em uma linha do tempo todas as denúncias publicadas, ordenadas por data de publicação. | - As denúncias devem estar ordenadas do mais recente para o mais antigo.<br>- Cada item deve mostrar título, resumo, data e número de apoios.<br>- A timeline deve atualizar em tempo real. |
 | RF-022 | Comentários nas Denúncias | SHOULD | Eu como usuário interessado em uma denúncia, quero comentar e interagir diretamente nela para compartilhar informações ou apoiar a discussão. | - Cada denúncia deve permitir comentários públicos.<br>- O sistema deve registrar o autor, data e conteúdo.<br>- Comentários devem poder ser denunciados/moderados.<br>- Listagem em ordem cronológica. |
 | RF-023 | Sistema de Reações | SHOULD | Eu como usuário que leu uma denúncia, quero reagir com apoio para expressar minha opinião sem precisar escrever um comentário. | - O sistema deve permitir pelo menos a reação “Apoiar”.<br>- O número total de reações deve ser atualizado em tempo real.<br>- Cada usuário só pode reagir uma vez por denúncia. |
-
 | **Administração** | | | | |
+| RF-024 | Gestão de Denúncias | MUST | Eu como administrador, quero acessar todas as denúncias registradas e poder gerenciá-las (excluir, encontrar o autor). | - Lista com todas as denúncias filtráveis.<br>- Registro de alterações no histórico.<br>- Lista separada para denúncias reportadas.<br>- Facilidade para remover denúncias do ar. |
+
 
 ### Requisitos Não-Funcionais
 
