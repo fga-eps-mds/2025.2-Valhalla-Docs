@@ -7,11 +7,11 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | ID | Requisito | Importância | Descrição | Critérios de Sucesso |
 |---|---|---|---|---|
 | **Autenticação e Conta** | | | | |
-| RF-001 | Login de Usuário | MUST | Eu como usuário cadastrado, quero fazer login usando meu e-mail e senha para ter acesso às funcionalidades exclusivas do meu perfil e interagir com a plataforma. | - O usuário consegue fazer login com credenciais válidas e é redirecionado para a página inicial logada.<br>- O sistema exibe uma mensagem de erro clara ("E-mail ou senha inválidos") ao tentar login com credenciais incorretas. |
+| RF-001 | Login de Usuáriso | MUST | Eu como usuário cadastrado, quero fazer login usando meu e-mail e senha para ter acesso às funcionalidades exclusivas do meu perfil e interagir com a plataforma. | - O usuário consegue fazer login com credenciais válidas e é redirecionado para a página inicial logada.<br>- O sistema exibe uma mensagem de erro clara ("E-mail ou senha inválidos") ao tentar login com credenciais incorretas. |
 | RF-002 | Cadastro | MUST | Eu como visitante, quero criar uma conta fornecendo meus dados básicos para poder utilizar as funcionalidades do site. | - Após preencher o formulário com dados válidos, a conta é criada com sucesso e o usuário é logado.<br>- O sistema exibe uma mensagem de erro se o e-mail informado já estiver em uso.<br>- O sistema valida a força da senha e informa o usuário se os critérios não forem atendidos. |
 | RF-003 | Recuperação da Senha | MUST | Eu como usuário cadastrado que esqueceu a senha, quero solicitar um link de redefinição por e-mail para recuperar o acesso à minha conta de forma segura. | - Ao inserir um e-mail cadastrado, o usuário recebe um e-mail com um link para redefinir sua senha.<br>- Após redefinir a senha, o usuário consegue fazer login com as novas credenciais. |
+| RF-004 | Manter Sessão Ativa | SHOULD | Eu como usuário cadastrado, quero ter a opção de 'Manter-se Conectado' ao fazer login para não precisar inserir minhas credenciais toda vez que eu visitar o site no mesmo dispositivo. | - Se a opção "Manter-se Conectado" for marcada, o usuário permanece logado após fechar e reabrir o navegador.<br>- Se a opção não for marcada, o usuário é desconectado ao fechar a sessão do navegador. |
 | **Página de Perfil** | | | | |
-
 | **Página de Orientação** | | | | |
 | **Página de Gráficos e Notícias** | | | | |
 | **Página de Denúncias** | | | | |
