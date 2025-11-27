@@ -15,6 +15,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | **Página de Perfil** | | | | |
 | RF-006 | Visualização de Dados do Perfil | MUST | Eu como usuário logado, quero visualizar as informações do meu perfil (nome, e-mail, foto, pontuação) para consultar meus dados cadastrados. | - Todas as informações salvas do usuário são exibidas corretamente na página de perfil. |
 | RF-007 | Edição de Dados Pessoais | MUST | Eu como usuário logado, quero editar minhas informações pessoais (como nome e foto de perfil) para manter meus dados atualizados. | - O usuário consegue alterar seus dados e salvá-los com sucesso.<br>- As informações atualizadas são refletidas imediatamente na página de perfil. |
+| RF-008 | Visualização de Histórico de Denúncias | SHOULD | Eu como usuário logado, quero ver uma lista de todas as denúncias que eu já fiz. | - A página exibe uma lista com todas as denúncias feitas pelo usuário. |
 | **Página de Orientação** | | | | |
 | **Página de Gráficos e Notícias** | | | | |
 | **Página de Denúncias** | | | | |
