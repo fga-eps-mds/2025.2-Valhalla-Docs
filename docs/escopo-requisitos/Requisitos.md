@@ -8,6 +8,7 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 |---|---|---|---|---|
 | **Autenticação e Conta** | | | | |
 | RF-001 | Login de Usuário | MUST | Eu como usuário cadastrado, quero fazer login usando meu e-mail e senha para ter acesso às funcionalidades exclusivas do meu perfil e interagir com a plataforma. | - O usuário consegue fazer login com credenciais válidas e é redirecionado para a página inicial logada.<br>- O sistema exibe uma mensagem de erro clara ("E-mail ou senha inválidos") ao tentar login com credenciais incorretas. |
+| RF-002 | Cadastro | MUST | Eu como visitante, quero criar uma conta fornecendo meus dados básicos para poder utilizar as funcionalidades do site. | - Após preencher o formulário com dados válidos, a conta é criada com sucesso e o usuário é logado.<br>- O sistema exibe uma mensagem de erro se o e-mail informado já estiver em uso.<br>- O sistema valida a força da senha e informa o usuário se os critérios não forem atendidos. |
 | **Página de Perfil** | | | | |
 
 | **Página de Orientação** | | | | |
