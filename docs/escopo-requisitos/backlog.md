@@ -1,5 +1,14 @@
 # Backlog do Produto
 
+## Releases Planejadas
+
+### Entrega MVP
+
+**Descrição:** A plataforma funciona de maneira estável e eficiente. O usuário ao acessar a homepage pode ser redirecionado a página de logine cadastro, onde pode se cadastrar sem erros, ao acessar é redirecionado a página de denuncias e 
+
+
+## Tabela do Backlog do Produto
+
 |   ID | Issue Title                                      |   Story Points |   Sprint | Milestone   |
 |-----:|:-------------------------------------------------|---------------:|---------:|:------------|
 |    1 | Página de Cadastro                               |              3 |        1 | Milestone 1 |
