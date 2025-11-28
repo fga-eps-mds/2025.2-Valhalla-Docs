@@ -107,3 +107,36 @@ O sistema "Guardiões da Universidade" utiliza um conjunto de tecnologias modern
 
 * **JWT (JSON Web Tokens) e Bcrypt:**
     São as tecnologias de segurança. O **Bcrypt** é usado para criar um *hash* seguro das senhas dos usuários antes de salvá-las. O **JWT** é usado para criar "crachás" (tokens) de autenticação que o front-end envia para acessar rotas protegidas da API.
+
+
+## 2. VISÃO GERAL DO PROJETO
+
+### 2.1 Ciclo de vida do projeto de desenvolvimento de software
+
+O projeto "Guardiões da Universidade" adota um **ciclo de vida iterativo e incremental**, fundamentado nos princípios da abordagem **ágil**. Diferentemente de modelos preditivos rígidos, onde o escopo é fixado no início, este processo segmenta o desenvolvimento em ciclos curtos e repetitivos denominados sprints (iterações). A cada iteração, um subconjunto funcional do software é desenvolvido, testado e integrado, resultando na entrega contínua de incrementos de valor para o usuário.
+
+A operacionalização deste ciclo é realizada através de uma metodologia híbrida que integra a gestão do **Scrum** com as práticas de engenharia do **XP (Extreme Programming)**. Enquanto o Scrum fornece o *framework* para a organização das sprints, gestão do *backlog* e ritos de acompanhamento (como dailies e reviews), o XP assegura a excelência técnica necessária para sustentar as iterações rápidas, através de práticas como revisão de código e testes automatizados.
+
+A justificativa para a adoção deste modelo reside na necessidade de flexibilidade para lidar com um escopo variável, onde os requisitos evoluem com o *feedback* da comunidade acadêmica. Além disso, a arquitetura do sistema (Cliente-Servidor em Monorepo) foi desenhada para suportar esse ritmo, permitindo que as camadas de Front-end e Back-end evoluam paralelamente e sejam integradas continuamente, garantindo que o software agregue valor real desde as primeiras fases do desenvolvimento.
+
+## 3. PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
+
+O processo de desenvolvimento do projeto "Guardiões da Universidade" é regido pela metodologia híbrida ScrumBan, que integra a disciplina iterativa do Scrum com o fluxo contínuo e visual do Kanban. Esta abordagem foi customizada para atender à realidade acadêmica da equipe, onde o desenvolvimento é segmentado em "Ondas" (iterações de tempo fixo), garantindo entregas consistentes de valor (MVPs e incrementos funcionais) dentro dos prazos estritos da disciplina.
+
+### Fluxo de Trabalho e Ritos (O Processo)
+
+O ciclo de desenvolvimento, denominado "Onda", é delimitado semanalmente e segue o seguinte encadeamento lógico de atividades:
+
+
+1.  **Planejamento (Segunda-feira):** A semana inicia com a reunião de planejamento e alinhamento, onde o backlog da Onda é revisado e as tarefas são atribuídas.
+2.  **Execução e Fluxo Contínuo (Zenhub):** Durante a semana, o desenvolvimento segue o fluxo visual do Kanban no Zenhub:
+    * *New Issues:* Novas demandas são cadastradas.
+    * *Backlog:* Demandas priorizadas aguardam início.
+    * *In Progress:* A tarefa é desenvolvida (utilizando Programação em Pares).
+    * *Review:* O código passa por revisão (Pull Request) e validação.
+    * *Done:* A tarefa é integrada à branch principal (`developer`).
+
+    Para garantir a qualidade técnica e o compartilhamento de conhecimento, a codificação é realizada predominantemente através de Programação em Pares (Pair Programming), uma prática herdada do XP.
+
+3.  **Revisão e Acompanhamento (Sexta-feira):** A semana encerra com uma reunião de *Review*, e acompanhamento técnico, focada na validação do progresso e na resolução de impedimentos críticos antes do fim de semana. Entre esses marcos, a comunicação ocorre de forma assíncrona e contínua.
+
