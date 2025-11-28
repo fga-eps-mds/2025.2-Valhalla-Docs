@@ -121,4 +121,22 @@ A justificativa para a adoção deste modelo reside na necessidade de flexibilid
 
 ## 3. PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
 
+O processo de desenvolvimento do projeto "Guardiões da Universidade" é regido pela metodologia híbrida ScrumBan, que integra a disciplina iterativa do Scrum com o fluxo contínuo e visual do Kanban. Esta abordagem foi customizada para atender à realidade acadêmica da equipe, onde o desenvolvimento é segmentado em "Ondas" (iterações de tempo fixo), garantindo entregas consistentes de valor (MVPs e incrementos funcionais) dentro dos prazos estritos da disciplina.
+
+### Fluxo de Trabalho e Ritos (O Processo)
+
+O ciclo de desenvolvimento, denominado "Onda", é delimitado semanalmente e segue o seguinte encadeamento lógico de atividades:
+
+
+1.  **Planejamento (Segunda-feira):** A semana inicia com a reunião de planejamento e alinhamento, onde o backlog da Onda é revisado e as tarefas são atribuídas.
+2.  **Execução e Fluxo Contínuo (Zenhub):** Durante a semana, o desenvolvimento segue o fluxo visual do Kanban no Zenhub:
+    * *New Issues:* Novas demandas são cadastradas.
+    * *Backlog:* Demandas priorizadas aguardam início.
+    * *In Progress:* A tarefa é desenvolvida (utilizando Programação em Pares).
+    * *Review:* O código passa por revisão (Pull Request) e validação.
+    * *Done:* A tarefa é integrada à branch principal (`developer`).
+
+    Para garantir a qualidade técnica e o compartilhamento de conhecimento, a codificação é realizada predominantemente através de Programação em Pares (Pair Programming), uma prática herdada do XP.
+
+3.  **Revisão e Acompanhamento (Sexta-feira):** A semana encerra com uma reunião de *Review*, e acompanhamento técnico, focada na validação do progresso e na resolução de impedimentos críticos antes do fim de semana. Entre esses marcos, a comunicação ocorre de forma assíncrona e contínua.
 
