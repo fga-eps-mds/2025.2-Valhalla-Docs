@@ -2,9 +2,33 @@
 
 ## Releases Planejadas
 
+O planejamento do projeto "Guardiões da Universidade" foi estruturado em três grandes entregas principais (Releases/Ondas), desenhadas para garantir a evolução incremental do produto, partindo de um Mínimo Produto Viável (MVP) funcional até a versão final rica em interatividade.
+
+O cronograma de entregas foi definido da seguinte forma:
+
+**Release 1 (MVP - Funcionalidades Essenciais e Moderação):**
+O foco da primeira fase foi estabelecer o núcleo do sistema. O objetivo foi permitir que o fluxo principal de denúncia ocorresse e que a administração pudesse moderar o conteúdo.
+* *Entregáveis:* Funcionalidades baseadas na Lean Inception, incluindo: Cadastro e Login de usuários; Gerenciamento de Perfil (adição e edição); CRUD básico de Denúncias (Publicar, Visualizar e Excluir a própria denúncia); e Funcionalidades Administrativas (Exclusão de denúncias e usuários para moderação).
+
+**Release 2 (Refinamento, Mídia e Notícias):**
+A segunda fase focou na expansão das capacidades do sistema e na melhoria da experiência do usuário, introduzindo recursos de edição e conteúdo informativo.
+* *Entregáveis:* Implementação da Edição de Denúncias (antes restrita apenas à exclusão); Suporte a upload de Mídias (fotos e vídeos); Filtros de Busca e Categorização; e o Módulo de Notícias (Publicação e Gestão de notícias por administradores).
+
+**Release 3 (Interação, Engajamento e Dados):**
+A fase final visa promover o engajamento da comunidade e fornecer transparência através de dados.
+* *Entregáveis:* Sistema de Comentários e Reações; Funcionalidade de Apoiar ou Reportar denúncias; Seção de "Top Denúncias" (mais apoiadas nos últimos 30 dias); Página de Gráficos e Página de Perguntas Frequentes (FAQ).
+
+A tabela a seguir resume o planejamento das fases:
+
+| Release | Foco da Entrega | Entregáveis Principais (Features) | Status |
+| :--- | :--- | :--- | :--- |
+| **Release 1** | **MVP e Moderação** | • Auth (Login/Cadastro)<br>• Perfil (Criar/Editar)<br>• Denúncia (Criar/Ver/Excluir)<br>• Moderação (Admin excluir user/denúncia) | Concluído |
+| **Release 2** | **Refinamento e Conteúdo** | • Edição de Denúncias<br>• Upload de Mídia (Foto/Vídeo)<br>• Filtros de Busca e Categoria<br>• Módulo de Notícias (Admin) | Planejado |
+| **Release 3** | **Engajamento e Dados** | • Comentários e Reações<br>• Apoiar/Reportar Denúncia<br>• Top Denúncias (30 dias)<br>• Gráficos e FAQ | Planejado |
+
 ### Entrega MVP
 
-**Descrição:** A plataforma funciona de maneira estável e eficiente. O usuário ao acessar a homepage pode ser redirecionado a página de logine cadastro, onde pode se cadastrar sem erros, ao acessar é redirecionado a página de denuncias e 
+**Descrição:** A plataforma funciona de maneira estável e eficiente. O usuário ao acessar a homepage pode ser redirecionado a página de login e cadastro, onde pode se cadastrar sem erros, ao acessar é redirecionado a página de denuncias e consegue visualizar as denúncias publicadas. O sistema permite ainda a criação de novas denúncias, a edição de dados do perfil e, para administradores, a funcionalidade de moderação (exclusão de usuários e postagens).
 
 
 ## Tabela do Backlog do Produto
