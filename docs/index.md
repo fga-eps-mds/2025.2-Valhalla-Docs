@@ -1,8 +1,8 @@
 # Documentação do Projeto Guardiões da Universidade - Grupo Valhalla
 
-![logo](assets/images/LogoCorujudaOutline.svg)
+![logo](assets/images/logoPrincipal.png)
 
-**Versão: 1.0.0**
+**Versão: 2.0.0**
 
 O projeto **Guardiões da Universidade** tem como proposta desenvolver um canal de denúncias para os alunos da Universidade de Brasília (UnB), sendo um meio para os discentes e os servidores exporem suas denúncias, conhecerem os procedimentos oficiais de denúncia e visualizarem as demandas da universidade.
 

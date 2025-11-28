@@ -7,25 +7,19 @@ repo_url: https://github.com/fga-eps-mds/2025.2-Valhalla.git
 nav:
   - 'Home': 'index.md'
 
-  - 'Atas de Reunião':
-    - 'Visão Geral': 'atas-reuniao/index.md'
+#  - 'Atas de Reunião':
+#    - 'Visão Geral': 'atas-reuniao/index.md'
 
   - 'Escopo e Requisitos':
     - 'Visão Geral': 'escopo-requisitos/geral.md'
     - 'Requisitos': 'escopo-requisitos/Requisitos.md'
-    - 'Casos de Uso': 'escopo-requisitos/casos-de-uso.md'
+    - 'Casos de Uso': 'escopo-requisitos/Casos_de_uso.md'
+    - 'Backlog do Produto': 'escopo-requisitos/backlog.md'
 
   - 'Arquitetura':
     - 'Introdução': 'arquitetura/introdução.md'
     - 'Representação Arquitetural': 'arquitetura/representação_arquitetural.md'
     - 'Referências': 'arquitetura/referências.md'
-
-  - 'Testes':
-    - 'Plano de Testes': 'testes/index.md'
-
-  - 'Desenvolvimento':
-    - 'Guia de Instalação': 'desenvolvimento/guia-instalacao.md'
-    - 'Documentação da API': 'desenvolvimento/documentacao-api.md'
 
 
 theme:
