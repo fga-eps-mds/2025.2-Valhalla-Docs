@@ -64,3 +64,19 @@ Esta tabela lista todos os requisitos do projeto, sua prioridade e descrição d
 | **Conformidade Legal** |
 | RNF-012 | LGPD e Consentimento | MUST | Eu como usuário, quero ter controle sobre meus dados, para garantir que a plataforma está em conformidade com a Lei Geral de Proteção de Dados (LGPD). | - O sistema deve apresentar política de privacidade clara e acessível.<br>- No cadastro, o usuário deve consentir ativamente com termos de uso e política de privacidade.<br>- No perfil, o usuário deve poder gerenciar permissões e solicitar exclusão de dados. |
 
+### Tipos de Usuário
+
+| Tipo de Usuário (`Enum`) | Descrição / Perfil | Permissões Principais | Restrições Importantes |
+| :--- | :--- | :--- | :--- |
+| **`COMUM`** | **Estudante / Padrão**<br>Usuário base do sistema. Acesso focado em criar e gerenciar seu próprio conteúdo. | • **Criar** Denúncias.<br>• **Editar** o próprio perfil (Nome/Foto).<br>• **Editar** texto das próprias denúncias.<br>• **Excluir** (Soft) a própria conta.<br>• **Excluir** (Soft) as próprias denúncias. | • Não pode criar/editar/excluir Categorias.<br>• Não pode excluir contas de terceiros.<br>• Não pode excluir denúncias de terceiros.<br>• Não pode criar usuários do tipo Admin. |
+| **`ADMIN`** | **Servidor / Moderador**<br>Focado na moderação de conteúdo e limpeza da comunidade. | • **Todos** os privilégios de `COMUM`.<br>• **Excluir** contas de usuários `COMUM`.<br>• **Excluir** denúncias de usuários `COMUM` (Moderação).<br>• Acesso a áreas de gestão restritas. | • Não pode criar/editar/excluir Categorias.<br>• Não pode excluir outros `ADMIN` ou `ADMINMASTER`.<br>• **Não pode alterar o texto** de denúncias de terceiros (apenas remover). |
+| **`ADMINMASTER`** | **Gestor / Super Admin**<br>Controle total do sistema e configurações globais. | • **Todos** os privilégios de `ADMIN`.<br>• **CRUD Completo** de Categorias (Criar, Editar, Deletar).<br>• **Criar** novos usuários `ADMIN`.<br>• **Excluir** contas de `ADMIN` e `COMUM`.<br>• **Excluir** qualquer denúncia. | • **Apenas um perfil** com privilégios `ADMINMASTER` (Segurança de Sistema).<br>• Não pode se auto-deletar via rota administrativa (para evitar sistema órfão). |
+
+#### Hierarquia de Exclusão
+| Atacante (Logado) \ Vítima (Alvo) | `COMUM` | `ADMIN` | `ADMINMASTER` |
+| :--- | :---: | :---: | :---: |
+| **`COMUM`** | 🟢 (Apenas se for ele mesmo) | 🔴 Proibido | 🔴 Proibido |
+| **`ADMIN`** | 🟢 Permitido | 🔴 Proibido* | 🔴 Proibido |
+| **`ADMINMASTER`** | 🟢 Permitido | 🟢 Permitido | 🔴 Proibido |
+
+**Nota**: um **`ADMIN`** pode se auto-deletar, mas não pode deletar outro **`ADMIN`**.
