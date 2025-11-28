@@ -7,8 +7,8 @@ repo_url: https://github.com/fga-eps-mds/2025.2-Valhalla.git
 nav:
   - 'Home': 'index.md'
 
-  - 'Atas de Reunião':
-    - 'Visão Geral': 'atas-reuniao/index.md'
+#  - 'Atas de Reunião':
+#    - 'Visão Geral': 'atas-reuniao/index.md'
 
   - 'Escopo e Requisitos':
     - 'Visão Geral': 'escopo-requisitos/geral.md'
