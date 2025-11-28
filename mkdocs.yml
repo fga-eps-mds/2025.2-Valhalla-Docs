@@ -13,19 +13,13 @@ nav:
   - 'Escopo e Requisitos':
     - 'Visão Geral': 'escopo-requisitos/geral.md'
     - 'Requisitos': 'escopo-requisitos/Requisitos.md'
-    - 'Casos de Uso': 'escopo-requisitos/casos-de-uso.md'
+    - 'Casos de Uso': 'escopo-requisitos/Casos_de_uso.md'
+    - 'Backlog do Produto': 'escopo-requisitos/backlog.md'
 
   - 'Arquitetura':
     - 'Introdução': 'arquitetura/introdução.md'
     - 'Representação Arquitetural': 'arquitetura/representação_arquitetural.md'
     - 'Referências': 'arquitetura/referências.md'
-
-  - 'Testes':
-    - 'Plano de Testes': 'testes/index.md'
-
-  - 'Desenvolvimento':
-    - 'Guia de Instalação': 'desenvolvimento/guia-instalacao.md'
-    - 'Documentação da API': 'desenvolvimento/documentacao-api.md'
 
 
 theme:
