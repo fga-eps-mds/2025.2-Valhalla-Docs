@@ -118,3 +118,7 @@ O projeto "Guardiões da Universidade" adota um **ciclo de vida iterativo e incr
 A operacionalização deste ciclo é realizada através de uma metodologia híbrida que integra a gestão do **Scrum** com as práticas de engenharia do **XP (Extreme Programming)**. Enquanto o Scrum fornece o *framework* para a organização das sprints, gestão do *backlog* e ritos de acompanhamento (como dailies e reviews), o XP assegura a excelência técnica necessária para sustentar as iterações rápidas, através de práticas como revisão de código e testes automatizados.
 
 A justificativa para a adoção deste modelo reside na necessidade de flexibilidade para lidar com um escopo variável, onde os requisitos evoluem com o *feedback* da comunidade acadêmica. Além disso, a arquitetura do sistema (Cliente-Servidor em Monorepo) foi desenhada para suportar esse ritmo, permitindo que as camadas de Front-end e Back-end evoluam paralelamente e sejam integradas continuamente, garantindo que o software agregue valor real desde as primeiras fases do desenvolvimento.
+
+## 3. PROCESSO DE DESENVOLVIMENTO DE SOFTWARE
+
+
