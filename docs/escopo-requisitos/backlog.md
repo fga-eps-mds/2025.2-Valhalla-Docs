@@ -53,21 +53,20 @@ A tabela a seguir resume o planejamento das fases:
 |   16 | Página de mudança de senha                       |              3 |        4 | Milestone 2 |
 |   17 | Gerir Usuários                                   |              3 |        5 | Milestone 1 |
 |   18 | Gerir Denúncias                                  |              3 |        5 | Milestone 1 |
-|   19 | Filtro e Busca                                   |              5 |        5 | Milestone 3 |
-|   20 | Gerenciar Denúncias                              |              5 |        5 | Milestone 3 |
-|   21 | Editar dados do Perfil                           |              3 |        5 | Milestone 2 |
-|   22 | Visualizar de dados do Perfil                    |              3 |        5 | Milestone 2 |
-|   23 | Encaminhamento Automático                        |              3 |        5 | Milestone 3 |
-|   24 | Gerenciar Denúncias                              |              5 |        5 | Milestone 3 |
-|   25 | Gerenciar denuncias (User)                       |              8 |        6 | Milestone 3 |
-|   26 | Postagens e Gestão de Notícias                   |              5 |        6 | Milestone 2 |
-|   27 | Visualizar do Histórico de Denúncias             |              5 |        6 | Milestone 3 |
-|   28 | Reagir a Postagens                               |              5 |        6 | Milestone 3 |
-|   29 | Comentar nas Denúncias                           |              3 |        6 | Milestone 3 |
-|   30 | Perguntas Frequentes                             |              3 |        6 | Milestone 3 |
-|   31 | Moderação de Denuncia e Abuso                    |              5 |        6 | Milestone 3 |
-|   32 | Visualização de "Top Denuncias"                  |              3 |        7 | Milestone 3 |
-|   33 | Visualizar Interações do Usuário                 |              5 |        7 | Milestone 3 |
-|   34 | Visualização de "Top Denuncias"                  |              3 |        7 | Milestone 3 |
-|   35 | Visualizar gráfico de linha do tempo de Denuncia |              5 |        7 | Milestone 3 |
-|   36 | Visualizar gráfico por categoria de Denúncia     |              5 |        7 | Milestone 3 |
+|   19 | Gerenciar Denúncias                              |              5 |        5 | Milestone 3 |
+|   20 | Editar dados do Perfil                           |              3 |        5 | Milestone 2 |
+|   21 | Visualizar de dados do Perfil                    |              3 |        5 | Milestone 2 |
+|   22 | Visualizar do Histórico de Denúncias             |              3 |        5 | Milestone 3 |
+|   23 | Gerenciar denuncias (User)                       |              8 |        6 | Milestone 3 |
+|   24 | Encaminhamento Automático                        |              5 |        6 | Milestone 2 |
+|   25 | Postagens e Gestão de Notícias                   |              5 |        6 | Milestone 2 |
+|   26 | Filtro e Busca                                   |              5 |        6 | Milestone 3 |
+|   27 | Reagir a Postagens                               |              5 |        6 | Milestone 3 |
+|   28 | Comentar nas Denúncias                           |              3 |        6 | Milestone 3 |
+|   29 | Perguntas Frequentes                             |              3 |        6 | Milestone 3 |
+|   30 | Moderação de Denuncia e Abuso                    |              5 |        6 | Milestone 3 |
+|   31 | Visualização de "Top Denuncias"                  |              3 |        7 | Milestone 3 |
+|   32 | Visualizar Interações do Usuário                 |              5 |        7 | Milestone 3 |
+|   33 | Visualização de "Top Denuncias"                  |              3 |        7 | Milestone 3 |
+|   34 | Visualizar gráfico de linha do tempo de Denuncia |              5 |        7 | Milestone 3 |
+|   35 | Visualizar gráfico por categoria de Denúncia     |              5 |        7 | Milestone 3 |
