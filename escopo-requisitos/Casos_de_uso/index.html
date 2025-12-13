@@ -1,0 +1,5427 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto Valhalla para as disciplinas de MDS.">
+      
+      
+        <meta name="author" content="Equipe Valhalla">
+      
+      
+      
+        <link rel="prev" href="../Requisitos/">
+      
+      
+        <link rel="next" href="../backlog/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico
+- navigation.tabs - navigation.tabs.sticky - navigation.sections - navigation.top - search.suggest - search.highlight - content.code.copy - navigation.path">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Casos de Uso - 2025.2 Valhalla</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#casos-de-uso" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="2025.2 Valhalla" class="md-header__button md-logo" aria-label="2025.2 Valhalla" data-md-component="logo">
+      
+  <img src="../../assets/images/LogoCorujudaCapeludaOutline.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2025.2 Valhalla
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Casos de Uso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fga-eps-mds/2025.2-Valhalla.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="2025.2 Valhalla" class="md-nav__button md-logo" aria-label="2025.2 Valhalla" data-md-component="logo">
+      
+  <img src="../../assets/images/LogoCorujudaCapeludaOutline.svg" alt="logo">
+
+    </a>
+    2025.2 Valhalla
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fga-eps-mds/2025.2-Valhalla.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Escopo e Requisitos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Escopo e Requisitos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Casos de Uso
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Casos de Uso
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-autenticacao-e-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Autenticação e Conta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-login-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Login de usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Login de usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cadastro-de-novo-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Cadastro de novo usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Cadastro de novo usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-recuperacao-de-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Recuperação de senha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Recuperação de senha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-logout-encerramento-de-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Logout (Encerramento de sessão)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Logout (Encerramento de sessão)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.3 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.4 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.5 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pagina-de-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Página de perfil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-visualizacao-de-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Visualização de perfil
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Visualização de perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-edicao-e-atualizacao-de-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Edição e atualização de perfil
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Edição e atualização de perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#226-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-historico-de-denuncias-e-atividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Histórico de denúncias e atividades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Histórico de denúncias e atividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#234-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#235-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.5 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-exclusao-de-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Exclusão de conta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Exclusão de conta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#245-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-pagina-de-orientacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Página de orientação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-consulta-e-busca-de-guias-e-informacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Consulta e busca de guias e informações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Consulta e busca de guias e informações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-leitura-de-tutoriais-e-acesso-a-links-externos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Leitura de tutoriais e acesso a links externos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Leitura de tutoriais e acesso a links externos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pagina-de-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Página de gráfico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-grafico-por-categoria-de-denuncia" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Gráfico por categoria de denúncia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Gráfico por categoria de denúncia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-linha-do-tempo-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Linha do tempo de denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Linha do tempo de denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#426-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-top-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Top denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Top denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#436-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pagina-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Página de denúncias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-moderacao-e-denuncia-de-abuso" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Moderação e denúncia de abuso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Moderação e denúncia de abuso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#515-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#516-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-filtros-e-busca" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Filtros e busca
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Filtros e busca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#525-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#526-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-publicacao-de-denuncia" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Publicação de denúncia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Publicação de denúncia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#534-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#535-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#536-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-timeline-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Timeline de denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Timeline de denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#541-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#542-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#544-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#545-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#546-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-comentarios-nas-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Comentários nas denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 Comentários nas denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#551-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#552-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#553-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#554-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#555-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#556-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-sistema-de-reacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Sistema de reações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6 Sistema de reações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#561-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#562-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#563-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#564-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#565-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#566-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-administracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Administração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-gestao-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Gestão de denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Gestão de denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#614-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#615-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#616-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-gestao-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Gestão de usuários
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Gestão de usuários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#624-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#625-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#626-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-postagens-e-gestao-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Postagens e gestão de denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Postagens e gestão de denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-fluxo-basico-criar-noticia" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.2 Fluxo básico (Criar notícia)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-fluxo-basico-editar-ou-excluir-noticia" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.3 Fluxo básico (Editar ou excluir notícia)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#634-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.4 FLuxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#635-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.5 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#636-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.6 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#637-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.7 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-configuracoes-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Configurações do sistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Configurações do sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.3 FLuxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#645-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#646-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-administrador-mestre" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Administrador mestre
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Administrador mestre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#651-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#652-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#653-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#654-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#655-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#656-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-confiabilidade-e-disponibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Confiabilidade e disponibilidade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-disponibilidade-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Disponibilidade do sistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Disponibilidade do sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#712-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#713-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#714-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#715-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#716-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-suporte-a-multipos-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Suporte a múltipos usuários
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Suporte a múltipos usuários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#724-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#725-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#726-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backlog do Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Arquitetura
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Arquitetura
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/introdu%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/representa%C3%A7%C3%A3o_arquitetural/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Representação Arquitetural
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/refer%C3%AAncias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Referências
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-autenticacao-e-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Autenticação e Conta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-login-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Login de usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Login de usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-cadastro-de-novo-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Cadastro de novo usuário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Cadastro de novo usuário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-recuperacao-de-senha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Recuperação de senha
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Recuperação de senha">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-logout-encerramento-de-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Logout (Encerramento de sessão)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Logout (Encerramento de sessão)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.3 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.4 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.5 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pagina-de-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Página de perfil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-visualizacao-de-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Visualização de perfil
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Visualização de perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-edicao-e-atualizacao-de-perfil" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Edição e atualização de perfil
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Edição e atualização de perfil">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#226-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-historico-de-denuncias-e-atividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Histórico de denúncias e atividades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Histórico de denúncias e atividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#234-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#235-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.5 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-exclusao-de-conta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Exclusão de conta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Exclusão de conta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#245-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-pagina-de-orientacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Página de orientação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-consulta-e-busca-de-guias-e-informacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Consulta e busca de guias e informações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Consulta e busca de guias e informações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-leitura-de-tutoriais-e-acesso-a-links-externos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Leitura de tutoriais e acesso a links externos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Leitura de tutoriais e acesso a links externos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pagina-de-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Página de gráfico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-grafico-por-categoria-de-denuncia" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Gráfico por categoria de denúncia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Gráfico por categoria de denúncia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#416-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-linha-do-tempo-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Linha do tempo de denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Linha do tempo de denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#426-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-top-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Top denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Top denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#436-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pagina-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Página de denúncias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-moderacao-e-denuncia-de-abuso" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Moderação e denúncia de abuso
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Moderação e denúncia de abuso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#515-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#516-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-filtros-e-busca" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Filtros e busca
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Filtros e busca">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#525-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#526-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-publicacao-de-denuncia" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Publicação de denúncia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Publicação de denúncia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#534-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#535-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#536-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-timeline-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Timeline de denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 Timeline de denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#541-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#542-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#544-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#545-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#546-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-comentarios-nas-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Comentários nas denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 Comentários nas denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#551-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#552-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#553-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#554-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#555-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#556-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-sistema-de-reacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Sistema de reações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6 Sistema de reações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#561-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#562-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#563-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#564-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#565-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#566-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-administracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Administração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-gestao-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Gestão de denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Gestão de denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#614-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#615-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#616-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-gestao-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Gestão de usuários
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Gestão de usuários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#624-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#625-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#626-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-postagens-e-gestao-de-denuncias" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Postagens e gestão de denúncias
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Postagens e gestão de denúncias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-fluxo-basico-criar-noticia" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.2 Fluxo básico (Criar notícia)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-fluxo-basico-editar-ou-excluir-noticia" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.3 Fluxo básico (Editar ou excluir notícia)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#634-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.4 FLuxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#635-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.5 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#636-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.6 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#637-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.7 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-configuracoes-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Configurações do sistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Configurações do sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.3 FLuxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#645-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#646-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-administrador-mestre" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Administrador mestre
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Administrador mestre">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#651-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#652-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#653-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#654-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#655-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#656-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-confiabilidade-e-disponibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Confiabilidade e disponibilidade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-disponibilidade-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Disponibilidade do sistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Disponibilidade do sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#712-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#713-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#714-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#715-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#716-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-suporte-a-multipos-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Suporte a múltipos usuários
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Suporte a múltipos usuários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-pre-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1 Pré-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-fluxo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.2 Fluxo básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723-fluxo-alternativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.3 Fluxo alternativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#724-pos-condicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.4 Pós-condições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#725-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.5 Requisitos não funcionais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#726-referencia-cruzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.6 Referência cruzada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="casos-de-uso">CASOS DE USO</h1>
+<h2 id="1-autenticacao-e-conta">1. Autenticação e Conta</h2>
+<h2 id="11-login-de-usuario">1.1 Login de usuário</h2>
+<p>Este caso de uso descreve o processo de login, que permi4e ao usuário acessar o sistema utilizando suas credenciais institucionais. O objetivo é garantir que somente membros autorizados possam entrar na plataforma, de forma segura, rápida e controlada.</p>
+<h3 id="111-pre-condicoes">1.1.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve possuir uma conta previamente cadastrada. </li>
+<li>O sistema deve estar conectado ao servidor e ao banco de dados de autenticação. </li>
+<li>Deve haver conectividade com a internet. </li>
+</ul>
+<h3 id="112-fluxo-basico">1.1.2  Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa a tela inicial do sistema.</p>
+</li>
+<li>
+<p>O sistema exibe os campos “E-mail” e “Senha”, além dos botões Entrar, Cadastre-se e Esqueci minha senha. </p>
+</li>
+<li>
+<p>O usuário insere o e-mail e a senha. </p>
+</li>
+<li>
+<p>O sistema valida o formato do e-mail. </p>
+</li>
+<li>
+<p>O sistema verifica se o e-mail existe no banco de dados. </p>
+</li>
+<li>
+<p>Caso exista, o sistema compara o hash da senha informada com o hash armazenado. </p>
+</li>
+<li>
+<p>Se as credenciais estiverem corretas, o sistema autentica o usuário e cria uma sessão segura. </p>
+</li>
+<li>
+<p>O sistema redireciona o usuário para a página inicial de denúncias (ou para o painel administrativo, se for administrador). </p>
+</li>
+<li>
+<p>Caso o usuário selecione “Manter-me conectado”, o sistema gera um token persistente para logins automáticos. </p>
+</li>
+</ol>
+<h3 id="113-fluxo-alternativo">1.1.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o e-mail não for encontrado, o sistema exibe a mensagem: “E-mail não cadastrado.” </li>
+<li>Se a senha estiver incorreta, o sistema exibe: “Senha incorreta” </li>
+<li>Se houver falha de conexão, o sistema exibe: “Não foi possível conectar ao servidor.” </li>
+<li>Se o servidor estiver em manutenção, o sistema exibe: “Serviço temporariamente indisponível.” </li>
+</ul>
+<h3 id="114-pos-condicoes">1.1.4 Pós-condições</h3>
+<ul>
+<li>O usuário é autenticado e redirecionado para o ambiente correto. </li>
+<li>O sistema registra o log de acesso. </li>
+<li>A sessão do usuário é criada e armazenada temporariamente. </li>
+</ul>
+<h3 id="115-requisitos-nao-funcionais">1.1.5 Requisitos não funcionais</h3>
+<ul>
+<li>O tempo máximo de autenticação deve ser de 3 segundos. </li>
+<li>O sistema deve usar HTTPS e hash seguro (bcrypt/Argon2). </li>
+<li>Interface responsiva e acessível. </li>
+<li>O login deve ser compatível com diferentes navegadores e dispositivos. </li>
+</ul>
+<h3 id="116-referencia-cruzada">1.1.6 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 3.1 – Tela de Login. </p>
+<h2 id="12-cadastro-de-novo-usuario">1.2 Cadastro de novo usuário</h2>
+<p>Este caso de uso descreve o processo de criação de uma nova conta no sistema. Ele garante que apenas usuários com e-mails válidos possam se registrar.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema.</p>
+<h3 id="121-pre-condicoes">1.2.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve possuir um e-mail válido. </li>
+<li>O sistema deve estar conectado ao banco de dados de usuários. </li>
+</ul>
+<h3 id="122-fluxo-basico">1.2.2 Fluxo básico</h3>
+<ol>
+<li>O usuário acessa a tela de login e clica em Cadastre-se. </li>
+<li>O sistema exibe o formulário de cadastro com os campos: Nome Completo, E-mail, Cargo/Ocupação, Senha e Confirmação de Senha. </li>
+<li>O usuário preenche os campos obrigatórios. </li>
+<li>
+<p>O sistema valida: </p>
+<ul>
+<li>Se o nome possui ao menos dois nomes; </li>
+<li>Se o e-mail é válido; </li>
+<li>Se a senha contém letras maiúsculas, minúsculas, números e caracteres especiais. </li>
+<li>O sistema verifica se o e-mail já está cadastrado. </li>
+<li>Caso não esteja, cria o registro e armazena os dados. </li>
+<li>O sistema exibe a mensagem: “Cadastro realizado com sucesso.” </li>
+<li>O usuário é redirecionado para a tela de login. </li>
+</ul>
+</li>
+</ol>
+<h3 id="123-fluxo-alternativo">1.2.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o e-mail já estiver cadastrado, o sistema exibe: “E-mail já cadastrado.” </li>
+<li>Se o e-mail não for válido, exibe: “E-mail inválido para cadastro.” </li>
+<li>Se a senha for fraca, exibe: “Senha não atende aos requisitos mínimos.” </li>
+</ul>
+<h3 id="124-pos-condicoes">1.2.4 Pós-condições</h3>
+<ul>
+<li>O novo usuário é registrado e habilitado para login. </li>
+<li>O sistema grava data e hora do cadastro. </li>
+</ul>
+<h3 id="125-requisitos-nao-funcionais">1.2.5 Requisitos não funcionais</h3>
+<ul>
+<li>O formulário deve ser intuitivo e validado em tempo real. </li>
+<li>O tempo total do cadastro não deve exceder 5 segundos. </li>
+<li>O sistema deve aplicar boas práticas de usabilidade e acessibilidade. </li>
+</ul>
+<h3 id="126-referencia-cruzada">1.2.6 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 3.2 – Tela de Cadastro de Usuário. </p>
+<h2 id="13-recuperacao-de-senha">1.3 Recuperação de senha</h2>
+<p>Este caso de uso permite que o usuário redefina sua senha caso a tenha esquecido, garantindo segurança e controle no processo.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema.</p>
+<h3 id="131-pre-condicoes">1.3.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve possuir uma conta existente. </li>
+<li>O sistema deve estar conectado ao serviço de e-mail. </li>
+</ul>
+<h3 id="132-fluxo-basico">1.3.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa a tela de login e clica em Esqueci minha senha. </p>
+</li>
+<li>
+<p>O sistema exibe o campo para inserção do e-mail. </p>
+</li>
+<li>O usuário informa o e-mail. </li>
+<li>O sistema verifica se o e-mail está cadastrado. </li>
+<li>Caso positivo, o sistema gera um token temporário de redefinição de senha. </li>
+<li>O sistema envia um e-mail com o link seguro para redefinição. </li>
+<li>O usuário acessa o link e insere uma nova senha. </li>
+<li>O sistema valida a nova senha conforme as regras de complexidade. </li>
+<li>Se válida, o sistema atualiza o hash no banco de dados. </li>
+<li>O sistema exibe a mensagem: “Senha redefinida com sucesso.” </li>
+</ol>
+<h3 id="133-fluxo-alternativo">1.3.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o e-mail não for encontrado, o sistema exibe: “E-mail não cadastrado.” </li>
+<li>Se o link estiver expirado, o sistema solicita novo pedido de redefinição. </li>
+<li>Se o servidor de e-mail estiver fora do ar, o sistema exibe: “Erro ao enviar e-mail, tente novamente mais tarde.” </li>
+</ul>
+<h3 id="134-pos-condicoes">1.3.4 Pós-condições</h3>
+<ul>
+<li>A senha do usuário é redefinida. </li>
+<li>O sistema registra a ação no log de segurança. </li>
+</ul>
+<h3 id="135-requisitos-nao-funcionais">1.3.5 Requisitos não funcionais</h3>
+<ul>
+<li>O link de redefinição deve expirar após 15 minutos. </li>
+<li>Todo o processo deve ocorrer sob conexão segura (HTTPS). </li>
+<li>Mensagens devem ser claras e orientativas. </li>
+</ul>
+<h3 id="136-referencia-cruzada">1.3.6 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 3.3 – Recuperação de Senha. </p>
+<h2 id="14-logout-encerramento-de-sessao">1.4 Logout (Encerramento de sessão)</h2>
+<p>Este caso de uso descreve o encerramento da sessão do usuário, garantindo que os dados não permaneçam ativos após o uso.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="141-pre-condicoes">1.4.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve estar logado. </li>
+</ul>
+<h3 id="142-fluxo-basico">1.4.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário clica em Sair no menu de perfil. </p>
+</li>
+<li>
+<p>O sistema encerra a sessão ativa. </p>
+</li>
+<li>O sistema limpa cookies e tokens temporários. </li>
+<li>O usuário é redirecionado para a tela de login. </li>
+<li>O sistema registra o evento no log de auditoria. </li>
+</ol>
+<h3 id="143-pos-condicoes">1.4.3 Pós-condições</h3>
+<ul>
+<li>Sessão encerrada com segurança. </li>
+<li>Dados de sessão eliminados da memória local. </li>
+</ul>
+<h3 id="144-requisitos-nao-funcionais">1.4.4 Requisitos não funcionais</h3>
+<ul>
+<li>O encerramento deve ocorrer em até 2 segundos.</li>
+<li>Tokens de sessão devem ser invalidados imediatamente. </li>
+</ul>
+<h3 id="145-referencia-cruzada">1.4.5 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 3.1 – Autenticação e 4.1 – Segurança de Sessão.</p>
+<h2 id="2-pagina-de-perfil">2. Página de perfil</h2>
+<h2 id="21-visualizacao-de-perfil">2.1 Visualização de perfil</h2>
+<p>Este caso de uso descreve o processo em que o usuário acessa e visualiza suas informações pessoais dentro do sistema. O objetivo é permitir que o usuário tenha acesso rápido e claro aos seus dados de identificação, configurações de conta e histórico de uso, garantindo transparência e controle.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="211-pre-condicoes">2.1.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve estar autenticado no sistema. </li>
+<li>O módulo de perfil deve estar ativo e devidamente integrado ao banco de dados. </li>
+<li>O sistema deve ter conexão estável com o servidor. </li>
+</ul>
+<h3 id="212-fluxo-basico">2.1.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa o menu lateral e seleciona a opção Meu Perfil. </p>
+</li>
+<li>
+<p>O sistema carrega as informações do usuário: nome completo, e-mail, data de criação da conta e foto de perfil. </p>
+</li>
+<li>O sistema exibe também as configurações de privacidade, preferências de notificação e opções de segurança. </li>
+<li>O usuário pode navegar entre abas como Informações Pessoais, Minhas Denúncias, Configurações e Histórico de Atividades. </li>
+<li>O sistema apresenta as informações de maneira organizada e responsiva, garantindo boa legibilidade. </li>
+<li>O sistema verifica periodicamente se há atualizações nas informações (como mudança de senha ou foto). </li>
+<li>Caso haja atualizações, os dados são recarregados automaticamente. </li>
+</ol>
+<h3 id="213-fluxo-alternativo">2.1.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o servidor estiver temporariamente indisponível, o sistema exibe: “Não foi possível carregar o perfil neste momento.” </li>
+<li>Caso os dados do usuário estejam corrompidos, o sistema exibe: “Erro ao recuperar informações, contate o suporte.” </li>
+<li>Se a imagem de perfil não for carregada, o sistema exibirá um avatar padrão. </li>
+</ul>
+<h3 id="214-pos-condicoes">2.1.4 Pós-condições</h3>
+<ul>
+<li>As informações do perfil são apresentadas corretamente ao usuário. </li>
+<li>Logs de visualização são registrados para fins de auditoria. </li>
+</ul>
+<h3 id="215-requisitos-nao-funcionais">2.1.5 Requisitos não funcionais</h3>
+<ul>
+<li>A tela deve carregar em até 3 segundos. </li>
+<li>A interface deve ser responsiva e acessível. </li>
+<li>O sistema deve garantir a integridade e consistência dos dados apresentados. </li>
+</ul>
+<h3 id="216-referencia-cruzada">2.1.6 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 3.5 – Perfil de Usuário. </p>
+<h2 id="22-edicao-e-atualizacao-de-perfil">2.2 Edição e atualização de perfil</h2>
+<p>Este caso de uso descreve as ações realizadas pelo usuário para atualizar ou modificar suas informações pessoais e preferências dentro do sistema. O objetivo é dar autonomia ao usuário para manter seus dados sempre corretos e suas preferências configuradas conforme desejar.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="221-pre-condicoes">2.2.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve estar logado no sistema. </li>
+<li>O módulo de edição deve estar disponível e com permissão ativa. </li>
+</ul>
+<h3 id="222-fluxo-basico">2.2.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa o menu Meu Perfil e clica em Editar Perfil. </p>
+</li>
+<li>
+<p>O sistema exibe os campos editáveis: nome completo, senha, foto de perfil e preferências de notificação. </p>
+</li>
+<li>O usuário realiza as alterações desejadas. </li>
+<li>
+<p>O sistema realiza validações: </p>
+<ul>
+<li>Nome completo deve conter pelo menos dois nomes; </li>
+<li>A senha deve atender aos critérios de segurança; </li>
+<li>A foto de perfil deve ter formato válido (.jpg, .png) e tamanho inferior a 5MB.</li>
+</ul>
+</li>
+<li>
+<p>O usuário confirma as alterações clicando em Salvar. </p>
+</li>
+<li>O sistema atualiza os dados no banco de dados e exibe a mensagem: “Perfil atualizado com sucesso.” </li>
+<li>O sistema cria um log de alteração de dados com data e hora. </li>
+</ol>
+<h3 id="223-fluxo-alternativo">2.2.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o usuário inserir senha fraca, o sistema exibirá: “Senha inválida, utilize caracteres especiais e números.” </li>
+<li>Se a imagem exceder o limite de tamanho, o sistema exibirá: “Imagem muito grande, selecione outro arquivo.” </li>
+<li>Se houver falha de conexão durante o salvamento, o sistema exibirá: “Erro ao salvar alterações, tente novamente.” </li>
+</ul>
+<h3 id="224-pos-condicoes">2.2.4 Pós-condições</h3>
+<ul>
+<li>Os dados são atualizados e refletidos em todas as telas do sistema. </li>
+<li>O sistema mantém o histórico de alterações de dados do usuário. </li>
+</ul>
+<h3 id="225-requisitos-nao-funcionais">2.2.5 Requisitos não funcionais</h3>
+<ul>
+<li>As alterações devem ser confirmadas em até 3 segundos. </li>
+<li>O sistema deve registrar logs detalhados de cada modificação. </li>
+<li>O design deve seguir padrões de usabilidade e clareza. </li>
+</ul>
+<h3 id="226-referencia-cruzada">2.2.6 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 3.5 – Perfil de Usuário (Edição). </p>
+<h2 id="23-historico-de-denuncias-e-atividades">2.3 Histórico de denúncias e atividades</h2>
+<p>Este caso de uso descreve como o usuário pode consultar o histórico de suas denúncias e atividades dentro do sistema. O objetivo é fornecer transparência e controle sobre as ações realizadas, permitindo que o usuário acompanhe o andamento de suas participações.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema, Administrador</p>
+<h3 id="231-pre-condicoes">2.3.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve estar logado. </li>
+<li>O sistema deve ter registros associados à conta do usuário. </li>
+</ul>
+<h3 id="232-fluxo-basico">2.3.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa o menu Meu Perfil e seleciona Minhas Denúncias. </p>
+</li>
+<li>
+<p>O sistema exibe uma lista com todas as denúncias enviadas, incluindo título, categoria, data e status atual (Pendente, Em Análise, Resolvida). </p>
+</li>
+<li>O usuário pode clicar em uma denúncia específica para visualizar detalhes, comentários e anexos. </li>
+<li>O sistema apresenta uma linha do tempo mostrando as atualizações do status. </li>
+<li>O usuário pode filtrar as denúncias por data, categoria ou status. </li>
+<li>O sistema oferece a opção de exportar o histórico em PDF. </li>
+<li>O sistema mantém todas as informações salvas em ordem cronológica. </li>
+</ol>
+<h3 id="233-fluxo-alternativo">2.3.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o usuário ainda não tiver denúncias, o sistema exibirá: “Nenhuma denúncia registrada até o momento.” </li>
+<li>Se houver falha na conexão com o banco de dados, o sistema exibirá: “Erro ao carregar histórico.” </li>
+<li>Se o usuário tentar acessar denúncia removida, o sistema informará que ela foi arquivada ou excluída. </li>
+</ul>
+<h3 id="234-pos-condicoes">2.3.4 Pós-condições</h3>
+<ul>
+<li>O histórico é exibido corretamente e atualizado em tempo real. </li>
+<li>Logs de consulta são registrados para auditoria. </li>
+<li>Requisitos não funcionais: </li>
+<li>O carregamento do histórico não deve exceder 4 segundos. </li>
+<li>O sistema deve garantir consistência e integridade dos registros. </li>
+<li>A exportação deve ser gerada em formato padronizado (PDF/A). </li>
+</ul>
+<h3 id="235-referencia-cruzada">2.3.5 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 3.6 – Gestão de Denúncias (Visualização do Usuário).</p>
+<h2 id="24-exclusao-de-conta">2.4 Exclusão de conta</h2>
+<p>Este caso de uso descreve o processo de exclusão de conta, no qual o usuário solicita a remoção de seus dados pessoais e encerramento do acesso ao sistema.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema, Administrador</p>
+<h3 id="241-pre-condicoes">2.4.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve estar logado. </li>
+<li>Não deve haver denúncias pendentes associadas à conta. </li>
+</ul>
+<h3 id="242-fluxo-basico">2.4.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa o menu Configurações de Conta. </p>
+</li>
+<li>
+<p>Clica em Excluir Conta. </p>
+</li>
+<li>O sistema solicita confirmação da ação e apresenta um aviso sobre a perda de acesso. </li>
+<li>O usuário confirma a exclusão. </li>
+<li>O sistema solicita autenticação de segurança (reinsira a senha). </li>
+<li>O sistema torna inativo os dados pessoais e anonimiza as denúncias enviadas. </li>
+<li>O sistema exibe: “Conta excluída com sucesso.” </li>
+</ol>
+<h3 id="243-fluxo-alternativo">2.4.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o usuário tiver denúncias pendentes, o sistema exibirá: “Não é possível excluir a conta enquanto houver denúncias abertas.” </li>
+<li>Se houver falha de rede, o sistema exibirá: “Erro ao excluir a conta, tente novamente.” </li>
+</ul>
+<h3 id="244-pos-condicoes">2.4.4 Pós-condições</h3>
+<ul>
+<li>Conta excluída e dados pessoais removidos. </li>
+<li>Denúncias associadas são mantidas de forma anônima. </li>
+</ul>
+<h3 id="245-requisitos-nao-funcionais">2.4.5 Requisitos não funcionais</h3>
+<ul>
+<li>O processo deve seguir os princípios da LGPD. </li>
+<li>A exclusão deve ser processada em até 5 segundos. </li>
+<li>Logs da ação devem ser mantidos para auditoria institucional. </li>
+</ul>
+<h3 id="246-referencia-cruzada">2.4.6 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 4.3 – Exclusão e Anonimização de Dados. </p>
+<h2 id="3-pagina-de-orientacao">3. Página de orientação</h2>
+<h2 id="31-consulta-e-busca-de-guias-e-informacoes">3.1 Consulta e busca de guias e informações</h2>
+<p>Este caso de uso descreve o processo em que o usuário busca e consulta guias e tutoriais passo a passo sobre como realizar denúncias nos canais oficiais, garantindo que o processo seja feito corretamente. Ele permite ao usuário encontrar informações específicas de maneira rápida e eficiente.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="311-pre-condicoes">3.1.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve ter acesso à internet. </li>
+<li>O módulo de orientação deve estar ativo e devidamente preenchido com guias e tutoriais. </li>
+</ul>
+<h3 id="312-fluxo-basico">3.1.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa a plataforma e navega até a seção "Orientação". </p>
+</li>
+<li>
+<p>O sistema exibe um índice ou uma lista de guias disponíveis, categorizados por tipo de denúncia (ex: "Assédio Moral", "Problemas de Infraestrutura"). </p>
+</li>
+<li>O usuário utiliza a barra de busca para encontrar informações específicas, digitando palavras-chave como "restaurante universitário" ou "iluminação". </li>
+<li>O sistema exibe os resultados da busca que correspondem às palavras-chave. </li>
+<li>O usuário clica em um dos guias da lista. </li>
+<li>O sistema carrega e exibe o conteúdo completo do guia, que inclui instruções detalhadas, textos explicativos e, se aplicável, imagens ou diagramas. </li>
+<li>O usuário lê o guia para entender o processo de denúncia. </li>
+</ol>
+<h3 id="313-fluxo-alternativo">3.1.3 Fluxo alternativo</h3>
+<ul>
+<li>Busca sem Resultados: Se a busca não retornar nenhum guia relevante, o sistema exibirá a mensagem: "Nenhum resultado encontrado para a sua busca. Por favor, tente outras palavras-chave." </li>
+<li>Conteúdo Indisponível: Se o guia estiver incompleto ou houver um erro de carregamento, o sistema exibirá: "Não foi possível carregar o conteúdo. Por favor, tente novamente mais tarde." </li>
+</ul>
+<h3 id="314-pos-condicoes">3.1.4 Pós-condições</h3>
+<ul>
+<li>O usuário consegue encontrar e ler o guia completo, compreendendo o processo de uma denúncia oficial. </li>
+</ul>
+<h3 id="315-requisitos-nao-funcionais">3.1.5 Requisitos não funcionais</h3>
+<ul>
+<li>A busca deve ser rápida e a interface deve ser intuitiva. O sistema deve garantir que os guias e tutoriais sejam de fácil leitura e compreensão. </li>
+</ul>
+<h3 id="316-referencia-cruzada">3.1.6 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 3.3.1 Guia de Denúncia. </p>
+<h2 id="32-leitura-de-tutoriais-e-acesso-a-links-externos">3.2 Leitura de tutoriais e acesso a links externos</h2>
+<p>Este caso de uso descreve como o usuário, após encontrar um guia, pode ler o conteúdo em profundidade, incluindo tutoriais e instruções detalhadas, e acessar diretamente os links para canais de denúncia externos e oficiais, garantindo que sua reclamação seja formalizada.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="321-pre-condicoes">3.2.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve ter selecionado um guia na página de Orientação. </li>
+<li>O sistema deve ter os links de órgãos oficiais cadastrados e funcionais. </li>
+</ul>
+<h3 id="322-fluxo-basico">3.2.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O sistema carrega o guia de denúncia, que pode incluir tutoriais passo a passo e links para sites externos. </p>
+</li>
+<li>
+<p>O usuário lê o tutorial para entender o procedimento completo. </p>
+</li>
+<li>O usuário localiza e clica em um dos links oficiais fornecidos, como "Acesse o site da Ouvidoria da UnB". </li>
+<li>O sistema redireciona o usuário para o site oficial do órgão competente em no máximo 2 segundos. </li>
+<li>O usuário consegue prosseguir com a denúncia no canal oficial, utilizando as informações obtidas no tutorial. </li>
+</ol>
+<h3 id="323-fluxo-alternativo">3.2.3 Fluxo alternativo</h3>
+<ul>
+<li>Link Quebrado: Se o link oficial estiver quebrado ou o site do órgão estiver fora do ar, o sistema exibirá uma mensagem de erro: "O link não está funcionando no momento. Por favor, tente novamente mais tarde ou acesse diretamente o site do órgão." </li>
+</ul>
+<h3 id="324-pos-condicoes">3.2.4 Pós-condições</h3>
+<ul>
+<li>O usuário é redirecionado para a página externa do canal oficial de denúncia e tem as informações necessárias para formalizar sua reclamação. </li>
+</ul>
+<h3 id="325-requisitos-nao-funcionais">3.2.5 Requisitos não funcionais</h3>
+<ul>
+<li>A responsividade dos links deve ser eficiente. </li>
+<li>O sistema deve ser compatível com os principais navegadores. </li>
+</ul>
+<h3 id="326-referencia-cruzada">3.2.6 Referência cruzada</h3>
+<p>Relacionado ao requisito funcional 3.3.2 Links para Denúncia. </p>
+<h2 id="4-pagina-de-grafico">4. Página de gráfico</h2>
+<h2 id="41-grafico-por-categoria-de-denuncia">4.1 Gráfico por categoria de denúncia</h2>
+<p>O usuário irá acessar a aba de gráficos e notícias e deseja ver os gráficos de denúncias.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="411-pre-condicoes">4.1.1 Pré-condições</h3>
+<ul>
+<li>O usuário deverá estar logado ao site. </li>
+<li>O usuário terá a vista da tela inicial do site, e depois acessar a página de gráficos e notícias, onde ficarão os gráficos. </li>
+<li>Deve haver denúncias cadastradas no sistema com categorias definidas. </li>
+</ul>
+<h3 id="412-fluxo-basico">4.1.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa a seção "Gráficos" do sistema. </p>
+</li>
+<li>
+<p>O sistema carrega e exibe um gráfico (por exemplo, de barras ou pizza) intitulado "Denúncias por Categoria". </p>
+</li>
+<li>Cada parte do gráfico representa uma categoria de denúncia e seu tamanho/valor corresponde à quantidade total de denúncias naquela categoria.  </li>
+<li>O usuário pode passar o mouse sobre uma seção do gráfico para ver o nome da categoria e o número exato de denúncias. </li>
+<li>O sistema garante que os dados do gráfico sejam atualizados em tempo real, refletindo novas denúncias assim que são registradas. </li>
+<li>O gráfico apresenta legendas claras e um design intuitivo para fácil interpretação. </li>
+</ol>
+<h3 id="413-fluxo-alternativo">4.1.3 Fluxo alternativo</h3>
+<ul>
+<li>Se não houver denúncias cadastradas, o sistema exibirá uma mensagem informativa no local do gráfico, como "Ainda não há dados para exibir. Nenhuma denúncia foi registrada." </li>
+</ul>
+<h3 id="414-pos-condicoes">4.1.4 Pós-condições</h3>
+<ul>
+<li>O usuário obtém uma visão clara e comparativa sobre quais tipos de problemas são mais frequentemente reportados na universidade. </li>
+</ul>
+<h3 id="415-requisitos-nao-funcionais">4.1.5 Requisitos não funcionais</h3>
+<ul>
+<li>O gráfico deve carregar rapidamente, mesmo com um grande volume de dados. </li>
+<li>A visualização do gráfico deve ser responsiva, adaptando-se a diferentes tamanhos de tela (desktop, tablet, mobile). </li>
+<li>As cores e o design do gráfico devem ser acessíveis e de fácil distinção para todos os usuários. </li>
+</ul>
+<h3 id="416-referencia-cruzada">4.1.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.4.1 (Gráfico por Categoria de Denúncia) </p>
+<h2 id="42-linha-do-tempo-de-denuncias">4.2 Linha do tempo de denúncias</h2>
+<p>O usuário visualizará um gráfico de linha do tempo que mostra a evolução do número de denúncias realizadas a cada mês, permitindo-lhe analisar tendências de crescimento ou diminuição ao longo do tempo.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="421-pre-condicoes">4.2.1 Pré-condições</h3>
+<ul>
+<li>O usuário deverá estar logado. </li>
+<li>O usuário deve ter acesso à página de gráficos e notícias. </li>
+<li>Devem existir denúncias cadastradas em diferentes meses para que a linha do tempo seja significativa. </li>
+</ul>
+<h3 id="422-fluxo-basico">4.2.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário navega para a página de gráficos e notícias do sistema. </p>
+</li>
+<li>
+<p>O sistema exibe um gráfico de linha intitulado "Linha do Tempo de Denúncias" ou "Volume de Denúncias por Mês". </p>
+</li>
+<li>O eixo X do gráfico representa os meses do ano. </li>
+<li>O eixo Y do gráfico representa a quantidade total de denúncias. </li>
+<li>Sistema plota os pontos de dados, onde cada ponto corresponde ao número total de denúncias registradas em um mês específico, e os conecta com uma linha. </li>
+<li>O usuário pode passar o mouse sobre um ponto no gráfico para ver o mês e o número exato de denúncias. </li>
+<li>O gráfico é atualizado em tempo real para refletir novas denúncias. </li>
+</ol>
+<h3 id="423-fluxo-alternativo">4.2.3 Fluxo alternativo</h3>
+<ul>
+<li>Se houver um período sem denúncias, o gráfico mostrará o valor "0" para o(s) mês(es) correspondente(s). </li>
+<li>Se não houver denúncias no sistema, uma mensagem como "Nenhuma denúncia encontrada para gerar a linha do tempo" será exibida. </li>
+</ul>
+<h3 id="424-pos-condicoes">4.2.4 Pós-condições</h3>
+<ul>
+<li>O usuário consegue identificar padrões e tendências sazonais no volume de denúncias. </li>
+</ul>
+<h3 id="425-requisitos-nao-funcionais">4.2.5 Requisitos não funcionais</h3>
+<ul>
+<li>A busca e agregação dos dados por mês devem ser eficientes para garantir o carregamento rápido do gráfico. </li>
+<li>O design do gráfico deve ser claro e intuitivo. </li>
+<li>O gráfico deve ser compatível com diversos navegadores e dispositivos. </li>
+</ul>
+<h3 id="426-referencia-cruzada">4.2.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.4.2 (Linha do Tempo de Denúncias). </p>
+<h2 id="43-top-denuncias">4.3 Top denúncias</h2>
+<p>O usuário visualizará uma seção destacada que lista as três denúncias que receberam o maior número de apoios (curtidas, votos) nos últimos 30 dias. Isso permite que os usuários identifiquem rapidamente os tópicos de maior relevância e repercussão na comunidade universitária.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="431-pre-condicoes">4.3.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve estar logado no sistema.  </li>
+<li>Devem existir denúncias criadas nos últimos 30 dias que tenham recebido apoios de outros usuários. </li>
+</ul>
+<h3 id="432-fluxo-basico">4.3.2 Fluxo básico</h3>
+<ol>
+<li>O usuário acessa a página de gráficos e notícias ou uma seção específica de "Destaques". </li>
+<li>O sistema realiza uma consulta para identificar todas as denúncias criadas nos últimos 30 dias. </li>
+<li>O sistema classifica essas denúncias em ordem decrescente pelo número de apoios recebidos. </li>
+<li>O sistema exibe as três primeiras denúncias dessa lista. </li>
+<li>Para cada denúncia exibida, o sistema mostra de forma clara seu título ou um resumo, e o número total de apoios que ela obteve. </li>
+<li>O usuário pode clicar em uma das denúncias para ver seus detalhes completos. </li>
+</ol>
+<h3 id="433-fluxo-alternativo">4.3.3 Fluxo alternativo</h3>
+<ul>
+<li>Se não houver denúncias nos últimos 30 dias, ou se nenhuma delas tiver recebido apoio, o sistema exibirá uma mensagem como "Nenhuma denúncia em destaque nos últimos 30 dias." </li>
+<li>Se houver menos de três denúncias com apoios nos últimos 30 dias, o sistema exibirá apenas as que existirem. </li>
+</ul>
+<h3 id="434-pos-condicoes">4.3.4 Pós-condições</h3>
+<ul>
+<li>O usuário está ciente das questões mais urgentes e apoiadas pela comunidade nos últimos 30 dias. </li>
+</ul>
+<h3 id="435-requisitos-nao-funcionais">4.3.5 Requisitos não funcionais</h3>
+<ul>
+<li>A consulta para determinar as "Top Denúncias" deve ser otimizada para não impactar o desempenho do sistema. </li>
+<li>A exibição das denúncias deve ser visualmente atraente e clara. </li>
+</ul>
+<h3 id="436-referencia-cruzada">4.3.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.4.3 (Top Denúncias). </p>
+<h2 id="5-pagina-de-denuncias">5. Página de denúncias</h2>
+<h2 id="51-moderacao-e-denuncia-de-abuso">5.1 Moderação e denúncia de abuso</h2>
+<p>Um usuário que encontra uma postagem ou comentário inapropriado deseja denunciar o conteúdo para que a moderação da plataforma possa analisar e tomar as medidas cabíveis.</p>
+<p><strong>Ator principal:</strong> Usuário, Administrador, Sistema</p>
+<h3 id="511-pre-condicoes">5.1.1 Pré-condições</h3>
+<ul>
+<li>O usuário está logado e navegando pelo conteúdo da plataforma (denúncias ou comentários). </li>
+</ul>
+<h3 id="512-fluxo-basico">5.1.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário identifica um conteúdo que viola as regras e clica no botão "Denunciar", que deve estar visível em todas as postagens e comentários. </p>
+</li>
+<li>
+<p>O sistema apresenta uma lista pré-definida de motivos para a denúncia (ex: assédio, spam, discurso de ódio). </p>
+</li>
+<li>O usuário seleciona o motivo que melhor se aplica. </li>
+<li>O usuário confirma a ação. </li>
+<li>O sistema registra a denúncia de abuso, armazenando a data, hora, ID do denunciante e ID do conteúdo denunciado. </li>
+<li>O sistema envia uma notificação imediata para a equipe de moderação. </li>
+</ol>
+<h3 id="513-fluxo-alternativo">5.1.3 Fluxo alternativo</h3>
+<ul>
+<li>O usuário pode optar por cancelar a denúncia antes de confirmá-la. </li>
+</ul>
+<h3 id="514-pos-condicoes">5.1.4 Pós-condições</h3>
+<ul>
+<li>O conteúdo é marcado para revisão pela equipe de administradores. </li>
+<li>A denúncia de abuso é registrada para futuras análises. </li>
+</ul>
+<h3 id="515-requisitos-nao-funcionais">5.1.5 Requisitos não funcionais</h3>
+<ul>
+<li>O processo deve ser discreto e garantir o sigilo do denunciante. </li>
+<li>O sistema de notificação para moderadores deve ser confiável e imediato. </li>
+</ul>
+<h3 id="516-referencia-cruzada">5.1.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.6 MODERAÇÃO E DENÚNCIA DE ABUSO </p>
+<h2 id="52-filtros-e-busca">5.2 Filtros e busca</h2>
+<p>Um usuário deseja encontrar uma denúncia específica de forma fácil, utilizando filtros por categoria ou uma busca por palavras-chave.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="521-pre-condicoes">5.2.1 Pré-condições</h3>
+<ul>
+<li>O usuário está na página que lista as denúncias. </li>
+<li>Existem denúncias cadastradas no sistema. </li>
+</ul>
+<h3 id="522-fluxo-basico">5.2.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário utiliza a barra de busca para digitar palavras-chave relacionadas ao título ou conteúdo da denúncia desejada. </p>
+</li>
+<li>
+<p>Alternativamente, o usuário seleciona filtros disponíveis, como categoria, período de tempo, etc. </p>
+</li>
+<li>O usuário aplica a busca ou o filtro. </li>
+<li>O sistema processa a solicitação e exibe uma lista de denúncias que correspondem aos critérios informados. </li>
+<li>Os resultados da busca são apresentados em no máximo 2 segundos. </li>
+</ol>
+<h3 id="523-fluxo-alternativo">5.2.3 Fluxo alternativo</h3>
+<ul>
+<li>Se nenhum resultado for encontrado para os critérios de busca ou filtro, o sistema exibirá uma mensagem informativa, como "Nenhuma denúncia encontrada". </li>
+</ul>
+<h3 id="524-pos-condicoes">5.2.4 Pós-condições</h3>
+<ul>
+<li>O usuário visualiza uma lista refinada de denúncias, facilitando a localização do conteúdo de seu interesse. </li>
+</ul>
+<h3 id="525-requisitos-nao-funcionais">5.2.5 Requisitos não funcionais</h3>
+<ul>
+<li>A performance da busca deve ser otimizada para retornar resultados rapidamente, mesmo com um grande volume de dados. </li>
+<li>A interface dos filtros deve ser clara e de fácil compreensão. </li>
+</ul>
+<h3 id="526-referencia-cruzada">5.2.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.6 FILTROS E BUSCA. </p>
+<h2 id="53-publicacao-de-denuncia">5.3 Publicação de denúncia</h2>
+<p>Um usuário que presenciou uma irregularidade registra uma denúncia na plataforma de forma clara e intuitiva para que o problema seja reportado e detenha as orientações cabíveis.</p>
+<p><strong>Ator principal:</strong> Usuári, Sistema</p>
+<h3 id="531-pre-condicoes">5.3.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve estar logado no sistema. </li>
+<li>O usuário deve estar na página de denúncias para a criação de uma nova denúncia. </li>
+</ul>
+<h3 id="532-fluxo-basico">5.3.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa o formulário de nova denúncia. </p>
+</li>
+<li>
+<p>O usuário preenche os campos obrigatórios, como categoria e descrição da irregularidade, e pode incluir anexos opcionalmente. </p>
+</li>
+<li>O usuário clica no botão para enviar a denúncia. </li>
+<li>O sistema valida as informações e registra a denúncia no banco de dados, atribuindo um ID único e um carimbo de data/hora. </li>
+<li>O sistema exibe uma mensagem de confirmação para o usuário, informando que a denúncia foi enviada com sucesso. </li>
+<li>A denúncia é imediatamente exibida na timeline de denúncias para que outros usuários possam visualizá-la. </li>
+</ol>
+<h3 id="533-fluxo-alternativo">5.3.3 Fluxo alternativo</h3>
+<ul>
+<li>Caso o usuário tente submeter o formulário sem preencher os campos obrigatórios, o sistema exibirá uma mensagem de erro, indicando quais campos precisam ser preenchidos. </li>
+</ul>
+<h3 id="534-pos-condicoes">5.3.4 Pós-condições</h3>
+<ul>
+<li>A denúncia é registrada com sucesso e fica visível para a comunidade na plataforma. </li>
+</ul>
+<h3 id="535-requisitos-nao-funcionais">5.3.5 Requisitos não funcionais</h3>
+<ul>
+<li>O sistema deve garantir a opção de anonimato ao usuário, conforme o requisito de "Anonimização de Denúncias". </li>
+<li>A interface do formulário deve ser intuitiva e fácil de usar. </li>
+</ul>
+<h3 id="536-referencia-cruzada">5.3.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.6 PUBLICAÇÃO DE DENÚNCIA. </p>
+<h2 id="54-timeline-de-denuncias">5.4 Timeline de denúncias</h2>
+<p>O usuário visualiza em uma linha do tempo todas as denúncias publicadas, ordenadas por data de publicação, para acompanhar os acontecimentos em ordem cronológica.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="541-pre-condicoes">5.4.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve ter acesso à página principal de denúncias da plataforma. </li>
+</ul>
+<h3 id="542-fluxo-basico">5.4.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário acessa a página de denúncias. </p>
+</li>
+<li>
+<p>O sistema carrega e exibe a lista de denúncias publicadas. </p>
+</li>
+<li>As denúncias são automaticamente ordenadas da mais recente para a mais antiga. </li>
+<li>Cada item na timeline exibe o título, a data de publicação e o número de apoios recebidos. </li>
+<li>A timeline é atualizada em tempo real sempre que novas denúncias são publicadas no sistema. </li>
+</ol>
+<h3 id="543-fluxo-alternativo">5.4.3 Fluxo alternativo</h3>
+<ul>
+<li>Se não houver nenhuma denúncia registrada no sistema, será exibida uma mensagem informativa, como "Nenhuma denúncia foi publicada ainda." </li>
+</ul>
+<h3 id="544-pos-condicoes">5.4.4 Pós-condições</h3>
+<ul>
+<li>O usuário obtém uma visão geral e cronológica das denúncias registradas na plataforma. </li>
+</ul>
+<h3 id="545-requisitos-nao-funcionais">5.4.5 Requisitos não funcionais</h3>
+<ul>
+<li>A interface deve ser responsiva, adaptando-se a diferentes tamanhos de tela. </li>
+<li>O carregamento da timeline deve ser eficiente para não comprometer a experiência do usuário. </li>
+</ul>
+<h3 id="546-referencia-cruzada">5.4.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.6 TIMELINE DE DENÚNCIAS.</p>
+<h2 id="55-comentarios-nas-denuncias">5.5 Comentários nas denúncias</h2>
+<p>Um usuário interessado em uma denúncia específica deseja interagir, adicionando um comentário para compartilhar informações a discussão.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="551-pre-condicoes">5.5.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve estar logado na plataforma. </li>
+<li>O usuário deve estar visualizando os detalhes de uma denúncia. </li>
+</ul>
+<h3 id="552-fluxo-basico">5.5.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário navega até a seção de comentários da denúncia. </p>
+</li>
+<li>
+<p>O usuário digita sua mensagem no campo de texto apropriado. </p>
+</li>
+<li>O usuário clica no botão "Comentar" ou "Enviar". </li>
+<li>O sistema registra o comentário, associando o autor, a data e o conteúdo. </li>
+<li>O novo comentário é exibido na lista, que é ordenada cronologicamente, com os mais recentes no topo. </li>
+</ol>
+<h3 id="553-fluxo-alternativo">5.5.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o usuário tentar enviar um comentário vazio, o sistema exibirá uma mensagem de erro. </li>
+<li>Outros usuários podem denunciar um comentário que considerem inapropriado para moderação. </li>
+</ul>
+<h3 id="554-pos-condicoes">5.5.4 Pós-condições</h3>
+<ul>
+<li>O comentário do usuário é adicionado à denúncia e fica visível para outros membros da comunidade. </li>
+</ul>
+<h3 id="555-requisitos-nao-funcionais">5.5.5 Requisitos não funcionais</h3>
+<ul>
+<li>O sistema deve processar e exibir novos comentários rapidamente. </li>
+<li>A interface para comentar deve ser clara e de fácil utilização. </li>
+</ul>
+<h3 id="556-referencia-cruzada">5.5.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.6 comentários nas denúncias. </p>
+<h2 id="56-sistema-de-reacoes">5.6 Sistema de reações</h2>
+<p>Um usuário que leu uma denúncia deseja reagir com "Apoiar" para expressar sua opinião de forma rápida, sem a necessidade de escrever um comentário.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="561-pre-condicoes">5.6.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve estar logado na plataforma. </li>
+<li>O usuário está visualizando uma denúncia. </li>
+</ul>
+<h3 id="562-fluxo-basico">5.6.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário localiza o botão de reação "Apoiar" (like) na postagem da denúncia. </p>
+</li>
+<li>
+<p>O usuário clica no botão para expressar seu apoio. </p>
+</li>
+<li>O sistema registra que o usuário reagiu àquela denúncia, garantindo que ele só possa reagir uma única vez. </li>
+<li>O número total de reações da denúncia é atualizado em tempo real para todos os usuários. </li>
+<li>O botão de reação muda de estado para indicar que o usuário já reagiu. </li>
+</ol>
+<h3 id="563-fluxo-alternativo">5.6.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o usuário clicar novamente no botão "Apoiar", sua reação é removida, e a contagem total de apoios é decrementada em tempo real. </li>
+</ul>
+<h3 id="564-pos-condicoes">5.6.4 Pós-condições</h3>
+<ul>
+<li>O apoio do usuário é contabilizado, refletindo a repercussão da denúncia na comunidade. </li>
+</ul>
+<h3 id="565-requisitos-nao-funcionais">5.6.5 Requisitos não funcionais</h3>
+<ul>
+<li>A atualização da contagem de reações deve ser instantânea e não deve sobrecarregar o sistema. </li>
+<li>A interface das reações deve ser visualmente clara e responsiva ao clique do usuário. </li>
+</ul>
+<h3 id="566-referencia-cruzada">5.6.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.6 sistema de reações. </p>
+<h2 id="6-administracao">6. Administração</h2>
+<h2 id="61-gestao-de-denuncias">6.1 Gestão de denúncias</h2>
+<p>O administrador acessa e gerencia todas as denúncias registradas para garantir que sejam processadas adequadamente e para moderar o conteúdo, removendo postagens que violem as regras da plataforma.</p>
+<p><strong>Ator principal:</strong> Administrador, Sistema</p>
+<h3 id="611-pre-condicoes">6.1.1 Pré-condições</h3>
+<ul>
+<li>O usuário deve ter permissões de administrador e estar logado no sistema. </li>
+<li>O administrador deve estar no painel de administração. </li>
+</ul>
+<h3 id="612-fluxo-basico">6.1.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O administrador acessa a seção de gerenciamento de denúncias. </p>
+</li>
+<li>
+<p>O sistema exibe uma lista de todas as denúncias, que pode ser filtrada por categoria ou usuário. </p>
+</li>
+<li>O sistema apresenta as denúncias que foram reportadas por usuários em uma lista separada para análise prioritária. </li>
+<li>O administrador seleciona uma denúncia para analisar seu conteúdo e autor. </li>
+<li>O administrador decide a ação a ser tomada, como "Excluir" a denúncia. </li>
+<li>O administrador executa a ação, e o sistema remove a denúncia do ar facilmente. </li>
+<li>Toda alteração realizada pelo administrador é registrada no histórico da denúncia. </li>
+</ol>
+<h3 id="613-fluxo-alternativo">6.1.3 Fluxo alternativo</h3>
+<ul>
+<li>O administrador pode requerer a alteração da denuncia se o sistema obtiver tal suporte. </li>
+</ul>
+<h3 id="614-pos-condicoes">6.1.4 Pós-condições</h3>
+<ul>
+<li>A denúncia é moderada (excluída ou atualizada), garantindo que a plataforma permaneça livre de abusos. </li>
+<li>O histórico de moderação é atualizado para fins de auditoria. </li>
+</ul>
+<h3 id="615-requisitos-nao-funcionais">6.1.5 Requisitos não funcionais</h3>
+<ul>
+<li>A interface de gestão deve ser eficiente, permitindo que o administrador encontre e modere denúncias rapidamente. </li>
+<li>As ações de exclusão devem ser seguras e registradas de forma confiável. </li>
+</ul>
+<h3 id="616-referencia-cruzada">6.1.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.7 gestão de denúncias.</p>
+<h2 id="62-gestao-de-usuarios">6.2 Gestão de usuários</h2>
+<p>O administrador gerencia as contas dos usuários da plataforma, podendo desativar ou banir contas para manter a segurança e a integridade do sistema.</p>
+<p><strong>Ator principal:</strong> Administrador, Sistema</p>
+<h3 id="621-pre-condicoes">6.2.1 Pré-condições</h3>
+<ul>
+<li>O administrador está logado no painel administrativo. </li>
+</ul>
+<h3 id="622-fluxo-basico">6.2.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O administrador acessa a seção "Gerenciar Usuários". </p>
+</li>
+<li>
+<p>O sistema exibe uma lista de todos os usuários cadastrados. </p>
+</li>
+<li>O administrador pode buscar por um usuário específico. </li>
+<li>Ao encontrar o usuário, o administrador seleciona uma ação, como "Desativar", "Banir" ou "Excluir conta". </li>
+<li>O sistema solicita uma confirmação para a ação crítica. </li>
+<li>Após a confirmação, o sistema aplica a restrição ou remove a conta do usuário. </li>
+<li>Todas as ações administrativas realizadas na conta do usuário são registradas em um histórico. </li>
+</ol>
+<h3 id="623-fluxo-alternativo">6.2.3 Fluxo alternativo</h3>
+<ul>
+<li>O administrador pode precisar reativar uma conta que foi desativada anteriormente. </li>
+</ul>
+<h3 id="624-pos-condicoes">6.2.4 Pós-condições</h3>
+<ul>
+<li>A conta do usuário é gerenciada (desativada, banida ou excluída), e o usuário perde o acesso conforme a ação aplicada. </li>
+<li>A segurança e a ordem da comunidade são mantidas. </li>
+</ul>
+<h3 id="625-requisitos-nao-funcionais">6.2.5 Requisitos não funcionais</h3>
+<ul>
+<li>A busca por usuários deve ser rápida e eficiente. </li>
+<li>As ações de gerenciamento de usuários devem ser devidamente registradas para garantir a rastreabilidade.</li>
+</ul>
+<h3 id="626-referencia-cruzada">6.2.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.7 GESTÃO DE USUÁRIOS. </p>
+<h2 id="63-postagens-e-gestao-de-denuncias">6.3 Postagens e gestão de denúncias</h2>
+<p>O administrador deseja postar, editar ou excluir notícias e comunicados para disseminar informações pertinentes aos usuários da plataforma de maneira simples e rápida.</p>
+<p><strong>Ator principal:</strong> Administrador, Sistema</p>
+<h3 id="631-pre-condicoes">6.3.1 Pré-condições</h3>
+<ul>
+<li>O administrador está logado no sistema. </li>
+</ul>
+<h3 id="632-fluxo-basico-criar-noticia">6.3.2 Fluxo básico (Criar notícia)</h3>
+<ol>
+<li>
+<p>O administrador navega para a seção de gestão de notícias. </p>
+</li>
+<li>
+<p>Ele clica em "Criar Nova Notícia". </p>
+</li>
+<li>Um editor de texto é apresentado, onde o administrador insere o título e o conteúdo da notícia. </li>
+<li>O administrador publica a notícia. </li>
+<li>A notícia aparece em uma área designada, visível para todos os usuários comuns. </li>
+</ol>
+<h3 id="633-fluxo-basico-editar-ou-excluir-noticia">6.3.3 Fluxo básico (Editar ou excluir notícia)</h3>
+<ol>
+<li>
+<p>O administrador acessa a lista de notícias publicadas. </p>
+</li>
+<li>
+<p>Ele seleciona a notícia que deseja modificar ou remover. </p>
+</li>
+<li>Ele escolhe a opção "Editar" ou "Excluir". </li>
+<li>Se "Editar", o sistema abre o editor com o conteúdo existente para alteração. As alterações são salvas e refletidas imediatamente para os outros usuários. </li>
+<li>Se "Excluir", o sistema pede confirmação e remove a notícia da plataforma. </li>
+</ol>
+<h3 id="634-fluxo-alternativo">6.3.4 FLuxo alternativo</h3>
+<ul>
+<li>O administrador pode salvar uma notícia como rascunho para publicá-la posteriormente. </li>
+</ul>
+<h3 id="635-pos-condicoes">6.3.5 Pós-condições</h3>
+<ul>
+<li>Informações e comunicados importantes são compartilhados com os usuários da plataforma. </li>
+<li>O conteúdo informativo do site é mantido atualizado. </li>
+</ul>
+<h3 id="636-requisitos-nao-funcionais">6.3.6 Requisitos não funcionais</h3>
+<ul>
+<li>A interface de edição de notícias deve ser intuitiva e de fácil utilização. </li>
+<li>A publicação e atualização de notícias devem ocorrer em tempo real, com responsividade imediata. </li>
+</ul>
+<h3 id="637-referencia-cruzada">6.3.7 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.7 POSTAGENS e Gestão de NOTÍCIAS. </p>
+<h2 id="64-configuracoes-do-sistema">6.4 Configurações do sistema</h2>
+<p>O administrador acessa um painel de configurações gerais para ajustar o funcionamento da plataforma, como gerenciar categorias de denúncia e permissões de usuários, conforme a necessidade.</p>
+<p><strong>Ator principal:</strong> Administrador, Sistema</p>
+<h3 id="641-pre-condicoes">6.4.1 Pré-condições</h3>
+<ul>
+<li>O usuário logado possui perfil de administrador e tem permissão para acessar as configurações. </li>
+</ul>
+<h3 id="642-fluxo-basico">6.4.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O administrador acessa a área de "Configurações do Sistema" no painel administrativo. </p>
+</li>
+<li>
+<p>O sistema exibe uma interface clara com diferentes seções de configuração (ex: Categorias de Denúncia, Permissões, Parâmetros de Segurança). </p>
+</li>
+<li>O administrador seleciona a seção que deseja alterar. </li>
+<li>Ele realiza as modificações necessárias (ex: adiciona uma nova categoria de denúncia). </li>
+<li>O administrador salva as alterações. </li>
+<li>O sistema aplica as novas configurações e registra a alteração em um log administrativo. </li>
+</ol>
+<h3 id="643-fluxo-alternativo">6.4.3 FLuxo alternativo</h3>
+<ul>
+<li>O administrador descarta as alterações antes de salvar, e o sistema mantém as configurações anteriores. </li>
+</ul>
+<h3 id="644-pos-condicoes">6.4.4 Pós-condições</h3>
+<ul>
+<li>O comportamento do sistema é ajustado de acordo com as novas configurações definidas pelo administrador. </li>
+</ul>
+<h3 id="645-requisitos-nao-funcionais">6.4.5 Requisitos não funcionais</h3>
+<ul>
+<li>O acesso a esta área deve ser estritamente restrito a usuários autorizados para evitar alterações indevidas. </li>
+<li>A interface deve ser clara e organizada para facilitar a gestão dos parâmetros. </li>
+</ul>
+<h3 id="646-referencia-cruzada">6.4.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.7 CONFIGURAÇÕES DO SISTEMA. </p>
+<h2 id="65-administrador-mestre">6.5 Administrador mestre</h2>
+<p>Como última instância de controle, o administrador mestre possui privilégios para gerenciar outros administradores e suas publicações, garantindo a supervisão completa sobre a plataforma.</p>
+<p><strong>Ator principal:</strong> Administrador mestre, Sistema</p>
+<h3 id="651-pre-condicoes">6.5.1 Pré-condições</h3>
+<ul>
+<li>O usuário logado possui o perfil exclusivo de "Administrador Mestre". </li>
+</ul>
+<h3 id="652-fluxo-basico">6.5.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O administrador mestre acessa uma área de gestão de administradores ou de notícias. </p>
+</li>
+<li>
+<p>Ele pode visualizar a lista de todos os outros administradores do sistema. </p>
+</li>
+<li>Ele seleciona um administrador e pode alterar suas permissões ou excluí-lo. </li>
+<li>Ao visualizar as notícias, ele pode editar ou excluir postagens feitas por qualquer outro administrador. </li>
+<li>O sistema executa a ação, que é soberana sobre as ações de outros administradores. </li>
+<li>Todas as ações são registradas em um log de auditoria de alta prioridade. </li>
+</ol>
+<h3 id="653-fluxo-alternativo">6.5.3 Fluxo alternativo</h3>
+<ul>
+<li>O administrador mestre pode optar por apenas revisar as atividades de outros administradores sem realizar nenhuma ação. </li>
+</ul>
+<h3 id="654-pos-condicoes">6.5.4 Pós-condições</h3>
+<ul>
+<li>O controle sobre a equipe administrativa e o conteúdo crítico é mantido, assegurando a hierarquia de gestão. </li>
+</ul>
+<h3 id="655-requisitos-nao-funcionais">6.5.5 Requisitos não funcionais</h3>
+<ul>
+<li>A segurança para o acesso do Administrador Mestre deve ser reforçada, possivelmente com autenticação de múltiplos fatores. </li>
+<li>Os privilégios deste perfil devem ser claramente definidos e isolados dos perfis de administradores padrão. </li>
+</ul>
+<h3 id="656-referencia-cruzada">6.5.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito funcional 3.7 ADMINISTRADOR MESTRE. </p>
+<h2 id="7-confiabilidade-e-disponibilidade">7. Confiabilidade e disponibilidade</h2>
+<h2 id="71-disponibilidade-do-sistema">7.1 Disponibilidade do sistema</h2>
+<p>O usuário espera que a plataforma esteja operacional e acessível na maior parte do tempo, permitindo o acesso a suas funcionalidades sempre que necessário, com um mínimo de interrupções.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="711-pre-condicoes">7.1.1 Pré-condições</h3>
+<ul>
+<li>O usuário possui um dispositivo conectado à internet.  </li>
+</ul>
+<h3 id="712-fluxo-basico">7.1.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>O usuário digita o endereço da plataforma em um navegador web em qualquer dia ou horário. </p>
+</li>
+<li>
+<p>O sistema responde e carrega a página solicitada de forma rápida e funcional. </p>
+</li>
+<li>O usuário consegue realizar login, consultar denúncias e utilizar todas as funcionalidades da plataforma sem falhas de conexão com o servidor. </li>
+</ol>
+<h3 id="713-fluxo-alternativo">7.1.3 Fluxo alternativo</h3>
+<ul>
+<li>Caso o sistema esteja passando por uma manutenção planejada ou uma falha inesperada, uma página informativa deve ser exibida, comunicando o status e, se possível, uma previsão de retorno. </li>
+</ul>
+<h3 id="714-pos-condicoes">7.1.4 Pós-condições</h3>
+<ul>
+<li>O usuário consegue utilizar a plataforma de forma confiável para suas necessidades. </li>
+</ul>
+<h3 id="715-requisitos-nao-funcionais">7.1.5 Requisitos não funcionais</h3>
+<ul>
+<li>Este caso de uso descreve um requisito não funcional em si. </li>
+<li>O sistema deve garantir uma disponibilidade mínima de 99,5% mensalmente, o que equivale a um tempo máximo de inatividade de aproximadamente 3 horas e 36 minutos por mês. </li>
+</ul>
+<h3 id="716-referencia-cruzada">7.1.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito não funcional 4.1 DISPONIBILIDADE DO SISTEMA. </p>
+<h2 id="72-suporte-a-multipos-usuarios">7.2 Suporte a múltipos usuários</h2>
+<p>O sistema precisa suportar um grande volume de usuários conectados e interagindo ao mesmo tempo, garantindo a estabilidade e a performance da plataforma mesmo durante períodos de pico de acesso.</p>
+<p><strong>Ator principal:</strong> Usuário, Sistema</p>
+<h3 id="721-pre-condicoes">7.2.1 Pré-condições</h3>
+<ul>
+<li>Um número elevado de usuários está acessando o sistema simultaneamente. </li>
+</ul>
+<h3 id="722-fluxo-basico">7.2.2 Fluxo básico</h3>
+<ol>
+<li>
+<p>Múltiplos usuários (pelo menos 250) realizam login, publicam denúncias, comentam e navegam pela plataforma ao mesmo tempo. </p>
+</li>
+<li>
+<p>O sistema processa todas as requisições concorrentes de forma eficiente. </p>
+</li>
+<li>O tempo de resposta para as ações dos usuários se mantém baixo, sem que haja lentidão ou degradação perceptível na experiência de uso. </li>
+<li>As operações são concluídas com sucesso para todos os usuários, sem erros de servidor por sobrecarga. </li>
+</ol>
+<h3 id="723-fluxo-alternativo">7.2.3 Fluxo alternativo</h3>
+<ul>
+<li>Se o sistema atingir seu limite de capacidade, ele deve gerenciar a carga de forma a não falhar completamente, podendo apresentar uma lentidão controlada ou uma mensagem de alta demanda. </li>
+</ul>
+<h3 id="724-pos-condicoes">7.2.4 Pós-condições</h3>
+<ul>
+<li>A plataforma se mantém estável e responsiva, proporcionando uma experiência de uso fluida para todos os usuários, mesmo sob alta demanda. </li>
+</ul>
+<h3 id="725-requisitos-nao-funcionais">7.2.5 Requisitos não funcionais</h3>
+<ul>
+<li>Este caso de uso descreve um requisito não funcional. </li>
+<li>A arquitetura do sistema deve ser robusta o suficiente para suportar no mínimo 250 usuários simultâneos. </li>
+</ul>
+<h3 id="726-referencia-cruzada">7.2.6 Referência cruzada</h3>
+<p>Este caso de uso está relacionado ao requisito não funcional 4.1 SUPORTE A MÚLTIPLOS USUÁRIOS. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Requisitos/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Requisitos">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Requisitos
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../backlog/" class="md-footer__link md-footer__link--next" aria-label="Next: Backlog do Produto">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Backlog do Produto
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
